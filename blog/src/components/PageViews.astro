@@ -1,0 +1,12 @@
+---
+// 文章阅读量展示。数字由 ViewBeacon 的全局脚本在每次页面浏览后填充，
+// 以兼容 swup 无刷新切页（组件内脚本切页时不会重新执行）。
+import { Icon } from "astro-icon/components";
+---
+
+<div class="flex items-center" title="阅读量">
+    <div class="meta-icon">
+        <Icon name="material-symbols:visibility-outline-rounded" class="text-xl"></Icon>
+    </div>
+    <span class="text-50 text-sm font-medium" data-page-views>–</span>
+</div>

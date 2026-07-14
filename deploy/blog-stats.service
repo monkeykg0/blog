@@ -1,0 +1,17 @@
+[Unit]
+Description=blog-stats API (访问量统计后端)
+After=network.target docker.service
+
+[Service]
+ExecStart=/opt/blog-stats/blog-stats
+EnvironmentFile=/opt/blog-stats/env
+Restart=always
+RestartSec=3
+User=www-data
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,30 @@
+<script>
+// 访问统计：每次页面浏览上报一次，并填充页面上的阅读量占位（若有）。
+// Fuwari 用 swup 做无刷新切页，组件脚本只在首次加载执行，
+// 因此后续浏览统一走 swup 的 page:view 钩子。开发环境不生效。
+function onPageView() {
+	const path = location.pathname;
+	const data = JSON.stringify({ path });
+	navigator.sendBeacon("/api/view", new Blob([data], { type: "application/json" }));
+
+	const el = document.querySelector("[data-page-views]");
+	if (el) {
+		fetch(`/api/views?path=${encodeURIComponent(path)}`)
+			.then((r) => (r.ok ? r.json() : Promise.reject()))
+			.then((d) => {
+				el.textContent = String(d.pv);
+			})
+			.catch(() => {});
+	}
+}
+
+if (!import.meta.env.DEV) {
+	onPageView();
+	const setup = () => window.swup.hooks.on("page:view", onPageView);
+	if (window?.swup?.hooks) {
+		setup();
+	} else {
+		document.addEventListener("swup:enable", setup);
+	}
+}
+</script>
