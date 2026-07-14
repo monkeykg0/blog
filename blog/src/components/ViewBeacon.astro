@@ -12,7 +12,7 @@ function onPageView() {
 		fetch(`/api/views?path=${encodeURIComponent(path)}`)
 			.then((r) => (r.ok ? r.json() : Promise.reject()))
 			.then((d) => {
-				el.textContent = String(d.pv);
+				el.textContent = String(d.uv);
 			})
 			.catch(() => {});
 	}
