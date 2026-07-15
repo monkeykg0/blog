@@ -1,6 +1,6 @@
 ---
 title: 我做了两个 Codex 技能：桌面宠物生成器 & 手绘风格配图
-published: 2026-07-14
+published: 2026-07-14T17:55:00+08:00
 description: 开源我的 Codex 技能合集：一个能把文字描述、照片甚至品牌色板变成桌面动画宠物的完整流水线，和一个把文章观点转译成手绘编辑插画的配图系统。
 tags: [Codex, AI, Agent Skills, 开源]
 category: 技术

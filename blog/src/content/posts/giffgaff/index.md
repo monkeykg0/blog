@@ -1,6 +1,6 @@
 ---
 title: giffgaff 完全使用手册：激活、保号、eSIM 转换保姆级教程
-published: 2026-07-14
+published: 2026-07-14T18:52:00+08:00
 description: 从激活、充值、保号到 eSIM 转换 —— 一份图文并茂、按章节梳理的英国 giffgaff SIM 卡保姆级中文教程。
 tags: [giffgaff, eSIM, 教程]
 category: 教程
