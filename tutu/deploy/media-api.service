@@ -1,0 +1,17 @@
+[Unit]
+Description=tutu media-api (兔兔听书屋媒体库后端)
+After=network.target mysql.service
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/media-api/env
+ExecStart=/opt/media-api/media-api
+Restart=always
+RestartSec=3
+# 加固:整个文件系统对服务只读(media-api 只读媒体目录 + 写 MySQL)
+ProtectSystem=strict
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

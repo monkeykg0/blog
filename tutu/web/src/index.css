@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ============ 兔兔听书屋 · 奶油绘本风主题 ============ */
+@theme {
+  --color-cream: #fff6ea;
+  --color-paper: #fffdf8;
+  --color-carrot: #ff8a3d;
+  --color-carrot-deep: #f06f1f;
+  --color-leaf: #7bc47f;
+  --color-leaf-deep: #4c9a55;
+  --color-ink: #4a3728;
+  --color-ink-soft: #8a7360;
+  --color-blush: #ffd9c9;
+  --color-blush-soft: #ffece1;
+  --color-sky: #bee3f8;
+
+  --font-round: "Yuanti SC", "YouYuan", "PingFang SC", "Hiragino Sans GB",
+    ui-rounded, system-ui, sans-serif;
+
+  --shadow-sticker: 0 4px 0 0 rgba(74, 55, 40, 0.12);
+  --shadow-sticker-lg: 0 6px 0 0 rgba(74, 55, 40, 0.14);
+
+  --animate-ear-l: ear-l 0.9s ease-in-out infinite;
+  --animate-ear-r: ear-r 0.9s ease-in-out 0.15s infinite;
+  --animate-hop: hop 0.9s ease-in-out infinite;
+  --animate-zzz: zzz 2.4s ease-in-out infinite;
+  --animate-bounce-soft: bounce-soft 2s ease-in-out infinite;
+}
+
+@keyframes ear-l {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(7deg); }
+}
+@keyframes ear-r {
+  0%, 100% { transform: rotate(6deg); }
+  50% { transform: rotate(-7deg); }
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-7%); }
+}
+@keyframes zzz {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.7); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(9px, -14px) scale(1.15); }
+}
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@layer base {
+html {
+  font-family: var(--font-round);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+  /* 绘本感:淡淡的胡萝卜波点 */
+  background-image: radial-gradient(rgba(255, 138, 61, 0.07) 2.5px, transparent 2.5px);
+  background-size: 26px 26px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+/* 小朋友的大按钮:全站禁用蓝色点按高亮 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* 章节列表滚动条也圆一点 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-blush);
+  border-radius: 8px;
+}
+}
