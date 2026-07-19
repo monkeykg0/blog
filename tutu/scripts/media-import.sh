@@ -76,7 +76,7 @@ sort -n "$TSV" | while IFS=$'\t' read -r num src; do
   # 标题清洗:去扩展名 → 去开头数字 → 去"+" → 去重复的专辑名前缀 → 修剪
   base="$(basename "$src")"
   title="${base%.*}"
-  title="$(echo "$title" | sed -E 's/^[0-9]+//; s/\+/ /g')"
+  title="$(echo "$title" | sed -E 's/^[0-9]+[. 　]*//; s/\+/ /g')"
   # 去重复的专辑名前缀(macOS bash 3.2 不支持 ${var#"$var"} 嵌套引号,用长度截取)
   case "$title" in
     "$ALBUM_TITLE"*) title="${title:${#ALBUM_TITLE}}" ;;
@@ -88,7 +88,7 @@ sort -n "$TSV" | while IFS=$'\t' read -r num src; do
       "$short"*) title="${title:${#short}}" ;;
     esac
   fi
-  title="$(echo "$title" | sed -E 's/[ 　]+（/（/g; s/[ 　]+/ /g; s/^[ 　]+|[ 　]+$//g')"
+  title="$(echo "$title" | sed -E 's/[ 　]+（/（/g; s/[ 　]+/ /g; s/^[. 　]+|[. 　]+$//g')"
   [ -n "$title" ] || title="第 $i 集"
 
   dur="$(ffprobe -v quiet -show_entries format=duration -of csv=p=0 "$dest" | cut -d. -f1)"
