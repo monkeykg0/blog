@@ -14,7 +14,7 @@ ssh "$SERVER" "mkdir -p '$LIB_ROOT/$SUB'"
 # -P: 显示进度 + 断点续传;不加 --delete,导入是只增操作
 rsync -aP "./$SUB/" "$SERVER:$LIB_ROOT/$SUB/"
 
-TOKEN="$(ssh "$SERVER" "grep '^MEDIA_TOKEN=' /opt/media-api/env | cut -d= -f2")"
-ssh "$SERVER" "curl -sf -X POST -H 'X-Media-Token: $TOKEN' http://127.0.0.1:8081/api/media/refresh"
+TOKEN="$(ssh "$SERVER" "grep '^ADMIN_TOKEN=' /opt/media-api/env | cut -d= -f2")"
+ssh "$SERVER" "curl -sf -X POST -H 'X-Admin-Token: $TOKEN' http://127.0.0.1:8081/api/media/refresh"
 echo
 echo "✅ 上传完成并已刷新专辑列表"

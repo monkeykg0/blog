@@ -8,11 +8,12 @@
 //	GET  /api/media/progress/{album}   读取播放进度(按设备)
 //	PUT  /api/media/progress/{album}   写入播放进度(body 为任意 JSON,64KB 上限)
 //	POST /api/media/stats/heartbeat    上报收听时长 {"seconds": N}
-//	GET  /api/media/stats              使用统计(设备数/总收听时长/设备明细)
-//	POST /api/media/refresh            重扫媒体目录(导入新专辑后调用)
+//	GET  /api/media/stats              使用统计(设备数/总收听时长/设备明细)[管理]
+//	POST /api/media/refresh            重扫媒体目录(导入新专辑后调用)[管理]
 //	GET  /api/media/healthz            健康检查(免 token)
 //
-// 除 healthz 外所有端点校验 X-Media-Token 头(或 ?token= 参数)。
+// 两层鉴权:普通端点校验 X-Media-Token(内嵌前端包,仅算门帘);
+// [管理] 端点校验 X-Admin-Token(只存服务器 env,前端拿不到,保护统计隐私)。
 // 无登录体系:进度与统计按 X-Device-Id 头区分用户(前端 localStorage 里的 UUID)。
 // 环境变量:LISTEN、MEDIA_ROOT、MEDIA_TOKEN、MYSQL_DSN
 package main
@@ -35,9 +36,10 @@ import (
 )
 
 var (
-	db        *sql.DB
-	mediaRoot string
-	token     string
+	db         *sql.DB
+	mediaRoot  string
+	token      string
+	adminToken string
 )
 
 var schemas = []string{`
@@ -169,6 +171,16 @@ func auth(w http.ResponseWriter, r *http.Request) bool {
 	return true
 }
 
+// authAdmin 校验管理 token(不接受前端那个共享 token)
+func authAdmin(w http.ResponseWriter, r *http.Request) bool {
+	got := r.Header.Get("X-Admin-Token")
+	if subtle.ConstantTimeCompare([]byte(got), []byte(adminToken)) != 1 {
+		fail(w, http.StatusUnauthorized, "admin token required")
+		return false
+	}
+	return true
+}
+
 // albumIDValid 防路径注入:与导入脚本约定一致
 func albumIDValid(id string) bool {
 	if id == "" || len(id) > 64 {
@@ -236,7 +248,7 @@ func handleAlbum(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleRefresh(w http.ResponseWriter, r *http.Request) {
-	if !auth(w, r) {
+	if !authAdmin(w, r) {
 		return
 	}
 	if err := lib.scan(); err != nil {
@@ -338,7 +350,7 @@ func handleHeartbeat(w http.ResponseWriter, r *http.Request) {
 
 // handleStats 汇总:多少台设备用过、总共听了多久,附设备明细
 func handleStats(w http.ResponseWriter, r *http.Request) {
-	if !auth(w, r) {
+	if !authAdmin(w, r) {
 		return
 	}
 	var users, total int
@@ -382,6 +394,10 @@ func main() {
 	token = env("MEDIA_TOKEN", "")
 	if token == "" {
 		log.Fatal("必须设置 MEDIA_TOKEN")
+	}
+	adminToken = env("ADMIN_TOKEN", "")
+	if adminToken == "" {
+		log.Fatal("必须设置 ADMIN_TOKEN")
 	}
 
 	var err error

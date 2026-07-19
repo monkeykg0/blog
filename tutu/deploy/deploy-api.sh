@@ -24,10 +24,16 @@ ssh "$SERVER" "
 LISTEN=127.0.0.1:8081
 MEDIA_ROOT=$MEDIA_ROOT
 MEDIA_TOKEN=\$(openssl rand -hex 16)
+ADMIN_TOKEN=\$(openssl rand -hex 16)
 \$DSN
 EOF
     chmod 600 /opt/media-api/env
     echo '已生成 /opt/media-api/env'
+  fi
+  # 旧 env 升级:补上管理 token(统计/重扫接口专用,不进前端包)
+  if ! grep -q '^ADMIN_TOKEN=' /opt/media-api/env; then
+    echo \"ADMIN_TOKEN=\$(openssl rand -hex 16)\" >> /opt/media-api/env
+    echo '已补充 ADMIN_TOKEN'
   fi
   mv /opt/media-api/media-api.new /opt/media-api/media-api
   chmod +x /opt/media-api/media-api
