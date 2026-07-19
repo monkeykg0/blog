@@ -28,7 +28,7 @@ export default function TrackList({ album }: { album: Album }) {
         />
       </div>
 
-      <ol className="max-h-[52dvh] space-y-1 overflow-y-auto overscroll-contain pr-1 lg:max-h-[60dvh]">
+      <ol className="max-h-[52dvh] space-y-1 overflow-y-auto overscroll-contain px-1 lg:max-h-[60dvh]">
         {shown.map((t) => {
           const isCur = t.n === trackN;
           const ep = eps[String(t.n)];
@@ -37,7 +37,7 @@ export default function TrackList({ album }: { album: Album }) {
             <li key={t.n}>
               <button
                 onClick={() => playTrack(t.n)}
-                className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-left transition-colors ${
+                className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-left outline-none transition-colors focus-visible:ring-2 focus-visible:ring-carrot ${
                   isCur ? "bg-blush ring-2 ring-carrot" : "hover:bg-blush-soft active:bg-blush"
                 }`}
               >
