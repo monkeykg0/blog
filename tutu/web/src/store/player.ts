@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { getAlbum, fileUrl } from "../lib/api";
+import { getAlbum, fileUrl, postHeartbeat } from "../lib/api";
 import * as progress from "../lib/progress";
 import type { Album, EpState, ProgressData, Track } from "../types";
 
@@ -55,14 +55,35 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     if (album && data) progress.push(album.id, data, immediate);
   };
 
+  // ---------- 收听统计:累计真实收听秒数,每 30 秒心跳上报 ----------
+  // 只累计相邻 timeupdate 间的连续小步进,跳转/换集的突变不计入
+  let listened = 0;
+  let lastPos = -1;
+  let lastBeat = Date.now();
+  const beat = (force = false) => {
+    const now = Date.now();
+    if (!force && now - lastBeat < 30_000) return;
+    const sec = Math.min(300, Math.floor(listened));
+    if (sec < 1) return;
+    lastBeat = now;
+    listened -= sec;
+    postHeartbeat(sec).catch(() => {
+      listened += sec; // 失败退回,随下次心跳一起补报
+    });
+  };
+
   // ---------- 音频事件(仅绑定一次) ----------
   audio.addEventListener("timeupdate", () => {
     const { track, eps } = get();
     const pos = audio.currentTime;
+    const delta = pos - lastPos;
+    if (lastPos >= 0 && delta > 0 && delta < 2) listened += delta;
+    lastPos = pos;
     set({ position: pos });
     if (track) {
       eps[String(track.n)] = { ...eps[String(track.n)], pos: Math.floor(pos) };
       persist();
+      beat();
     }
   });
   audio.addEventListener("durationchange", () => set({ duration: audio.duration || 0 }));
@@ -70,6 +91,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
   audio.addEventListener("pause", () => {
     set({ playing: false });
     persist(true);
+    beat(true);
   });
   audio.addEventListener("ended", () => {
     const { track, eps, sleep, next } = get();
@@ -91,6 +113,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
       if (document.visibilityState === "hidden") {
         persist(true);
         progress.flush();
+        beat(true);
       }
     });
   }

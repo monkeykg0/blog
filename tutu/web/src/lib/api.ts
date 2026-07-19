@@ -1,4 +1,5 @@
 import type { Album, AlbumSummary, ProgressData } from "../types";
+import { deviceId } from "./uid";
 
 // token 构建期注入(部署脚本传 VITE_MEDIA_TOKEN);页面本身已在隐秘路径之后
 const TOKEN = import.meta.env.VITE_MEDIA_TOKEN ?? "dev-token";
@@ -7,7 +8,7 @@ const API = "/api/media";
 async function fetchJSON<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API}${path}`, {
     ...init,
-    headers: { "X-Media-Token": TOKEN, ...init?.headers },
+    headers: { "X-Media-Token": TOKEN, "X-Device-Id": deviceId(), ...init?.headers },
   });
   if (!res.ok) throw new Error(`API ${path}: ${res.status}`);
   return res.json() as Promise<T>;
@@ -25,6 +26,16 @@ export function getRemoteProgress(
   albumId: string,
 ): Promise<{ data: ProgressData | null; updatedAt: string | null }> {
   return fetchJSON(`/progress/${albumId}`);
+}
+
+/** 收听统计心跳:上报真实收听秒数,keepalive 保证关页/切后台也能送达 */
+export function postHeartbeat(seconds: number): Promise<unknown> {
+  return fetchJSON("/stats/heartbeat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ seconds }),
+    keepalive: true,
+  });
 }
 
 export function putRemoteProgress(albumId: string, data: ProgressData): Promise<unknown> {
