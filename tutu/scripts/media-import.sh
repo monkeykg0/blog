@@ -126,7 +126,8 @@ album = {
     "cover": os.environ["COVER_FILE"] or None,
     "trackCount": len(tracks),
     "totalDuration": sum(t["duration"] for t in tracks),
-    "updatedAt": datetime.date.today().isoformat(),
+    # 完整时间戳:书架按此排序,同日导入两个专辑也能保持先来后到
+    "updatedAt": datetime.datetime.now().isoformat(timespec="seconds"),
     "tracks": tracks,
 }
 path = os.path.join(os.environ["DEST"], "album.json")

@@ -129,7 +129,14 @@ func (l *library) list() []map[string]any {
 			"totalDuration": a.TotalDuration, "updatedAt": a.UpdatedAt,
 		})
 	}
-	sort.Slice(out, func(i, j int) bool { return out[i]["id"].(string) < out[j]["id"].(string) })
+	// 先导入的排前面;updatedAt 为 ISO 日期/时间戳,字符串序即时间序,同刻按 id 兜底
+	sort.Slice(out, func(i, j int) bool {
+		ti, tj := out[i]["updatedAt"].(string), out[j]["updatedAt"].(string)
+		if ti != tj {
+			return ti < tj
+		}
+		return out[i]["id"].(string) < out[j]["id"].(string)
+	})
 	return out
 }
 
