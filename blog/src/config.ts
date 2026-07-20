@@ -44,11 +44,6 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
-		{
-			name: "GitHub",
-			url: "https://github.com/monkeykg0", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
 	],
 };
 
@@ -56,15 +51,7 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "monkeykg",
 	bio: "记录技术与生活。",
-	links: [
-		{
-			name: "GitHub",
-			icon: "fa6-brands:github", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://github.com/monkeykg0",
-		},
-	],
+	links: [],
 };
 
 export const licenseConfig: LicenseConfig = {
