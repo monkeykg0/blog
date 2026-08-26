@@ -4,13 +4,14 @@ import { LANGS, type Lang, t, url } from "../lib/i18n";
 interface Props {
 	lang: Lang;
 	path: string;
-	nav?: "products" | "regions" | "method";
+	nav?: "products" | "regions" | "history" | "method";
 }
 const { lang, path, nav } = Astro.props;
 
 const items = [
 	{ key: "products" as const, label: t(lang, "navProducts"), href: url(lang, "p") },
 	{ key: "regions" as const, label: t(lang, "navRegions"), href: url(lang, "r") },
+	{ key: "history" as const, label: t(lang, "navHistory"), href: url(lang, "history") },
 	{ key: "method" as const, label: t(lang, "navMethod"), href: url(lang, "method") },
 ];
 ---

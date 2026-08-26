@@ -30,6 +30,8 @@ type ExportMeta struct {
 	GeneratedAt string `json:"generatedAt"` // 本次导出时间（RFC3339）
 	Storefronts int    `json:"storefronts"` // 地区总数
 	Products    int    `json:"products"`
+	// Days 是已积累的快照天数。=1 时历史曲线还画不出来，页面要显示积累中。
+	Days int `json:"days"`
 	// CNYPerUSD 是快照当日的美元兑人民币中间价。站点展示人民币时用它换算，
 	// 必须用快照当天的汇率，不能用构建当天的（调研报告 §3.5）。
 	CNYPerUSD float64 `json:"cnyPerUsd"`
@@ -121,11 +123,21 @@ func Export(store *Store, outDir, date string) error {
 		log.Printf("%-8s %d 个档位 / %d 条价格", p.ID, len(tiers), n)
 	}
 
+	// 历史序列与变价事件
+	hist, err := BuildHistory(store)
+	if err != nil {
+		return err
+	}
+	if err := writeJSON(filepath.Join(outDir, "history.json"), hist); err != nil {
+		return err
+	}
+	log.Printf("history  %d 天 / %d 条序列 / %d 起变价", len(hist.Days), len(hist.Series), len(hist.Changes))
+
 	meta := ExportMeta{
 		DataDate: date, FXDate: fxDate, FXSource: fxSource,
 		GeneratedAt: time.Now().UTC().Format(time.RFC3339),
 		Storefronts: len(Storefronts()), Products: len(Products),
-		CNYPerUSD: cnyPerUSD, PriceCount: totalRows,
+		CNYPerUSD: cnyPerUSD, PriceCount: totalRows, Days: len(hist.Days),
 	}
 	if err := writeJSON(filepath.Join(outDir, "meta.json"), meta); err != nil {
 		return err

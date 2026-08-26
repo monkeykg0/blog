@@ -11,7 +11,7 @@ interface Props {
 	description: string;
 	/** 当前页在其它语言下的路径（不含语言前缀），用于 hreflang 与语言切换 */
 	path?: string;
-	nav?: "products" | "regions" | "method";
+	nav?: "products" | "regions" | "history" | "method";
 }
 
 const { lang, title, description, path = "", nav } = Astro.props;

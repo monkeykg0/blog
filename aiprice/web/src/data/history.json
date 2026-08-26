@@ -1,0 +1,358 @@
+{
+ "days": [
+  "2026-08-26"
+ ],
+ "series": [
+  {
+   "productId": "chatgpt",
+   "tier": "go",
+   "tierEn": "ChatGPT Go",
+   "tierZh": "ChatGPT Go",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 4.181179,
+     "storefront": "in"
+    }
+   ]
+  },
+  {
+   "productId": "chatgpt",
+   "tier": "plus",
+   "tierEn": "ChatGPT Plus",
+   "tierZh": "ChatGPT Plus",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 161.95198,
+     "storefront": "ph"
+    }
+   ]
+  },
+  {
+   "productId": "chatgpt",
+   "tier": "plus",
+   "tierEn": "ChatGPT Plus",
+   "tierZh": "ChatGPT Plus",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 16.195198,
+     "storefront": "ph"
+    }
+   ]
+  },
+  {
+   "productId": "chatgpt",
+   "tier": "pro20x",
+   "tierEn": "ChatGPT Pro 20x",
+   "tierZh": "ChatGPT Pro 20x",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 161.95198,
+     "storefront": "ph"
+    }
+   ]
+  },
+  {
+   "productId": "chatgpt",
+   "tier": "pro5x",
+   "tierEn": "ChatGPT Pro 5x",
+   "tierZh": "ChatGPT Pro 5x",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 99.182175,
+     "storefront": "me"
+    }
+   ]
+  },
+  {
+   "productId": "claude",
+   "tier": "max20x",
+   "tierEn": "Claude Max 20x",
+   "tierZh": "Claude Max 20x",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 225.746432,
+     "storefront": "id"
+    }
+   ]
+  },
+  {
+   "productId": "claude",
+   "tier": "max5x",
+   "tierEn": "Claude Max 5x",
+   "tierZh": "Claude Max 5x",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 112.844991,
+     "storefront": "id"
+    }
+   ]
+  },
+  {
+   "productId": "claude",
+   "tier": "pro",
+   "tierEn": "Claude Pro",
+   "tierZh": "Claude Pro",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 198.321126,
+     "storefront": "eg"
+    }
+   ]
+  },
+  {
+   "productId": "claude",
+   "tier": "pro",
+   "tierEn": "Claude Pro",
+   "tierZh": "Claude Pro",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 17.65601,
+     "storefront": "pk"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_plus",
+   "tierEn": "Google AI Plus",
+   "tierZh": "Google AI Plus",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 41.916582,
+     "storefront": "in"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_plus",
+   "tierEn": "Google AI Plus",
+   "tierZh": "Google AI Plus",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 4.157076,
+     "storefront": "tr"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_plus_2tb",
+   "tierEn": "Google AI Plus (2 TB)",
+   "tierZh": "Google AI Plus (2 TB)",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 99.99,
+     "storefront": "mg"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_plus_2tb",
+   "tierEn": "Google AI Plus (2 TB)",
+   "tierZh": "Google AI Plus (2 TB)",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 7.482903,
+     "storefront": "tr"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_pro",
+   "tierEn": "Google AI Pro",
+   "tierZh": "Google AI Pro",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 199.99,
+     "storefront": "ag"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_pro",
+   "tierEn": "Google AI Pro",
+   "tierZh": "Google AI Pro",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 11.224458,
+     "storefront": "tr"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_pro_10tb",
+   "tierEn": "Google AI Pro (10 TB)",
+   "tierZh": "Google AI Pro (10 TB)",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 49.99,
+     "storefront": "bj"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_ultra",
+   "tierEn": "Google AI Ultra",
+   "tierZh": "Google AI Ultra",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 149.99,
+     "storefront": "mg"
+    }
+   ]
+  },
+  {
+   "productId": "gemini",
+   "tier": "ai_ultra_20tb",
+   "tierEn": "Google AI Ultra (20 TB)",
+   "tierZh": "Google AI Ultra (20 TB)",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 99.99,
+     "storefront": "mg"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "heavy",
+   "tierEn": "SuperGrok Heavy",
+   "tierZh": "SuperGrok Heavy",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 243.009028,
+     "storefront": "ph"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "lite",
+   "tierEn": "SuperGrok Lite",
+   "tierZh": "SuperGrok Lite",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 100,
+     "storefront": "ai"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "lite",
+   "tierEn": "SuperGrok Lite",
+   "tierZh": "SuperGrok Lite",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 9.419355,
+     "storefront": "jp"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "plus",
+   "tierEn": "SuperGrok Plus",
+   "tierZh": "SuperGrok Plus",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 1000,
+     "storefront": "ag"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "plus",
+   "tierEn": "SuperGrok Plus",
+   "tierZh": "SuperGrok Plus",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 89.721358,
+     "storefront": "pk"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "supergrok",
+   "tierEn": "SuperGrok",
+   "tierZh": "SuperGrok",
+   "period": "annual",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 243.009028,
+     "storefront": "ph"
+    }
+   ]
+  },
+  {
+   "productId": "grok",
+   "tier": "supergrok",
+   "tierEn": "SuperGrok",
+   "tierZh": "SuperGrok",
+   "period": "monthly",
+   "points": [
+    {
+     "date": "2026-08-26",
+     "usd": 27.022138,
+     "storefront": "tr"
+    }
+   ]
+  }
+ ],
+ "changes": []
+}

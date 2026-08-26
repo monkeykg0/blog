@@ -1,0 +1,227 @@
+---
+// 全球最低价逐日折线图。构建期生成 SVG，运行时没有 JS。
+//
+// 画法遵循几条硬规则：
+//   - 单一 Y 轴，绝不双轴；
+//   - 线宽 2px，端点标记 ≥8px 且带 2px 表面环（重叠时仍能分辨）；
+//   - 网格线要退到背景里，别和数据抢；
+//   - 4 条以内的序列既给图例、也给直接标注；
+//   - 文字一律用墨色，颜色只由旁边的色块承载身份。
+import { type Lang, t } from "../lib/i18n";
+import { SERIES_VAR, tierName, type HistorySeries } from "../lib/data";
+
+interface Props {
+	lang: Lang;
+	series: HistorySeries[];
+	days: string[];
+}
+const { lang, series, days } = Astro.props;
+
+// 画布几何（viewBox 坐标，非像素）
+const W = 1250;
+const H = 380;
+const L = 70; // 左边留给 Y 轴刻度
+const R = 1020; // 绘图区右边界，右侧留白放直接标注
+const TOP = 30;
+const BOT = 330;
+
+const n = days.length;
+const single = n < 2;
+
+// Y 轴上界取整到 8 的倍数，让刻度落在整数上
+const maxUsd = Math.max(...series.flatMap((s) => s.points.map((p) => p.usd)), 1);
+const yMax = Math.ceil(maxUsd / 8) * 8;
+const y = (v: number) => BOT - (v / yMax) * (BOT - TOP);
+const x = (i: number) => (n <= 1 ? R : L + (i / (n - 1)) * (R - L));
+
+const gridVals = [0, 1, 2, 3, 4].map((k) => (yMax / 4) * k);
+
+const dayIndex = new Map(days.map((d, i) => [d, i]));
+
+const plotted = series.map((s) => {
+	const pts = s.points
+		.map((p) => ({ ...p, i: dayIndex.get(p.date) ?? 0 }))
+		.sort((a, b) => a.i - b.i);
+	const last = pts[pts.length - 1]!;
+	return {
+		s,
+		color: SERIES_VAR[s.productId] ?? "var(--ink3)",
+		poly: pts.map((p) => `${x(p.i).toFixed(1)},${y(p.usd).toFixed(1)}`).join(" "),
+		last,
+		lastX: x(last.i),
+		lastY: y(last.usd),
+	};
+});
+
+// 直接标注可能挤在一起，按 y 排开，最小间距 34
+const labels = [...plotted].sort((a, b) => a.lastY - b.lastY);
+let prevY = -Infinity;
+for (const l of labels) {
+	const wanted = Math.max(l.lastY, prevY + 34);
+	(l as any).labelY = wanted;
+	prevY = wanted;
+}
+
+// x 轴刻度：最多 7 个，均匀取
+const tickIdx =
+	n <= 7 ? days.map((_, i) => i) : [0, 1, 2, 3, 4, 5, 6].map((k) => Math.round((k / 6) * (n - 1)));
+---
+
+<figure class="chart">
+	<figcaption class="legend">
+		{
+			plotted.map((p) => (
+				<span class="lg">
+					<span class="swatch" style={`background:${p.color}`}></span>
+					<span>{tierName(p.s, lang)}</span>
+				</span>
+			))
+		}
+		<span class="unit">{lang === "zh" ? "单位：美元 / 月" : "USD per month"}</span>
+	</figcaption>
+
+	<svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
+		aria-label={t(lang, "historyTitle")}>
+		{/* 网格 */}
+		<g class="grid">
+			{gridVals.slice(1).map((v) => <line x1={L} y1={y(v)} x2={R} y2={y(v)} />)}
+		</g>
+		<line class="axis" x1={L} y1={BOT} x2={R} y2={BOT}></line>
+
+		{/* Y 轴刻度 */}
+		<g class="tick" text-anchor="end">
+			{gridVals.map((v) => <text x={L - 14} y={y(v) + 4}>${Math.round(v)}</text>)}
+		</g>
+
+		{/* X 轴刻度 */}
+		<g class="tick" text-anchor="middle">
+			{
+				tickIdx.map((i) => (
+					<text x={x(i)} y={BOT + 22}>
+						{single ? days[i] : days[i]!.slice(5)}
+					</text>
+				))
+			}
+		</g>
+
+		{/* 序列 */}
+		{
+			plotted.map((p) =>
+				single ? null : (
+					<polyline
+						fill="none"
+						stroke={p.color}
+						stroke-width="2"
+						stroke-linejoin="round"
+						stroke-linecap="round"
+						points={p.poly}
+					/>
+				),
+			)
+		}
+
+		{/* 端点：2px 表面环，重叠也分得清 */}
+		{
+			plotted.map((p) => (
+				<circle cx={p.lastX} cy={p.lastY} r="4.5" fill={p.color} class="dot" />
+			))
+		}
+
+		{/* 直接标注：色块承担身份，文字用墨色 */}
+		{
+			plotted.map((p) => {
+				const ly = (p as any).labelY as number;
+				return (
+					<g>
+						{Math.abs(ly - p.lastY) > 2 && (
+							<line class="leader" x1={p.lastX + 6} y1={p.lastY} x2={R + 22} y2={ly - 4} />
+						)}
+						<rect x={R + 22} y={ly - 12} width="8" height="8" fill={p.color} />
+						<text class="lval" x={R + 37} y={ly - 4}>${p.last.usd.toFixed(2)}</text>
+						<text class="lkey" x={R + 37} y={ly + 11}>
+							{tierName(p.s, lang)} · {p.last.storefront.toUpperCase()}
+						</text>
+					</g>
+				);
+			})
+		}
+	</svg>
+</figure>
+
+<style>
+	.chart {
+		margin: 0;
+		border: 1px solid var(--rule);
+		background: var(--surface);
+		padding: 26px 24px 18px;
+	}
+	.legend {
+		display: flex;
+		gap: 26px;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 18px;
+		padding-left: 46px;
+		font-size: 12px;
+		color: var(--ink2);
+	}
+	.lg {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+	.swatch {
+		width: 14px;
+		height: 2px;
+		flex: none;
+	}
+	.unit {
+		margin-left: auto;
+		font-size: 11px;
+		color: var(--ink3);
+	}
+	svg {
+		display: block;
+		overflow: visible;
+		font-family: var(--mono);
+	}
+	.grid line {
+		stroke: var(--rule-soft);
+		stroke-width: 1;
+	}
+	.axis {
+		stroke: var(--rule);
+		stroke-width: 1;
+	}
+	.tick text {
+		fill: var(--ink3);
+		font-size: 11.5px;
+	}
+	.dot {
+		stroke: var(--surface);
+		stroke-width: 2;
+	}
+	.leader {
+		stroke: var(--rule);
+		stroke-width: 1;
+	}
+	.lval {
+		fill: var(--ink);
+		font-size: 12.5px;
+		font-weight: 500;
+	}
+	.lkey {
+		fill: var(--ink3);
+		font-size: 11px;
+		font-family: var(--sans);
+	}
+	@media (max-width: 760px) {
+		.chart {
+			padding: 18px 12px 12px;
+		}
+		.legend {
+			padding-left: 0;
+			gap: 14px;
+		}
+	}
+</style>

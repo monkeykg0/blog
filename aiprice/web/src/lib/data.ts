@@ -9,6 +9,7 @@ import chatgpt from "../data/prices/chatgpt.json";
 import claude from "../data/prices/claude.json";
 import gemini from "../data/prices/gemini.json";
 import grok from "../data/prices/grok.json";
+import historyJson from "../data/history.json";
 import { type Lang } from "./i18n";
 
 export interface Meta {
@@ -20,6 +21,7 @@ export interface Meta {
 	products: number;
 	cnyPerUsd: number;
 	priceCount: number;
+	days: number;
 }
 
 export interface Storefront {
@@ -65,6 +67,62 @@ export interface TierPrices {
 	tierZh: string;
 	period: string;
 	rows: PriceRow[]; // 已按美元价升序
+}
+
+export interface HistoryPoint {
+	date: string;
+	usd: number;
+	storefront: string;
+}
+
+export interface HistorySeries {
+	productId: string;
+	tier: string;
+	tierEn: string;
+	tierZh: string;
+	period: string;
+	points: HistoryPoint[];
+}
+
+export interface PriceChange {
+	date: string;
+	prevDate: string;
+	productId: string;
+	tier: string;
+	tierEn: string;
+	tierZh: string;
+	period: string;
+	storefront: string;
+	currency: string;
+	fromRaw: string;
+	toRaw: string;
+	pct: number;
+}
+
+export interface History {
+	days: string[];
+	series: HistorySeries[];
+	changes: PriceChange[];
+}
+
+export const history = historyJson as History;
+
+/** 首页那四个代表档位的历史序列，用于趋势图。 */
+export function headlineSeries(): HistorySeries[] {
+	const out: HistorySeries[] = [];
+	for (const p of products) {
+		const tp = headlineTier(p);
+		if (!tp) continue;
+		const s = history.series.find(
+			(x) => x.productId === p.id && x.tier === tp.tier && x.period === tp.period,
+		);
+		if (s && s.points.length > 0) out.push(s);
+	}
+	return out.sort((a, b) => {
+		const la = a.points[a.points.length - 1]?.usd ?? 0;
+		const lb = b.points[b.points.length - 1]?.usd ?? 0;
+		return lb - la;
+	});
 }
 
 export const meta = metaJson as Meta;

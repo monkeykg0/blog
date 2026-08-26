@@ -23,7 +23,33 @@ const STRINGS = {
 
 	navProducts: { en: "Products", zh: "产品" },
 	navRegions: { en: "Regions", zh: "地区" },
+	navHistory: { en: "History", zh: "历史" },
 	navMethod: { en: "Method", zh: "方法论" },
+
+	historyTitle: { en: "Lowest price worldwide, by day", zh: "各产品全球最低价，逐日" },
+	historySub: {
+		en: "Each line is that product's cheapest storefront price on that day, in USD. A line falling can mean a price cut or simply a weaker local currency.",
+		zh: "每条线是该产品当天在全部地区中的最低折算美元价。线的下行既可能来自降价，也可能来自当地货币贬值。",
+	},
+	historyEmpty: {
+		en: "Only one day of data so far",
+		zh: "目前只有一天数据",
+	},
+	historyEmptyBody: {
+		en: "Trend lines need at least two daily snapshots. Collection started {date} and runs once a day — the chart fills in from tomorrow. The figures below are today's starting values.",
+		zh: "画趋势线至少需要两天快照。数据从 {date} 开始采集，每日一次，曲线将从明天起逐日生长。下面是今天的起点值。",
+	},
+	changesTitle: { en: "Price changes", zh: "变价事件" },
+	changesEmpty: {
+		en: "No price changes recorded yet — that needs at least two snapshots to compare.",
+		zh: "尚未记录到变价 —— 这需要至少两次快照才能比较。",
+	},
+	changesNote: {
+		en: "Compared against the previous snapshot, storefront by storefront. Only the local currency price is compared: an exchange-rate move is not a price change.",
+		zh: "与上一次抓取逐地区比对。只比较本地货币标价——汇率波动不算变价。",
+	},
+	whyHistory: { en: "Why keep history", zh: "为什么记录历史" },
+	daysCollected: { en: "{n} days collected", zh: "已积累 {n} 天" },
 
 	homeEyebrow: {
 		en: "Measured daily · {n} App Store storefronts",

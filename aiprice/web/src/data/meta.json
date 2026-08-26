@@ -2,9 +2,10 @@
  "dataDate": "2026-08-26",
  "fxDate": "2026-08-26",
  "fxSource": "open.er-api.com",
- "generatedAt": "2026-08-26T03:50:09Z",
+ "generatedAt": "2026-08-26T04:22:21Z",
  "storefronts": 158,
  "products": 4,
+ "days": 1,
  "cnyPerUsd": 6.737012,
  "priceCount": 2767
 }
