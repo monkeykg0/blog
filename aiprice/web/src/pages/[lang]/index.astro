@@ -1,0 +1,395 @@
+---
+import Base from "../../layouts/Base.astro";
+import SeriesDot from "../../components/SeriesDot.astro";
+import { LANGS, type Lang, t, url } from "../../lib/i18n";
+import {
+	cny,
+	headlineTier,
+	meta,
+	pct,
+	productName,
+	products,
+	regionName,
+	statsOf,
+	storefrontOf,
+	tierName,
+	usd,
+} from "../../lib/data";
+
+export function getStaticPaths() {
+	return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+const overview = products
+	.map((p) => {
+		const tp = headlineTier(p);
+		if (!tp) return null;
+		const st = statsOf(tp);
+		if (!st) return null;
+		return { product: p, tp, st };
+	})
+	.filter((x): x is NonNullable<typeof x> => x !== null)
+	.sort((a, b) => a.st.lowest.usd - b.st.lowest.usd);
+
+const title = `${t(lang, "siteName")} — ${t(lang, "tagline")}`;
+const description = t(lang, "homeStandfirst", { n: meta.storefronts });
+---
+
+<Base {lang} {title} {description} path="">
+	<!-- lede -->
+	<section class="wrap lede rule-bottom">
+		<div>
+			<p class="eyebrow">{t(lang, "homeEyebrow", { n: meta.storefronts })}</p>
+			<h1>{t(lang, "homeHeadline")}</h1>
+			<p class="standfirst">{t(lang, "homeStandfirst", { n: meta.storefronts })}</p>
+		</div>
+		<aside class="runbox">
+			<p class="eyebrow">{t(lang, "thisRun")}</p>
+			<dl>
+				<div><dt>{t(lang, "dataDate")}</dt><dd class="num">{meta.dataDate}</dd></div>
+				<div><dt>{t(lang, "coverage")}</dt><dd class="num">{meta.storefronts}</dd></div>
+				<div><dt>{t(lang, "priceRecords")}</dt><dd class="num">{meta.priceCount.toLocaleString("en-US")}</dd></div>
+				<div class="sep">
+					<dt>{t(lang, "fxRate")}</dt>
+					<dd class="num">USD/CNY {meta.cnyPerUsd.toFixed(4)}</dd>
+				</div>
+			</dl>
+		</aside>
+	</section>
+
+	<!-- 四产品总览 -->
+	<section class="wrap ov">
+		<header class="ovhead">
+			<h2 class="eyebrow">{t(lang, "featuredTiers")}</h2>
+			<p class="note">{t(lang, "tableNote")}</p>
+		</header>
+
+		<div class="scroll-x">
+			<table class="ovt">
+				<thead>
+					<tr>
+						<th scope="col" class="c-p">{t(lang, "colProduct")}</th>
+						<th scope="col" class="c-spread">{t(lang, "colSpread")}</th>
+						<th scope="col" class="c-r">{t(lang, "colLowest")}</th>
+						<th scope="col" class="c-r">{t(lang, "colUS")}</th>
+						<th scope="col" class="c-r c-gap">{t(lang, "colGap")}</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						overview.map(({ product, tp, st }) => {
+							const lowSf = storefrontOf(st.lowest.storefront);
+							const usPos = st.usRank
+								? ((st.us!.usd - st.lowest.usd) / (st.highest.usd - st.lowest.usd || 1)) * 100
+								: null;
+							const href = url(lang, `p/${product.id}/${tp.tier}`);
+							return (
+								<tr>
+									<th scope="row" class="c-p">
+										<a href={href} class="pcell">
+											<SeriesDot productId={product.id} />
+											<span>
+												<span class="pname">{tierName(tp, lang)}</span>
+												<span class="pmeta">
+													{product.vendor} · {t(lang, "regionsWord", { n: st.count })}
+												</span>
+											</span>
+										</a>
+									</th>
+									<td class="c-spread">
+										<span class="track" style={`--tint: ${product.id}`}>
+											<span class="fill" data-p={product.id}></span>
+											{usPos !== null && (
+												<span class="usmark" style={`left: ${usPos}%`}>
+													<span class="uslabel">US</span>
+												</span>
+											)}
+										</span>
+									</td>
+									<td class="c-r">
+										<span class="big num">${usd(st.lowest.usd)}</span>
+										<span class="sub">
+											{st.lowest.storefront.toUpperCase()}
+											{lowSf ? ` ${regionName(lowSf, lang)}` : ""}
+										</span>
+									</td>
+									<td class="c-r">
+										{st.us ? (
+											<>
+												<span class="big num muted">${usd(st.us.usd)}</span>
+												<span class="sub">
+													{lang === "zh" ? `第 ${st.usRank} / ${st.count}` : `#${st.usRank} of ${st.count}`}
+													{st.usTied && st.usTied > 1 && (
+														<span class="tie">
+															{lang === "zh" ? ` ${st.usTied} 地区同价` : ` ${st.usTied} tied`}
+														</span>
+													)}
+												</span>
+											</>
+										) : (
+											<span class="sub">—</span>
+										)}
+									</td>
+									<td class="c-r c-gap"><span class="big num">{pct(st.spread)}</span></td>
+								</tr>
+							);
+						})
+					}
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<!-- 读数说明 -->
+	<section class="wrap reads">
+		<h2 class="eyebrow">{lang === "zh" ? "读数说明" : "Reading these numbers"}</h2>
+		<div class="cards">
+			<p>
+				<b>{lang === "zh" ? "同一币种不等于同价。" : "Same currency, different price."}</b>
+				{
+					lang === "zh"
+						? "158 个地区共用 40 种货币，但同为欧元区，保加利亚的 ChatGPT Plus 是 19,99 €，德国是 22,99 €。"
+						: "158 storefronts share 40 currencies, yet ChatGPT Plus is 19,99 € in Bulgaria and 22,99 € in Germany."
+				}
+			</p>
+			<p>
+				<b>{lang === "zh" ? "没有万能低价区。" : "There is no single cheapest country."}</b>
+				{
+					overview
+						.map((o) => `${tierName(o.tp, lang)} — ${o.st.lowest.storefront.toUpperCase()}`)
+						.join(lang === "zh" ? "；" : "; ")
+				}.
+			</p>
+			<p>
+				<b>{lang === "zh" ? "价格会过期。" : "Prices go stale."}</b>
+				{
+					lang === "zh"
+						? "土耳其区曾长期是 ChatGPT 最低价地区，调价后已排到第 97 位，而多数攻略仍停留在调价之前。"
+						: "Turkey was for a long time the cheapest storefront for ChatGPT; after a price rise it now sits at #97, while most guides still say otherwise."
+				}
+			</p>
+		</div>
+	</section>
+</Base>
+
+<style>
+	.lede {
+		display: grid;
+		grid-template-columns: 1fr 340px;
+		gap: 64px;
+		padding-block: 44px 38px;
+	}
+	h1 {
+		font-size: 46px;
+		line-height: 1.14;
+		margin: 18px 0 20px;
+		max-width: 15em;
+	}
+	.standfirst {
+		margin: 0;
+		font-size: 15.5px;
+		line-height: 1.7;
+		color: var(--ink2);
+		max-width: 46em;
+	}
+	.runbox {
+		border-left: 1px solid var(--rule);
+		padding-left: 28px;
+	}
+	.runbox dl {
+		margin: 14px 0 0;
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+		font-size: 12.5px;
+	}
+	.runbox div {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+	}
+	.runbox .sep {
+		padding-top: 11px;
+		border-top: 1px solid var(--rule);
+	}
+	.runbox dt {
+		color: var(--ink3);
+	}
+	.runbox dd {
+		margin: 0;
+	}
+
+	.ov {
+		padding-block: 34px 10px;
+	}
+	.ovhead {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 24px;
+		margin-bottom: 18px;
+	}
+	.ovhead h2 {
+		font-family: var(--sans);
+		margin: 0;
+	}
+	.note {
+		margin: 0;
+		font-size: 11.5px;
+		color: var(--ink3);
+	}
+
+	.ovt {
+		width: 100%;
+		border-collapse: collapse;
+		min-width: 820px;
+	}
+	.ovt thead th {
+		font-size: 10.5px;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--ink3);
+		font-weight: 600;
+		text-align: left;
+		padding: 0 12px 9px;
+		border-bottom: 1px solid var(--ink);
+	}
+	.ovt thead th.c-r {
+		text-align: right;
+	}
+	.ovt tbody td,
+	.ovt tbody th {
+		padding: 17px 12px;
+		border-bottom: 1px solid var(--rule);
+		text-align: left;
+		font-weight: 400;
+	}
+	.ovt tbody td.c-r {
+		text-align: right;
+	}
+	.c-p {
+		width: 230px;
+	}
+	.c-gap {
+		width: 96px;
+	}
+	.pcell {
+		display: flex;
+		align-items: baseline;
+		gap: 9px;
+	}
+	.pname {
+		display: block;
+		font-size: 14.5px;
+		font-weight: 500;
+	}
+	.pmeta {
+		display: block;
+		font-size: 11.5px;
+		color: var(--ink3);
+		margin-top: 2px;
+	}
+	.big {
+		display: block;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.big.muted {
+		color: var(--ink2);
+		font-weight: 400;
+	}
+	.sub {
+		display: block;
+		font-size: 11px;
+		color: var(--ink3);
+		margin-top: 2px;
+	}
+	.tie {
+		opacity: 0.75;
+	}
+
+	.track {
+		position: relative;
+		display: block;
+		height: 30px;
+	}
+	.track::before {
+		content: "";
+		position: absolute;
+		inset-inline: 0;
+		top: 14px;
+		height: 1px;
+		background: var(--rule);
+	}
+	.fill {
+		position: absolute;
+		inset-inline: 0;
+		top: 11px;
+		height: 7px;
+		opacity: 0.22;
+	}
+	.fill[data-p="chatgpt"] { background: var(--s1); }
+	.fill[data-p="claude"] { background: var(--s2); }
+	.fill[data-p="gemini"] { background: var(--s3); }
+	.fill[data-p="grok"] { background: var(--s4); }
+	.usmark {
+		position: absolute;
+		top: 5px;
+		width: 1px;
+		height: 19px;
+		background: var(--ink);
+		opacity: 0.55;
+	}
+	.uslabel {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 10px;
+		color: var(--ink3);
+	}
+
+	.reads {
+		padding-block: 34px 10px;
+	}
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 32px;
+		margin-top: 16px;
+	}
+	.cards p {
+		margin: 0;
+		font-size: 13px;
+		line-height: 1.72;
+		color: var(--ink2);
+		padding-left: 20px;
+		border-left: 1px solid var(--rule);
+	}
+	.cards b {
+		color: var(--ink);
+		font-weight: 500;
+	}
+
+	@media (max-width: 980px) {
+		.lede {
+			grid-template-columns: 1fr;
+			gap: 32px;
+		}
+		h1 {
+			font-size: 34px;
+		}
+		.runbox {
+			border-left: 0;
+			border-top: 1px solid var(--rule);
+			padding-left: 0;
+			padding-top: 20px;
+		}
+		.cards {
+			grid-template-columns: 1fr;
+			gap: 18px;
+		}
+	}
+</style>

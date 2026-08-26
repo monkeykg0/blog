@@ -1,0 +1,356 @@
+---
+import Base from "../../../layouts/Base.astro";
+import SeriesDot from "../../../components/SeriesDot.astro";
+import { LANGS, type Lang, t, url } from "../../../lib/i18n";
+import {
+	activeStorefronts,
+	cny,
+	currencyName,
+	meta,
+	productName,
+	regionEntries,
+	regionName,
+	storefrontOf,
+	tierName,
+	usd,
+} from "../../../lib/data";
+
+export function getStaticPaths() {
+	const paths = [];
+	for (const lang of LANGS) {
+		for (const sf of activeStorefronts()) {
+			paths.push({ params: { lang, code: sf.code } });
+		}
+	}
+	return paths;
+}
+
+const lang = Astro.params.lang as Lang;
+const code = Astro.params.code as string;
+
+const sf = storefrontOf(code)!;
+const entries = regionEntries(code);
+const tierCount = entries.reduce((n, e) => n + e.items.length, 0);
+
+// 该地区有几个产品的主力档比美国便宜
+const vsUS = entries.flatMap((e) =>
+	e.items
+		.filter((i) => i.tier.period === "monthly")
+		.map((i) => {
+			const us = i.tier.rows.find((r) => r.storefront === "us");
+			return us ? i.row.usd < us.usd : null;
+		})
+		.filter((x): x is boolean => x !== null),
+);
+const cheaperCount = vsUS.filter(Boolean).length;
+
+// 当日汇率直接由数据反推：本地金额 / 美元金额。用不着再往导出里塞一份汇率表，
+// 而且这样算出来的一定和页面上这些价格自洽。
+const sample = entries[0]?.items[0]?.row;
+const fxRate = sample && sample.usd > 0 ? sample.amount / sample.usd : null;
+
+const name = regionName(sf, lang);
+const path = `r/${code}`;
+const title = `${name} App Store — ${lang === "zh" ? "AI 订阅价格" : "AI subscription prices"} · ${t(lang, "siteName")}`;
+const description = t(lang, "regionSub", {
+	name,
+	cur: `${sf.currency} ${currencyName(sf, lang)}`,
+	n: tierCount,
+});
+---
+
+<Base {lang} {title} {description} {path} nav="regions">
+	<section class="wrap head rule-bottom">
+		<nav class="crumb" aria-label="breadcrumb">
+			<a href={url(lang, "r")}>{t(lang, "navRegions")}</a>
+			<span aria-hidden="true">/</span>
+			<span class="cur">{name}</span>
+		</nav>
+
+		<div class="row">
+			<div>
+				<h1>
+					<span class="code big">{code.toUpperCase()}</span>
+					{t(lang, "regionTitle", { name })}
+				</h1>
+				<p class="sub">
+					{t(lang, "regionSub", { name, cur: `${sf.currency} ${currencyName(sf, lang)}`, n: tierCount })}
+				</p>
+			</div>
+
+			<div class="stats">
+				<div>
+					<p class="eyebrow">{lang === "zh" ? "当日汇率" : "FX that day"}</p>
+					<p class="v num">{fxRate === null ? "—" : fxRate >= 100 ? fxRate.toFixed(0) : fxRate.toFixed(2)}</p>
+					<p class="k num">{sf.currency} / USD</p>
+				</div>
+				<div>
+					<p class="eyebrow">{lang === "zh" ? "对比美国" : "vs United States"}</p>
+					<p class="v">
+						{
+							lang === "zh"
+								? `${cheaperCount} / ${vsUS.length} 更低`
+								: `${cheaperCount} of ${vsUS.length} lower`
+						}
+					</p>
+					<p class="k">{lang === "zh" ? "月付档位" : "monthly tiers"}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="wrap body">
+		<div class="scroll-x">
+			<table class="tbl">
+				<caption class="sr-only">{description}</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="c-tier">{t(lang, "colTier")}</th>
+						<th scope="col" class="c-per">{t(lang, "colPeriod")}</th>
+						<th scope="col" class="c-local">{t(lang, "colLocal")}</th>
+						<th scope="col" class="c-n">≈ USD</th>
+						<th scope="col" class="c-n">≈ CNY</th>
+						<th scope="col" class="c-n c-rank">{t(lang, "colGlobalRank")}</th>
+					</tr>
+				</thead>
+				{
+					entries.map((e) => (
+						<tbody>
+							<tr class="grp">
+								<th scope="rowgroup" colspan="6">
+									<span class="gname">
+										<SeriesDot productId={e.product.id} />
+										<b>{productName(e.product, lang)}</b>
+										<span class="vendor">{e.product.vendor}</span>
+									</span>
+								</th>
+							</tr>
+							{e.items.map((i) => {
+								const top = i.rank <= 5;
+								return (
+									<tr>
+										<td class="c-tier">
+											<a href={url(lang, `p/${e.product.id}/${i.tier.tier}`)}>
+												{tierName(i.tier, lang)}
+											</a>
+										</td>
+										<td class="c-per">
+											{t(lang, i.tier.period === "annual" ? "annual" : "monthly")}
+										</td>
+										<td class="c-local num">{i.row.rawPrice}</td>
+										<td class="c-n num strong">{usd(i.row.usd)}</td>
+										<td class="c-n num soft">{cny(i.row.usd)}</td>
+										<td class="c-n c-rank num" data-top={top ? "1" : null}>
+											{i.rank} / {i.total}
+											{i.tied > 1 && <span class="tie">={i.tied}</span>}
+										</td>
+									</tr>
+								);
+							})}
+						</tbody>
+					))
+				}
+			</table>
+		</div>
+
+		<aside class="notice">
+			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+				<circle cx="8" cy="8" r="6.6" stroke="currentColor" stroke-width="1.3"></circle>
+				<path d="M8 4.9v3.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+				<circle cx="8" cy="11" r=".85" fill="currentColor"></circle>
+			</svg>
+			<p>{t(lang, "notListed")}</p>
+		</aside>
+	</section>
+</Base>
+
+<style>
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+	}
+	.head {
+		padding-block: 34px 26px;
+	}
+	.crumb {
+		font-size: 12px;
+		color: var(--ink3);
+		margin-bottom: 14px;
+		display: flex;
+		gap: 7px;
+	}
+	.crumb a {
+		color: var(--ink3);
+	}
+	.crumb .cur {
+		color: var(--ink);
+	}
+	.row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 48px;
+		flex-wrap: wrap;
+	}
+	h1 {
+		font-size: 40px;
+		line-height: 1;
+		margin: 0 0 12px;
+		display: flex;
+		align-items: center;
+		gap: 13px;
+	}
+	.code.big {
+		font-size: 13px;
+		padding: 4px 8px;
+		border-color: var(--ink);
+		color: var(--ink);
+	}
+	.sub {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--ink2);
+	}
+	.stats {
+		display: flex;
+		border: 1px solid var(--rule);
+		background: var(--surface);
+	}
+	.stats > div {
+		padding: 13px 22px;
+		border-right: 1px solid var(--rule);
+	}
+	.stats > div:last-child {
+		border-right: 0;
+	}
+	.stats p {
+		margin: 0;
+	}
+	.stats .v {
+		font-size: 19px;
+		margin-top: 6px;
+	}
+	.stats .k {
+		font-size: 11px;
+		color: var(--ink3);
+		margin-top: 3px;
+	}
+
+	.body {
+		padding-block: 8px 40px;
+	}
+	.tbl {
+		width: 100%;
+		border-collapse: collapse;
+		min-width: 720px;
+	}
+	thead th {
+		font-size: 10.5px;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--ink3);
+		font-weight: 600;
+		text-align: left;
+		padding: 16px 10px 9px;
+		border-bottom: 1px solid var(--ink);
+	}
+	thead th.c-n {
+		text-align: right;
+	}
+	tbody td {
+		padding: 10px;
+		border-bottom: 1px solid var(--rule);
+	}
+	tbody td.c-n {
+		text-align: right;
+	}
+	tr.grp th {
+		text-align: left;
+		font-weight: 400;
+		padding: 22px 10px 9px;
+		border-bottom: 0;
+	}
+	.gname {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+	}
+	.gname b {
+		font-size: 15px;
+		font-weight: 500;
+	}
+	.vendor {
+		font-size: 11.5px;
+		color: var(--ink3);
+	}
+	.c-tier {
+		font-size: 13.5px;
+	}
+	.c-per {
+		width: 92px;
+		font-size: 12.5px;
+		color: var(--ink2);
+	}
+	.c-local {
+		width: 160px;
+		font-size: 13px;
+		color: var(--ink2);
+	}
+	.c-n {
+		width: 100px;
+	}
+	.strong {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.soft {
+		font-size: 13px;
+		color: var(--ink2);
+	}
+	.c-rank {
+		width: 128px;
+		font-size: 12.5px;
+		color: var(--ink3);
+	}
+	.tie {
+		font-size: 10px;
+		opacity: 0.7;
+		margin-left: 3px;
+		font-weight: 400;
+	}
+	.c-rank[data-top] {
+		color: var(--ink);
+		font-weight: 500;
+	}
+
+	.notice {
+		margin-top: 20px;
+		padding: 15px 18px;
+		border: 1px solid var(--rule);
+		background: var(--surface);
+		display: flex;
+		gap: 14px;
+		align-items: flex-start;
+		color: var(--ink3);
+	}
+	.notice svg {
+		flex: none;
+		margin-top: 1px;
+	}
+	.notice p {
+		margin: 0;
+		font-size: 12px;
+		color: var(--ink2);
+		line-height: 1.7;
+	}
+
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 28px;
+		}
+	}
+</style>

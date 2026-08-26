@@ -1,0 +1,5572 @@
+[
+ {
+  "tier": "go",
+  "tierEn": "ChatGPT Go",
+  "tierZh": "ChatGPT Go",
+  "period": "monthly",
+  "rows": [
+   {
+    "storefront": "in",
+    "currency": "INR",
+    "rawPrice": "₹ 399",
+    "amount": 399,
+    "usd": 4.181179
+   },
+   {
+    "storefront": "id",
+    "currency": "IDR",
+    "rawPrice": "Rp 75ribu",
+    "amount": 75000,
+    "usd": 4.233804
+   },
+   {
+    "storefront": "ph",
+    "currency": "PHP",
+    "rawPrice": "₱ 300.00",
+    "amount": 300,
+    "usd": 4.863422
+   },
+   {
+    "storefront": "eg",
+    "currency": "EGP",
+    "rawPrice": "EGP 249.99",
+    "amount": 249.99,
+    "usd": 4.957834
+   },
+   {
+    "storefront": "mn",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "sz",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "mr",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "sr",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "jo",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "mw",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "iq",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "sl",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "mz",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "cg",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "bf",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "ne",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "td",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "ni",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "hn",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "cd",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "gw",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "gm",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "bo",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "pg",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "dz",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "tn",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "rw",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "mg",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "ml",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "ye",
+    "currency": "USD",
+    "rawPrice": "$4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "lr",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "ao",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "sv",
+    "currency": "USD",
+    "rawPrice": "USD 4.99",
+    "amount": 4.99,
+    "usd": 4.99
+   },
+   {
+    "storefront": "mm",
+    "currency": "USD",
+    "rawPrice": "USD 5.00",
+    "amount": 5,
+    "usd": 5
+   },
+   {
+    "storefront": "sb",
+    "currency": "USD",
+    "rawPrice": "USD 5.00",
+    "amount": 5,
+    "usd": 5
+   },
+   {
+    "storefront": "lk",
+    "currency": "USD",
+    "rawPrice": "USD 5.00",
+    "amount": 5,
+    "usd": 5
+   },
+   {
+    "storefront": "bt",
+    "currency": "USD",
+    "rawPrice": "USD 5.00",
+    "amount": 5,
+    "usd": 5
+   },
+   {
+    "storefront": "fm",
+    "currency": "USD",
+    "rawPrice": "USD 5.00",
+    "amount": 5,
+    "usd": 5
+   },
+   {
+    "storefront": "pk",
+    "currency": "PKR",
+    "rawPrice": "Rs 1,400.00",
+    "amount": 1400,
+    "usd": 5.044574
+   },
+   {
+    "storefront": "vn",
+    "currency": "VND",
+    "rawPrice": "132.000đ",
+    "amount": 132000,
+    "usd": 5.065252
+   },
+   {
+    "storefront": "ng",
+    "currency": "NGN",
+    "rawPrice": "₦ 6,900.00",
+    "amount": 6900,
+    "usd": 5.10826
+   },
+   {
+    "storefront": "tr",
+    "currency": "TRY",
+    "rawPrice": "₺249,99",
+    "amount": 249.99,
+    "usd": 5.196397
+   },
+   {
+    "storefront": "la",
+    "currency": "USD",
+    "rawPrice": "USD 5.49",
+    "amount": 5.49,
+    "usd": 5.49
+   },
+   {
+    "storefront": "kh",
+    "currency": "USD",
+    "rawPrice": "USD 5.49",
+    "amount": 5.49,
+    "usd": 5.49
+   },
+   {
+    "storefront": "tz",
+    "currency": "TZS",
+    "rawPrice": "14,900.00 TZS",
+    "amount": 14900,
+    "usd": 5.687619
+   },
+   {
+    "storefront": "np",
+    "currency": "USD",
+    "rawPrice": "USD 5.69",
+    "amount": 5.69,
+    "usd": 5.69
+   },
+   {
+    "storefront": "my",
+    "currency": "MYR",
+    "rawPrice": "RM23.99",
+    "amount": 23.99,
+    "usd": 5.928211
+   },
+   {
+    "storefront": "pe",
+    "currency": "PEN",
+    "rawPrice": "S/ 19.90",
+    "amount": 19.9,
+    "usd": 5.936375
+   },
+   {
+    "storefront": "bz",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "zm",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "lb",
+    "currency": "USD",
+    "rawPrice": "$5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "gy",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "bj",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ma",
+    "currency": "USD",
+    "rawPrice": "$5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "tj",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "gt",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "fj",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "bw",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "bn",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "gh",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ly",
+    "currency": "USD",
+    "rawPrice": "$5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ec",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ga",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "do",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "py",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "zw",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "uz",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "mv",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ug",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ar",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "az",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "mu",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "na",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "cr",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "kg",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "jm",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "sn",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ke",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "mk",
+    "currency": "USD",
+    "rawPrice": "USD 5.99",
+    "amount": 5.99,
+    "usd": 5.99
+   },
+   {
+    "storefront": "ci",
+    "currency": "USD",
+    "rawPrice": "6,00 $US",
+    "amount": 6,
+    "usd": 6
+   },
+   {
+    "storefront": "ro",
+    "currency": "RON",
+    "rawPrice": "29,99 lei",
+    "amount": 29.99,
+    "usd": 6.658522
+   },
+   {
+    "storefront": "ua",
+    "currency": "USD",
+    "rawPrice": "6,99 USD",
+    "amount": 6.99,
+    "usd": 6.99
+   },
+   {
+    "storefront": "am",
+    "currency": "USD",
+    "rawPrice": "USD 6.99",
+    "amount": 6.99,
+    "usd": 6.99
+   },
+   {
+    "storefront": "al",
+    "currency": "USD",
+    "rawPrice": "USD 6.99",
+    "amount": 6.99,
+    "usd": 6.99
+   },
+   {
+    "storefront": "md",
+    "currency": "USD",
+    "rawPrice": "USD 6.99",
+    "amount": 6.99,
+    "usd": 6.99
+   },
+   {
+    "storefront": "rs",
+    "currency": "EUR",
+    "rawPrice": "5,99 €",
+    "amount": 5.99,
+    "usd": 6.990248
+   },
+   {
+    "storefront": "dm",
+    "currency": "USD",
+    "rawPrice": "USD 7.00",
+    "amount": 7,
+    "usd": 7
+   },
+   {
+    "storefront": "vc",
+    "currency": "USD",
+    "rawPrice": "USD 7.00",
+    "amount": 7,
+    "usd": 7
+   },
+   {
+    "storefront": "lc",
+    "currency": "USD",
+    "rawPrice": "USD 7.00",
+    "amount": 7,
+    "usd": 7
+   },
+   {
+    "storefront": "kz",
+    "currency": "KZT",
+    "rawPrice": "3,390.00₸",
+    "amount": 3390,
+    "usd": 7.409005
+   },
+   {
+    "storefront": "bg",
+    "currency": "EUR",
+    "rawPrice": "6,49 €",
+    "amount": 6.49,
+    "usd": 7.573741
+   },
+   {
+    "storefront": "mx",
+    "currency": "MXN",
+    "rawPrice": "$129.00",
+    "amount": 129,
+    "usd": 7.612117
+   },
+   {
+    "storefront": "br",
+    "currency": "BRL",
+    "rawPrice": "R$ 39,90",
+    "amount": 39.9,
+    "usd": 7.740812
+   },
+   {
+    "storefront": "th",
+    "currency": "THB",
+    "rawPrice": "฿259.00",
+    "amount": 259,
+    "usd": 7.916018
+   },
+   {
+    "storefront": "bh",
+    "currency": "USD",
+    "rawPrice": "$7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "pa",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "ky",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "om",
+    "currency": "USD",
+    "rawPrice": "$7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "bs",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "cv",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "bm",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "tm",
+    "currency": "USD",
+    "rawPrice": "USD 7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "kw",
+    "currency": "USD",
+    "rawPrice": "$7.99",
+    "amount": 7.99,
+    "usd": 7.99
+   },
+   {
+    "storefront": "tc",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "kn",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "ai",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "us",
+    "currency": "USD",
+    "rawPrice": "$8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "vg",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "ms",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "bb",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "ag",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "tt",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "gd",
+    "currency": "USD",
+    "rawPrice": "USD 8.00",
+    "amount": 8,
+    "usd": 8
+   },
+   {
+    "storefront": "co",
+    "currency": "COP",
+    "rawPrice": "$ 24.900,00",
+    "amount": 24900,
+    "usd": 8.129397
+   },
+   {
+    "storefront": "ae",
+    "currency": "AED",
+    "rawPrice": "AED 29.99",
+    "amount": 29.99,
+    "usd": 8.166099
+   },
+   {
+    "storefront": "me",
+    "currency": "EUR",
+    "rawPrice": "7,00 €",
+    "amount": 7,
+    "usd": 8.168904
+   },
+   {
+    "storefront": "qa",
+    "currency": "QAR",
+    "rawPrice": "QAR 29.99",
+    "amount": 29.99,
+    "usd": 8.23901
+   },
+   {
+    "storefront": "nz",
+    "currency": "NZD",
+    "rawPrice": "$13.99",
+    "amount": 13.99,
+    "usd": 8.355082
+   },
+   {
+    "storefront": "il",
+    "currency": "ILS",
+    "rawPrice": "₪25.00",
+    "amount": 25,
+    "usd": 8.394504
+   },
+   {
+    "storefront": "tw",
+    "currency": "TWD",
+    "rawPrice": "$270.00",
+    "amount": 270,
+    "usd": 8.477856
+   },
+   {
+    "storefront": "sg",
+    "currency": "SGD",
+    "rawPrice": "S$ 10.98",
+    "amount": 10.98,
+    "usd": 8.648291
+   },
+   {
+    "storefront": "ch",
+    "currency": "CHF",
+    "rawPrice": "CHF 7.00",
+    "amount": 7,
+    "usd": 8.726025
+   },
+   {
+    "storefront": "cl",
+    "currency": "CLP",
+    "rawPrice": "$7.990",
+    "amount": 7990,
+    "usd": 8.750062
+   },
+   {
+    "storefront": "jp",
+    "currency": "JPY",
+    "rawPrice": "¥1,400",
+    "amount": 1400,
+    "usd": 8.791398
+   },
+   {
+    "storefront": "se",
+    "currency": "SEK",
+    "rawPrice": "85,00 kr",
+    "amount": 85,
+    "usd": 8.970856
+   },
+   {
+    "storefront": "uy",
+    "currency": "USD",
+    "rawPrice": "USD 8.99",
+    "amount": 8.99,
+    "usd": 8.99
+   },
+   {
+    "storefront": "au",
+    "currency": "AUD",
+    "rawPrice": "$13.00",
+    "amount": 13,
+    "usd": 9.305988
+   },
+   {
+    "storefront": "fi",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "ee",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "lu",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "lt",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "lv",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "es",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "nl",
+    "currency": "EUR",
+    "rawPrice": "€ 7,99",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "mt",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "it",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "fr",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "gr",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "cy",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "pt",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "sk",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "ie",
+    "currency": "EUR",
+    "rawPrice": "€7.99",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "hr",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "si",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "de",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "at",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "be",
+    "currency": "EUR",
+    "rawPrice": "7,99 €",
+    "amount": 7.99,
+    "usd": 9.324221
+   },
+   {
+    "storefront": "sa",
+    "currency": "SAR",
+    "rawPrice": "SAR 35.00",
+    "amount": 35,
+    "usd": 9.333333
+   },
+   {
+    "storefront": "ca",
+    "currency": "CAD",
+    "rawPrice": "$12.99",
+    "amount": 12.99,
+    "usd": 9.386082
+   },
+   {
+    "storefront": "kr",
+    "currency": "KRW",
+    "rawPrice": "￦13,000",
+    "amount": 13000,
+    "usd": 9.399056
+   },
+   {
+    "storefront": "za",
+    "currency": "ZAR",
+    "rawPrice": "R149.99",
+    "amount": 149.99,
+    "usd": 9.408796
+   },
+   {
+    "storefront": "pl",
+    "currency": "PLN",
+    "rawPrice": "34,99 zł",
+    "amount": 34.99,
+    "usd": 9.488705
+   },
+   {
+    "storefront": "gb",
+    "currency": "GBP",
+    "rawPrice": "£6.99",
+    "amount": 6.99,
+    "usd": 9.535359
+   },
+   {
+    "storefront": "hu",
+    "currency": "HUF",
+    "rawPrice": "HUF2,990.00",
+    "amount": 2990,
+    "usd": 9.65175
+   },
+   {
+    "storefront": "cz",
+    "currency": "CZK",
+    "rawPrice": "200,00 Kč",
+    "amount": 200,
+    "usd": 9.689077
+   },
+   {
+    "storefront": "dk",
+    "currency": "DKK",
+    "rawPrice": "64,00 kr",
+    "amount": 64,
+    "usd": 9.98524
+   },
+   {
+    "storefront": "is",
+    "currency": "USD",
+    "rawPrice": "USD 9.99",
+    "amount": 9.99,
+    "usd": 9.99
+   },
+   {
+    "storefront": "no",
+    "currency": "NOK",
+    "rawPrice": "99,00 kr",
+    "amount": 99,
+    "usd": 10.624655
+   }
+  ]
+ },
+ {
+  "tier": "plus",
+  "tierEn": "ChatGPT Plus",
+  "tierZh": "ChatGPT Plus",
+  "period": "annual",
+  "rows": [
+   {
+    "storefront": "ph",
+    "currency": "PHP",
+    "rawPrice": "₱ 9,990.00",
+    "amount": 9990,
+    "usd": 161.95198
+   },
+   {
+    "storefront": "pk",
+    "currency": "PKR",
+    "rawPrice": "Rs 49,900.00",
+    "amount": 49900,
+    "usd": 179.803043
+   },
+   {
+    "storefront": "ca",
+    "currency": "CAD",
+    "rawPrice": "$249.00",
+    "amount": 249,
+    "usd": 179.917974
+   },
+   {
+    "storefront": "jp",
+    "currency": "JPY",
+    "rawPrice": "¥30,000",
+    "amount": 30000,
+    "usd": 188.387109
+   },
+   {
+    "storefront": "vn",
+    "currency": "VND",
+    "rawPrice": "4.999.000đ",
+    "amount": 4999000,
+    "usd": 191.827248
+   },
+   {
+    "storefront": "qa",
+    "currency": "QAR",
+    "rawPrice": "QAR 699.99",
+    "amount": 699.99,
+    "usd": 192.304945
+   },
+   {
+    "storefront": "br",
+    "currency": "BRL",
+    "rawPrice": "R$ 999,90",
+    "amount": 999.9,
+    "usd": 193.985912
+   },
+   {
+    "storefront": "id",
+    "currency": "IDR",
+    "rawPrice": "Rp 3,499juta",
+    "amount": 3499000,
+    "usd": 197.521072
+   },
+   {
+    "storefront": "eg",
+    "currency": "EGP",
+    "rawPrice": "EGP 9,999.99",
+    "amount": 9999.99,
+    "usd": 198.321126
+   },
+   {
+    "storefront": "bm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "pa",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ky",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "om",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gd",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ye",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gy",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bo",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ga",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "pg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tn",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "fm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "la",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "fj",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bs",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "vc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mr",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "jo",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ms",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "jm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "uz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ar",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mu",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "uy",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "iq",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kh",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kw",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "vg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "us",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ao",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bf",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ml",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "na",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ne",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "hn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ni",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mk",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bh",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ag",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "dz",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ec",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "rw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "do",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ly",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "dm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sb",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tj",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "td",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lk",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cd",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ai",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ma",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sl",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "py",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lb",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tr",
+    "currency": "TRY",
+    "rawPrice": "₺9.999,99",
+    "amount": 9999.99,
+    "usd": 207.863993
+   },
+   {
+    "storefront": "in",
+    "currency": "INR",
+    "rawPrice": "₹ 19,900",
+    "amount": 19900,
+    "usd": 208.534995
+   },
+   {
+    "storefront": "th",
+    "currency": "THB",
+    "rawPrice": "฿6,990.00",
+    "amount": 6990,
+    "usd": 213.640803
+   },
+   {
+    "storefront": "au",
+    "currency": "AUD",
+    "rawPrice": "$300.00",
+    "amount": 300,
+    "usd": 214.75357
+   },
+   {
+    "storefront": "kr",
+    "currency": "KRW",
+    "rawPrice": "￦299,000",
+    "amount": 299000,
+    "usd": 216.178305
+   },
+   {
+    "storefront": "ae",
+    "currency": "AED",
+    "rawPrice": "AED 799.99",
+    "amount": 799.99,
+    "usd": 217.832539
+   },
+   {
+    "storefront": "kz",
+    "currency": "KZT",
+    "rawPrice": "99,990.00₸",
+    "amount": 99990,
+    "usd": 218.53289
+   },
+   {
+    "storefront": "tw",
+    "currency": "TWD",
+    "rawPrice": "$6,990.00",
+    "amount": 6990,
+    "usd": 219.48229
+   },
+   {
+    "storefront": "ro",
+    "currency": "RON",
+    "rawPrice": "999,99 lei",
+    "amount": 999.99,
+    "usd": 222.022547
+   },
+   {
+    "storefront": "ng",
+    "currency": "NGN",
+    "rawPrice": "₦ 299,900.00",
+    "amount": 299900,
+    "usd": 222.024236
+   },
+   {
+    "storefront": "tz",
+    "currency": "TZS",
+    "rawPrice": "599,900.00 TZS",
+    "amount": 599900,
+    "usd": 228.993503
+   },
+   {
+    "storefront": "bg",
+    "currency": "EUR",
+    "rawPrice": "199,99 €",
+    "amount": 199.99,
+    "usd": 233.385614
+   },
+   {
+    "storefront": "me",
+    "currency": "EUR",
+    "rawPrice": "200,00 €",
+    "amount": 200,
+    "usd": 233.397284
+   },
+   {
+    "storefront": "il",
+    "currency": "ILS",
+    "rawPrice": "₪699.90",
+    "amount": 699.9,
+    "usd": 235.012536
+   },
+   {
+    "storefront": "mx",
+    "currency": "MXN",
+    "rawPrice": "$3,999.00",
+    "amount": 3999,
+    "usd": 235.975632
+   },
+   {
+    "storefront": "sg",
+    "currency": "SGD",
+    "rawPrice": "S$ 299.98",
+    "amount": 299.98,
+    "usd": 236.276351
+   },
+   {
+    "storefront": "nz",
+    "currency": "NZD",
+    "rawPrice": "$400.00",
+    "amount": 400,
+    "usd": 238.887263
+   },
+   {
+    "storefront": "sa",
+    "currency": "SAR",
+    "rawPrice": "SAR 899.99",
+    "amount": 899.99,
+    "usd": 239.997333
+   },
+   {
+    "storefront": "cz",
+    "currency": "CZK",
+    "rawPrice": "4 990,00 Kč",
+    "amount": 4990,
+    "usd": 241.742471
+   },
+   {
+    "storefront": "my",
+    "currency": "MYR",
+    "rawPrice": "RM999.90",
+    "amount": 999.9,
+    "usd": 247.087046
+   },
+   {
+    "storefront": "ch",
+    "currency": "CHF",
+    "rawPrice": "CHF 200.00",
+    "amount": 200,
+    "usd": 249.315007
+   },
+   {
+    "storefront": "sn",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ua",
+    "currency": "USD",
+    "rawPrice": "250,00 USD",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ug",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "bb",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "zw",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "az",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "is",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "al",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "md",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "zm",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "gh",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "am",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "np",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ci",
+    "currency": "USD",
+    "rawPrice": "250,00 $US",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "bj",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ke",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "za",
+    "currency": "ZAR",
+    "rawPrice": "R3,999.99",
+    "amount": 3999.99,
+    "usd": 250.91734
+   },
+   {
+    "storefront": "cl",
+    "currency": "CLP",
+    "rawPrice": "$229.990",
+    "amount": 229990,
+    "usd": 251.868188
+   },
+   {
+    "storefront": "se",
+    "currency": "SEK",
+    "rawPrice": "2 495,00 kr",
+    "amount": 2495,
+    "usd": 263.321036
+   },
+   {
+    "storefront": "no",
+    "currency": "NOK",
+    "rawPrice": "2.490,00 kr",
+    "amount": 2490,
+    "usd": 267.226188
+   },
+   {
+    "storefront": "mt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "nl",
+    "currency": "EUR",
+    "rawPrice": "€ 229,00",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "it",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "fi",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lv",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "at",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "cy",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "sk",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "be",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "ie",
+    "currency": "EUR",
+    "rawPrice": "€229.00",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "es",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lu",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "ee",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "gr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "rs",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "fr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "hr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "de",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "si",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "pt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "pe",
+    "currency": "PEN",
+    "rawPrice": "S/ 899.90",
+    "amount": 899.9,
+    "usd": 268.449448
+   },
+   {
+    "storefront": "pl",
+    "currency": "PLN",
+    "rawPrice": "999,99 zł",
+    "amount": 999.99,
+    "usd": 271.18064
+   },
+   {
+    "storefront": "gb",
+    "currency": "GBP",
+    "rawPrice": "£200.00",
+    "amount": 200,
+    "usd": 272.828591
+   },
+   {
+    "storefront": "dk",
+    "currency": "DKK",
+    "rawPrice": "1.799,00 kr",
+    "amount": 1799,
+    "usd": 280.678871
+   },
+   {
+    "storefront": "hu",
+    "currency": "HUF",
+    "rawPrice": "HUF89,990.00",
+    "amount": 89990,
+    "usd": 290.488633
+   },
+   {
+    "storefront": "co",
+    "currency": "COP",
+    "rawPrice": "$ 999.900,00",
+    "amount": 999900,
+    "usd": 326.449175
+   }
+  ]
+ },
+ {
+  "tier": "plus",
+  "tierEn": "ChatGPT Plus",
+  "tierZh": "ChatGPT Plus",
+  "period": "monthly",
+  "rows": [
+   {
+    "storefront": "ph",
+    "currency": "PHP",
+    "rawPrice": "₱ 999.00",
+    "amount": 999,
+    "usd": 16.195198
+   },
+   {
+    "storefront": "pk",
+    "currency": "PKR",
+    "rawPrice": "Rs 4,900.00",
+    "amount": 4900,
+    "usd": 17.65601
+   },
+   {
+    "storefront": "ca",
+    "currency": "CAD",
+    "rawPrice": "$24.99",
+    "amount": 24.99,
+    "usd": 18.056828
+   },
+   {
+    "storefront": "jp",
+    "currency": "JPY",
+    "rawPrice": "¥3,000",
+    "amount": 3000,
+    "usd": 18.83871
+   },
+   {
+    "storefront": "tz",
+    "currency": "TZS",
+    "rawPrice": "49,900.00 TZS",
+    "amount": 49900,
+    "usd": 19.047801
+   },
+   {
+    "storefront": "vn",
+    "currency": "VND",
+    "rawPrice": "499.000đ",
+    "amount": 499000,
+    "usd": 19.148189
+   },
+   {
+    "storefront": "qa",
+    "currency": "QAR",
+    "rawPrice": "QAR 69.99",
+    "amount": 69.99,
+    "usd": 19.228021
+   },
+   {
+    "storefront": "br",
+    "currency": "BRL",
+    "rawPrice": "R$ 99,90",
+    "amount": 99.9,
+    "usd": 19.38113
+   },
+   {
+    "storefront": "id",
+    "currency": "IDR",
+    "rawPrice": "Rp 349ribu",
+    "amount": 349000,
+    "usd": 19.701301
+   },
+   {
+    "storefront": "eg",
+    "currency": "EGP",
+    "rawPrice": "EGP 999.99",
+    "amount": 999.99,
+    "usd": 19.831934
+   },
+   {
+    "storefront": "ao",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sv",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mg",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "lc",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ai",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ky",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "zm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mk",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ma",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "kw",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mn",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "vg",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "lk",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "lr",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ml",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "kg",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ly",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ye",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "kn",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "la",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ag",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "kh",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "lb",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ar",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "tn",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ec",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bz",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bw",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "tm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "py",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bt",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bs",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "fj",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "dz",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "fm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ga",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "pg",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bo",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "gd",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "pa",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bn",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "vc",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "rw",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "do",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "dm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sb",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "cd",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "td",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "cg",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sl",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "cv",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "tc",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sn",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "cr",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sz",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "sr",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ci",
+    "currency": "USD",
+    "rawPrice": "19,99 $US",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "na",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "jo",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ms",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "jm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "uz",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mu",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "az",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mv",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "iq",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "uy",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mw",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "us",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mz",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bf",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "om",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "mr",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "tt",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "gm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bm",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "np",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "gt",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bj",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "gw",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ne",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "gy",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "ni",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "bh",
+    "currency": "USD",
+    "rawPrice": "$19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "hn",
+    "currency": "USD",
+    "rawPrice": "USD 19.99",
+    "amount": 19.99,
+    "usd": 19.99
+   },
+   {
+    "storefront": "tr",
+    "currency": "TRY",
+    "rawPrice": "₺999,99",
+    "amount": 999.99,
+    "usd": 20.786212
+   },
+   {
+    "storefront": "in",
+    "currency": "INR",
+    "rawPrice": "₹ 1,999",
+    "amount": 1999,
+    "usd": 20.947811
+   },
+   {
+    "storefront": "kr",
+    "currency": "KRW",
+    "rawPrice": "￦29,000",
+    "amount": 29000,
+    "usd": 20.967126
+   },
+   {
+    "storefront": "th",
+    "currency": "THB",
+    "rawPrice": "฿699.00",
+    "amount": 699,
+    "usd": 21.36408
+   },
+   {
+    "storefront": "au",
+    "currency": "AUD",
+    "rawPrice": "$29.99",
+    "amount": 29.99,
+    "usd": 21.468198
+   },
+   {
+    "storefront": "tw",
+    "currency": "TWD",
+    "rawPrice": "$690.00",
+    "amount": 690,
+    "usd": 21.665633
+   },
+   {
+    "storefront": "ae",
+    "currency": "AED",
+    "rawPrice": "AED 79.99",
+    "amount": 79.99,
+    "usd": 21.780803
+   },
+   {
+    "storefront": "kz",
+    "currency": "KZT",
+    "rawPrice": "9,990.00₸",
+    "amount": 9990,
+    "usd": 21.833619
+   },
+   {
+    "storefront": "cl",
+    "currency": "CLP",
+    "rawPrice": "$19.990",
+    "amount": 19990,
+    "usd": 21.891582
+   },
+   {
+    "storefront": "ro",
+    "currency": "RON",
+    "rawPrice": "99,99 lei",
+    "amount": 99.99,
+    "usd": 22.200256
+   },
+   {
+    "storefront": "gh",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "bb",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "is",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "ua",
+    "currency": "USD",
+    "rawPrice": "22,99 USD",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "md",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "ke",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "al",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "am",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "zw",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "ug",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "tj",
+    "currency": "USD",
+    "rawPrice": "USD 22.99",
+    "amount": 22.99,
+    "usd": 22.99
+   },
+   {
+    "storefront": "ng",
+    "currency": "NGN",
+    "rawPrice": "₦ 31,500.00",
+    "amount": 31500,
+    "usd": 23.320318
+   },
+   {
+    "storefront": "bg",
+    "currency": "EUR",
+    "rawPrice": "19,99 €",
+    "amount": 19.99,
+    "usd": 23.328058
+   },
+   {
+    "storefront": "me",
+    "currency": "EUR",
+    "rawPrice": "19,99 €",
+    "amount": 19.99,
+    "usd": 23.328058
+   },
+   {
+    "storefront": "il",
+    "currency": "ILS",
+    "rawPrice": "₪69.90",
+    "amount": 69.9,
+    "usd": 23.471033
+   },
+   {
+    "storefront": "mx",
+    "currency": "MXN",
+    "rawPrice": "$399.00",
+    "amount": 399,
+    "usd": 23.544455
+   },
+   {
+    "storefront": "sg",
+    "currency": "SGD",
+    "rawPrice": "S$ 29.98",
+    "amount": 29.98,
+    "usd": 23.613457
+   },
+   {
+    "storefront": "pe",
+    "currency": "PEN",
+    "rawPrice": "S/ 79.90",
+    "amount": 79.9,
+    "usd": 23.834993
+   },
+   {
+    "storefront": "nz",
+    "currency": "NZD",
+    "rawPrice": "$39.99",
+    "amount": 39.99,
+    "usd": 23.882754
+   },
+   {
+    "storefront": "sa",
+    "currency": "SAR",
+    "rawPrice": "SAR 89.99",
+    "amount": 89.99,
+    "usd": 23.997333
+   },
+   {
+    "storefront": "cz",
+    "currency": "CZK",
+    "rawPrice": "499,00 Kč",
+    "amount": 499,
+    "usd": 24.174247
+   },
+   {
+    "storefront": "my",
+    "currency": "MYR",
+    "rawPrice": "RM99.90",
+    "amount": 99.9,
+    "usd": 24.686464
+   },
+   {
+    "storefront": "ch",
+    "currency": "CHF",
+    "rawPrice": "CHF 20.00",
+    "amount": 20,
+    "usd": 24.9315
+   },
+   {
+    "storefront": "za",
+    "currency": "ZAR",
+    "rawPrice": "R399.99",
+    "amount": 399.99,
+    "usd": 25.091169
+   },
+   {
+    "storefront": "se",
+    "currency": "SEK",
+    "rawPrice": "249,00 kr",
+    "amount": 249,
+    "usd": 26.279333
+   },
+   {
+    "storefront": "no",
+    "currency": "NOK",
+    "rawPrice": "249,00 kr",
+    "amount": 249,
+    "usd": 26.722618
+   },
+   {
+    "storefront": "nl",
+    "currency": "EUR",
+    "rawPrice": "€ 22,99",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "si",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "at",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "rs",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "gr",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "mt",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "it",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "cy",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "hr",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "be",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "ie",
+    "currency": "EUR",
+    "rawPrice": "€22.99",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "sk",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "lu",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "fr",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "fi",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "pt",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "ee",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "es",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "de",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "lv",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "lt",
+    "currency": "EUR",
+    "rawPrice": "22,99 €",
+    "amount": 22.99,
+    "usd": 26.829017
+   },
+   {
+    "storefront": "pl",
+    "currency": "PLN",
+    "rawPrice": "99,99 zł",
+    "amount": 99.99,
+    "usd": 27.115623
+   },
+   {
+    "storefront": "gb",
+    "currency": "GBP",
+    "rawPrice": "£19.99",
+    "amount": 19.99,
+    "usd": 27.269217
+   },
+   {
+    "storefront": "dk",
+    "currency": "DKK",
+    "rawPrice": "179,00 kr",
+    "amount": 179,
+    "usd": 27.927469
+   },
+   {
+    "storefront": "hu",
+    "currency": "HUF",
+    "rawPrice": "HUF8,990.00",
+    "amount": 8990,
+    "usd": 29.019811
+   },
+   {
+    "storefront": "co",
+    "currency": "COP",
+    "rawPrice": "$ 99.900,00",
+    "amount": 99900,
+    "usd": 32.615534
+   }
+  ]
+ },
+ {
+  "tier": "pro20x",
+  "tierEn": "ChatGPT Pro 20x",
+  "tierZh": "ChatGPT Pro 20x",
+  "period": "monthly",
+  "rows": [
+   {
+    "storefront": "ph",
+    "currency": "PHP",
+    "rawPrice": "₱ 9,990.00",
+    "amount": 9990,
+    "usd": 161.95198
+   },
+   {
+    "storefront": "pk",
+    "currency": "PKR",
+    "rawPrice": "Rs 49,900.00",
+    "amount": 49900,
+    "usd": 179.803043
+   },
+   {
+    "storefront": "ca",
+    "currency": "CAD",
+    "rawPrice": "$249.00",
+    "amount": 249,
+    "usd": 179.917974
+   },
+   {
+    "storefront": "jp",
+    "currency": "JPY",
+    "rawPrice": "¥30,000",
+    "amount": 30000,
+    "usd": 188.387109
+   },
+   {
+    "storefront": "vn",
+    "currency": "VND",
+    "rawPrice": "4.999.000đ",
+    "amount": 4999000,
+    "usd": 191.827248
+   },
+   {
+    "storefront": "qa",
+    "currency": "QAR",
+    "rawPrice": "QAR 699.99",
+    "amount": 699.99,
+    "usd": 192.304945
+   },
+   {
+    "storefront": "br",
+    "currency": "BRL",
+    "rawPrice": "R$ 999,90",
+    "amount": 999.9,
+    "usd": 193.985912
+   },
+   {
+    "storefront": "id",
+    "currency": "IDR",
+    "rawPrice": "Rp 3,499juta",
+    "amount": 3499000,
+    "usd": 197.521072
+   },
+   {
+    "storefront": "eg",
+    "currency": "EGP",
+    "rawPrice": "EGP 9,999.99",
+    "amount": 9999.99,
+    "usd": 198.321126
+   },
+   {
+    "storefront": "bs",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "hn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tn",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bh",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bf",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ne",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "dz",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "py",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gd",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gy",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "td",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "pa",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "na",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cd",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ec",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bo",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "fm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "fj",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tj",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "pg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "gw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "bz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tt",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ga",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "om",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ni",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kw",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mk",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ml",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ao",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kh",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "vg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ye",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ar",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sn",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mr",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "vc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "jo",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "kg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mg",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ky",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "cv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sl",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "la",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ma",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lb",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ai",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lc",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ly",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ag",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lk",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "lr",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sb",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "sz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "iq",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "us",
+    "currency": "USD",
+    "rawPrice": "$200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mv",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "rw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mu",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "uy",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "az",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "uz",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "dm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "ms",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "jm",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "mw",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "do",
+    "currency": "USD",
+    "rawPrice": "USD 200.00",
+    "amount": 200,
+    "usd": 200
+   },
+   {
+    "storefront": "tr",
+    "currency": "TRY",
+    "rawPrice": "₺9.999,99",
+    "amount": 9999.99,
+    "usd": 207.863993
+   },
+   {
+    "storefront": "in",
+    "currency": "INR",
+    "rawPrice": "₹ 19,900",
+    "amount": 19900,
+    "usd": 208.534995
+   },
+   {
+    "storefront": "th",
+    "currency": "THB",
+    "rawPrice": "฿6,990.00",
+    "amount": 6990,
+    "usd": 213.640803
+   },
+   {
+    "storefront": "au",
+    "currency": "AUD",
+    "rawPrice": "$300.00",
+    "amount": 300,
+    "usd": 214.75357
+   },
+   {
+    "storefront": "kr",
+    "currency": "KRW",
+    "rawPrice": "￦299,000",
+    "amount": 299000,
+    "usd": 216.178305
+   },
+   {
+    "storefront": "ae",
+    "currency": "AED",
+    "rawPrice": "AED 799.99",
+    "amount": 799.99,
+    "usd": 217.832539
+   },
+   {
+    "storefront": "kz",
+    "currency": "KZT",
+    "rawPrice": "99,990.00₸",
+    "amount": 99990,
+    "usd": 218.53289
+   },
+   {
+    "storefront": "cl",
+    "currency": "CLP",
+    "rawPrice": "$199.990",
+    "amount": 199990,
+    "usd": 219.014388
+   },
+   {
+    "storefront": "tw",
+    "currency": "TWD",
+    "rawPrice": "$6,990.00",
+    "amount": 6990,
+    "usd": 219.48229
+   },
+   {
+    "storefront": "ro",
+    "currency": "RON",
+    "rawPrice": "999,99 lei",
+    "amount": 999.99,
+    "usd": 222.022547
+   },
+   {
+    "storefront": "ng",
+    "currency": "NGN",
+    "rawPrice": "₦ 299,900.00",
+    "amount": 299900,
+    "usd": 222.024236
+   },
+   {
+    "storefront": "tz",
+    "currency": "TZS",
+    "rawPrice": "599,900.00 TZS",
+    "amount": 599900,
+    "usd": 228.993503
+   },
+   {
+    "storefront": "bg",
+    "currency": "EUR",
+    "rawPrice": "199,99 €",
+    "amount": 199.99,
+    "usd": 233.385614
+   },
+   {
+    "storefront": "me",
+    "currency": "EUR",
+    "rawPrice": "200,00 €",
+    "amount": 200,
+    "usd": 233.397284
+   },
+   {
+    "storefront": "il",
+    "currency": "ILS",
+    "rawPrice": "₪699.90",
+    "amount": 699.9,
+    "usd": 235.012536
+   },
+   {
+    "storefront": "mx",
+    "currency": "MXN",
+    "rawPrice": "$3,999.00",
+    "amount": 3999,
+    "usd": 235.975632
+   },
+   {
+    "storefront": "sg",
+    "currency": "SGD",
+    "rawPrice": "S$ 299.98",
+    "amount": 299.98,
+    "usd": 236.276351
+   },
+   {
+    "storefront": "pe",
+    "currency": "PEN",
+    "rawPrice": "S/ 799.90",
+    "amount": 799.9,
+    "usd": 238.618417
+   },
+   {
+    "storefront": "nz",
+    "currency": "NZD",
+    "rawPrice": "$400.00",
+    "amount": 400,
+    "usd": 238.887263
+   },
+   {
+    "storefront": "sa",
+    "currency": "SAR",
+    "rawPrice": "SAR 899.99",
+    "amount": 899.99,
+    "usd": 239.997333
+   },
+   {
+    "storefront": "cz",
+    "currency": "CZK",
+    "rawPrice": "4 990,00 Kč",
+    "amount": 4990,
+    "usd": 241.742471
+   },
+   {
+    "storefront": "my",
+    "currency": "MYR",
+    "rawPrice": "RM999.90",
+    "amount": 999.9,
+    "usd": 247.087046
+   },
+   {
+    "storefront": "ch",
+    "currency": "CHF",
+    "rawPrice": "CHF 200.00",
+    "amount": 200,
+    "usd": 249.315007
+   },
+   {
+    "storefront": "ci",
+    "currency": "USD",
+    "rawPrice": "250,00 $US",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ug",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "zm",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "zw",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ua",
+    "currency": "USD",
+    "rawPrice": "250,00 USD",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "md",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "al",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "bj",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "am",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "bb",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "is",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "ke",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "gh",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "np",
+    "currency": "USD",
+    "rawPrice": "USD 250.00",
+    "amount": 250,
+    "usd": 250
+   },
+   {
+    "storefront": "za",
+    "currency": "ZAR",
+    "rawPrice": "R3,999.99",
+    "amount": 3999.99,
+    "usd": 250.91734
+   },
+   {
+    "storefront": "se",
+    "currency": "SEK",
+    "rawPrice": "2 495,00 kr",
+    "amount": 2495,
+    "usd": 263.321036
+   },
+   {
+    "storefront": "no",
+    "currency": "NOK",
+    "rawPrice": "2.490,00 kr",
+    "amount": 2490,
+    "usd": 267.226188
+   },
+   {
+    "storefront": "de",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "rs",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "hr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "ie",
+    "currency": "EUR",
+    "rawPrice": "€229.00",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lu",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "lv",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "sk",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "at",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "mt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "it",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "cy",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "be",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "ee",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "nl",
+    "currency": "EUR",
+    "rawPrice": "€ 229,00",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "gr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "si",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "fr",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "fi",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "pt",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "es",
+    "currency": "EUR",
+    "rawPrice": "229,00 €",
+    "amount": 229,
+    "usd": 267.23989
+   },
+   {
+    "storefront": "pl",
+    "currency": "PLN",
+    "rawPrice": "999,99 zł",
+    "amount": 999.99,
+    "usd": 271.18064
+   },
+   {
+    "storefront": "gb",
+    "currency": "GBP",
+    "rawPrice": "£200.00",
+    "amount": 200,
+    "usd": 272.828591
+   },
+   {
+    "storefront": "dk",
+    "currency": "DKK",
+    "rawPrice": "1.799,00 kr",
+    "amount": 1799,
+    "usd": 280.678871
+   },
+   {
+    "storefront": "hu",
+    "currency": "HUF",
+    "rawPrice": "HUF89,990.00",
+    "amount": 89990,
+    "usd": 290.488633
+   },
+   {
+    "storefront": "co",
+    "currency": "COP",
+    "rawPrice": "$ 999.900,00",
+    "amount": 999900,
+    "usd": 326.449175
+   }
+  ]
+ },
+ {
+  "tier": "pro5x",
+  "tierEn": "ChatGPT Pro 5x",
+  "tierZh": "ChatGPT Pro 5x",
+  "period": "monthly",
+  "rows": [
+   {
+    "storefront": "me",
+    "currency": "EUR",
+    "rawPrice": "84,99 €",
+    "amount": 84.99,
+    "usd": 99.182175
+   },
+   {
+    "storefront": "cr",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "py",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bo",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ag",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ai",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ye",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "vg",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ao",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ar",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "vc",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "us",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bf",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "tt",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bn",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "sv",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "tn",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "tm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bt",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "tj",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bw",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "bz",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "td",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "cd",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "tc",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "cg",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "sz",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ni",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mu",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "iq",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mv",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mw",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mz",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "na",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ne",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "hn",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "gy",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ms",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "gw",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "gt",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "gm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "gd",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "pa",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ga",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "pg",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "fm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mk",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "lr",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "lk",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "lc",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ly",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "lb",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ma",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ky",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mg",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "kw",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "cv",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "kn",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ml",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "kg",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mn",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "mr",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "jo",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "jm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "fj",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "sl",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "sb",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "dm",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "rw",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "do",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "dz",
+    "currency": "USD",
+    "rawPrice": "$100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "ec",
+    "currency": "USD",
+    "rawPrice": "USD 100.00",
+    "amount": 100,
+    "usd": 100
+   },
+   {
+    "storefront": "qa",
+    "currency": "QAR",
+    "rawPrice": "QAR 364.99",
+    "amount": 364.99,
+    "usd": 100.271978
+   },
+   {
+    "storefront": "pk",
+    "currency": "PKR",
+    "rawPrice": "Rs 27,999.00",
+    "amount": 27999,
+    "usd": 100.887884
+   },
+   {
+    "storefront": "br",
+    "currency": "BRL",
+    "rawPrice": "R$ 524,90",
+    "amount": 524.9,
+    "usd": 101.833389
+   },
+   {
+    "storefront": "th",
+    "currency": "THB",
+    "rawPrice": "฿3,350.00",
+    "amount": 3350,
+    "usd": 102.388653
+   },
+   {
+    "storefront": "ch",
+    "currency": "CHF",
+    "rawPrice": "CHF 83.00",
+    "amount": 83,
+    "usd": 103.465727
+   },
+   {
+    "storefront": "tw",
+    "currency": "TWD",
+    "rawPrice": "$3,300.00",
+    "amount": 3300,
+    "usd": 103.618248
+   },
+   {
+    "storefront": "my",
+    "currency": "MYR",
+    "rawPrice": "RM419.90",
+    "amount": 419.9,
+    "usd": 103.762227
+   },
+   {
+    "storefront": "il",
+    "currency": "ILS",
+    "rawPrice": "₪309.90",
+    "amount": 309.9,
+    "usd": 104.058272
+   },
+   {
+    "storefront": "ae",
+    "currency": "AED",
+    "rawPrice": "AED 384.99",
+    "amount": 384.99,
+    "usd": 104.830496
+   },
+   {
+    "storefront": "om",
+    "currency": "USD",
+    "rawPrice": "$104.99",
+    "amount": 104.99,
+    "usd": 104.99
+   },
+   {
+    "storefront": "ph",
+    "currency": "PHP",
+    "rawPrice": "₱ 6,490.00",
+    "amount": 6490,
+    "usd": 105.212047
+   },
+   {
+    "storefront": "jp",
+    "currency": "JPY",
+    "rawPrice": "¥16,800",
+    "amount": 16800,
+    "usd": 105.496781
+   },
+   {
+    "storefront": "id",
+    "currency": "IDR",
+    "rawPrice": "Rp 1,889juta",
+    "amount": 1889000,
+    "usd": 106.635411
+   },
+   {
+    "storefront": "eg",
+    "currency": "EGP",
+    "rawPrice": "EGP 5,399.99",
+    "amount": 5399.99,
+    "usd": 107.093317
+   },
+   {
+    "storefront": "ng",
+    "currency": "NGN",
+    "rawPrice": "₦ 144,900.00",
+    "amount": 144900,
+    "usd": 107.273464
+   },
+   {
+    "storefront": "sg",
+    "currency": "SGD",
+    "rawPrice": "S$ 137.98",
+    "amount": 137.98,
+    "usd": 108.678615
+   },
+   {
+    "storefront": "bh",
+    "currency": "USD",
+    "rawPrice": "$109.00",
+    "amount": 109,
+    "usd": 109
+   },
+   {
+    "storefront": "vn",
+    "currency": "VND",
+    "rawPrice": "2.849.000đ",
+    "amount": 2849000,
+    "usd": 109.325031
+   },
+   {
+    "storefront": "la",
+    "currency": "USD",
+    "rawPrice": "USD 109.99",
+    "amount": 109.99,
+    "usd": 109.99
+   },
+   {
+    "storefront": "sr",
+    "currency": "USD",
+    "rawPrice": "USD 109.99",
+    "amount": 109.99,
+    "usd": 109.99
+   },
+   {
+    "storefront": "kh",
+    "currency": "USD",
+    "rawPrice": "USD 109.99",
+    "amount": 109.99,
+    "usd": 109.99
+   },
+   {
+    "storefront": "bs",
+    "currency": "USD",
+    "rawPrice": "USD 109.99",
+    "amount": 109.99,
+    "usd": 109.99
+   },
+   {
+    "storefront": "tr",
+    "currency": "TRY",
+    "rawPrice": "₺5.299,99",
+    "amount": 5299.99,
+    "usd": 110.167818
+   },
+   {
+    "storefront": "ca",
+    "currency": "CAD",
+    "rawPrice": "$152.99",
+    "amount": 152.99,
+    "usd": 110.544782
+   },
+   {
+    "storefront": "au",
+    "currency": "AUD",
+    "rawPrice": "$154.99",
+    "amount": 154.99,
+    "usd": 110.948852
+   },
+   {
+    "storefront": "uz",
+    "currency": "USD",
+    "rawPrice": "USD 111.99",
+    "amount": 111.99,
+    "usd": 111.99
+   },
+   {
+    "storefront": "in",
+    "currency": "INR",
+    "rawPrice": "₹ 10,699",
+    "amount": 10699,
+    "usd": 112.116377
+   },
+   {
+    "storefront": "cl",
+    "currency": "CLP",
+    "rawPrice": "$102.990",
+    "amount": 102990,
+    "usd": 112.787098
+   },
+   {
+    "storefront": "np",
+    "currency": "USD",
+    "rawPrice": "USD 112.99",
+    "amount": 112.99,
+    "usd": 112.99
+   },
+   {
+    "storefront": "nz",
+    "currency": "NZD",
+    "rawPrice": "$190.00",
+    "amount": 190,
+    "usd": 113.471449
+   },
+   {
+    "storefront": "sa",
+    "currency": "SAR",
+    "rawPrice": "SAR 429.99",
+    "amount": 429.99,
+    "usd": 114.664
+   },
+   {
+    "storefront": "kr",
+    "currency": "KRW",
+    "rawPrice": "￦159,000",
+    "amount": 159000,
+    "usd": 114.957694
+   },
+   {
+    "storefront": "gh",
+    "currency": "USD",
+    "rawPrice": "USD 114.99",
+    "amount": 114.99,
+    "usd": 114.99
+   },
+   {
+    "storefront": "zw",
+    "currency": "USD",
+    "rawPrice": "USD 114.99",
+    "amount": 114.99,
+    "usd": 114.99
+   },
+   {
+    "storefront": "za",
+    "currency": "ZAR",
+    "rawPrice": "R1,839.00",
+    "amount": 1839,
+    "usd": 115.359535
+   },
+   {
+    "storefront": "ro",
+    "currency": "RON",
+    "rawPrice": "519,99 lei",
+    "amount": 519.99,
+    "usd": 115.450659
+   },
+   {
+    "storefront": "ke",
+    "currency": "USD",
+    "rawPrice": "USD 115.99",
+    "amount": 115.99,
+    "usd": 115.99
+   },
+   {
+    "storefront": "zm",
+    "currency": "USD",
+    "rawPrice": "USD 115.99",
+    "amount": 115.99,
+    "usd": 115.99
+   },
+   {
+    "storefront": "tz",
+    "currency": "TZS",
+    "rawPrice": "304,900.00 TZS",
+    "amount": 304900,
+    "usd": 116.386263
+   },
+   {
+    "storefront": "mx",
+    "currency": "MXN",
+    "rawPrice": "$1,989.00",
+    "amount": 1989,
+    "usd": 117.368225
+   },
+   {
+    "storefront": "pe",
+    "currency": "PEN",
+    "rawPrice": "S/ 394.90",
+    "amount": 394.9,
+    "usd": 117.802741
+   },
+   {
+    "storefront": "az",
+    "currency": "USD",
+    "rawPrice": "USD 117.99",
+    "amount": 117.99,
+    "usd": 117.99
+   },
+   {
+    "storefront": "ci",
+    "currency": "USD",
+    "rawPrice": "117,99 $US",
+    "amount": 117.99,
+    "usd": 117.99
+   },
+   {
+    "storefront": "bj",
+    "currency": "USD",
+    "rawPrice": "USD 117.99",
+    "amount": 117.99,
+    "usd": 117.99
+   },
+   {
+    "storefront": "sn",
+    "currency": "USD",
+    "rawPrice": "USD 117.99",
+    "amount": 117.99,
+    "usd": 117.99
+   },
+   {
+    "storefront": "ug",
+    "currency": "USD",
+    "rawPrice": "USD 117.99",
+    "amount": 117.99,
+    "usd": 117.99
+   },
+   {
+    "storefront": "se",
+    "currency": "SEK",
+    "rawPrice": "1 120,00 kr",
+    "amount": 1120,
+    "usd": 118.204232
+   },
+   {
+    "storefront": "bb",
+    "currency": "USD",
+    "rawPrice": "USD 119.00",
+    "amount": 119,
+    "usd": 119
+   },
+   {
+    "storefront": "ua",
+    "currency": "USD",
+    "rawPrice": "119,00 USD",
+    "amount": 119,
+    "usd": 119
+   },
+   {
+    "storefront": "pl",
+    "currency": "PLN",
+    "rawPrice": "439,00 zł",
+    "amount": 439,
+    "usd": 119.049491
+   },
+   {
+    "storefront": "co",
+    "currency": "COP",
+    "rawPrice": "$ 364.900,00",
+    "amount": 364900,
+    "usd": 119.133217
+   },
+   {
+    "storefront": "am",
+    "currency": "USD",
+    "rawPrice": "USD 119.99",
+    "amount": 119.99,
+    "usd": 119.99
+   },
+   {
+    "storefront": "al",
+    "currency": "USD",
+    "rawPrice": "USD 119.99",
+    "amount": 119.99,
+    "usd": 119.99
+   },
+   {
+    "storefront": "md",
+    "currency": "USD",
+    "rawPrice": "USD 119.99",
+    "amount": 119.99,
+    "usd": 119.99
+   },
+   {
+    "storefront": "kz",
+    "currency": "KZT",
+    "rawPrice": "54,990.00₸",
+    "amount": 54990,
+    "usd": 120.183254
+   },
+   {
+    "storefront": "si",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "cy",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "sk",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "lv",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "lu",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "fi",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "ie",
+    "currency": "EUR",
+    "rawPrice": "€102.99",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "gr",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "es",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "nl",
+    "currency": "EUR",
+    "rawPrice": "€ 102,99",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "pt",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "lt",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "bg",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "ee",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "hr",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "de",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "be",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "rs",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "mt",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "it",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "at",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "fr",
+    "currency": "EUR",
+    "rawPrice": "102,99 €",
+    "amount": 102.99,
+    "usd": 120.187931
+   },
+   {
+    "storefront": "cz",
+    "currency": "CZK",
+    "rawPrice": "2 490,00 Kč",
+    "amount": 2490,
+    "usd": 120.629009
+   },
+   {
+    "storefront": "gb",
+    "currency": "GBP",
+    "rawPrice": "£88.90",
+    "amount": 88.9,
+    "usd": 121.272308
+   },
+   {
+    "storefront": "uy",
+    "currency": "USD",
+    "rawPrice": "USD 121.99",
+    "amount": 121.99,
+    "usd": 121.99
+   },
+   {
+    "storefront": "dk",
+    "currency": "DKK",
+    "rawPrice": "789,00 kr",
+    "amount": 789,
+    "usd": 123.099293
+   },
+   {
+    "storefront": "is",
+    "currency": "USD",
+    "rawPrice": "USD 123.99",
+    "amount": 123.99,
+    "usd": 123.99
+   },
+   {
+    "storefront": "no",
+    "currency": "NOK",
+    "rawPrice": "1.190,00 kr",
+    "amount": 1190,
+    "usd": 127.710507
+   },
+   {
+    "storefront": "hu",
+    "currency": "HUF",
+    "rawPrice": "HUF40,490.00",
+    "amount": 40490,
+    "usd": 130.702131
+   }
+  ]
+ }
+]

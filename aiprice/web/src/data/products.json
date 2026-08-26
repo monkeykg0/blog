@@ -1,0 +1,154 @@
+[
+ {
+  "id": "chatgpt",
+  "nameEn": "ChatGPT",
+  "nameZh": "ChatGPT",
+  "vendor": "OpenAI",
+  "appStoreId": 6448311069,
+  "bundleId": "com.openai.chat",
+  "tiers": [
+   {
+    "productId": "chatgpt",
+    "tier": "go",
+    "tierEn": "ChatGPT Go",
+    "tierZh": "ChatGPT Go",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "chatgpt",
+    "tier": "plus",
+    "tierEn": "ChatGPT Plus",
+    "tierZh": "ChatGPT Plus",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "chatgpt",
+    "tier": "pro5x",
+    "tierEn": "ChatGPT Pro 5x",
+    "tierZh": "ChatGPT Pro 5x",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "chatgpt",
+    "tier": "pro20x",
+    "tierEn": "ChatGPT Pro 20x",
+    "tierZh": "ChatGPT Pro 20x",
+    "period": "monthly",
+    "featured": true
+   }
+  ]
+ },
+ {
+  "id": "claude",
+  "nameEn": "Claude",
+  "nameZh": "Claude",
+  "vendor": "Anthropic",
+  "appStoreId": 6473753684,
+  "bundleId": "com.anthropic.claude",
+  "tiers": [
+   {
+    "productId": "claude",
+    "tier": "pro",
+    "tierEn": "Claude Pro",
+    "tierZh": "Claude Pro",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "claude",
+    "tier": "max5x",
+    "tierEn": "Claude Max 5x",
+    "tierZh": "Claude Max 5x",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "claude",
+    "tier": "max20x",
+    "tierEn": "Claude Max 20x",
+    "tierZh": "Claude Max 20x",
+    "period": "monthly",
+    "featured": true
+   }
+  ]
+ },
+ {
+  "id": "gemini",
+  "nameEn": "Google Gemini",
+  "nameZh": "Google Gemini",
+  "vendor": "Google",
+  "appStoreId": 6477489729,
+  "bundleId": "com.google.gemini",
+  "tiers": [
+   {
+    "productId": "gemini",
+    "tier": "ai_plus",
+    "tierEn": "Google AI Plus",
+    "tierZh": "Google AI Plus",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "gemini",
+    "tier": "ai_pro",
+    "tierEn": "Google AI Pro",
+    "tierZh": "Google AI Pro",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "gemini",
+    "tier": "ai_ultra",
+    "tierEn": "Google AI Ultra",
+    "tierZh": "Google AI Ultra",
+    "period": "monthly",
+    "featured": true
+   }
+  ]
+ },
+ {
+  "id": "grok",
+  "nameEn": "Grok",
+  "nameZh": "Grok",
+  "vendor": "xAI",
+  "appStoreId": 6670324846,
+  "bundleId": "ai.x.GrokApp",
+  "tiers": [
+   {
+    "productId": "grok",
+    "tier": "lite",
+    "tierEn": "SuperGrok Lite",
+    "tierZh": "SuperGrok Lite",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "grok",
+    "tier": "supergrok",
+    "tierEn": "SuperGrok",
+    "tierZh": "SuperGrok",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "grok",
+    "tier": "plus",
+    "tierEn": "SuperGrok Plus",
+    "tierZh": "SuperGrok Plus",
+    "period": "monthly",
+    "featured": true
+   },
+   {
+    "productId": "grok",
+    "tier": "heavy",
+    "tierEn": "SuperGrok Heavy",
+    "tierZh": "SuperGrok Heavy",
+    "period": "monthly",
+    "featured": true
+   }
+  ]
+ }
+]

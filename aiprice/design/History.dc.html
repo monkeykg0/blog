@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --paper: #FBFAF7; --ink: #17160F; --ink2: #55534A; --ink3: #8B8879;
+      --rule: #E5E2D9; --grid: #EDEAE1;
+      --s1: #0B7D63; --s2: #BF4A15; --s3: #2F5FAE; --s4: #8A3A6B;
+      --up: #A32B1C; --down: #1C6B45;
+      --sans: "Archivo", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Newsreader", "Songti SC", Georgia, serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+           -webkit-font-smoothing: antialiased; }
+    a { color: var(--ink); text-decoration: none; } a:hover { color: var(--s2); }
+    .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+    .eyebrow { font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+               color: var(--ink3); font-weight: 600; }
+    .code { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .04em;
+            color: var(--ink2); border: 1px solid var(--rule); padding: 2px 5px; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; background: var(--paper);">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 22px 56px 14px; border-bottom: 1px solid var(--ink);">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: var(--serif); font-size: 23px; letter-spacing: -.01em;">AIPRICE</div>
+      <div style="width: 1px; height: 15px; background: var(--rule);"></div>
+      <div style="font-size: 12.5px; color: var(--ink2);">AI 订阅全球价格观测</div>
+    </div>
+    <div style="display: flex; gap: 26px; font-size: 12.5px; color: var(--ink2);">
+      <a href="#">产品</a><a href="#">地区</a>
+      <a href="#" style="color: var(--ink); font-weight: 500; border-bottom: 2px solid var(--ink); padding-bottom: 2px;">历史</a>
+      <a href="#">方法论</a>
+    </div>
+  </div>
+
+  <div style="padding: 34px 56px 22px;">
+    <div class="eyebrow" style="margin-bottom: 16px;">十二个月 · 全球最低价走势</div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 8px;">
+      <div>
+        <h1 style="font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1;
+                   margin: 0 0 12px; letter-spacing: -.015em;">各产品全球最低价，逐月</h1>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: var(--ink2); max-width: 52em;">
+          每条线是该产品当月在 158 个地区中的最低折算美元价。最低价所在的地区会随汇率和厂商调价变化——
+          线的下行既可能来自降价，也可能来自当地货币贬值。
+        </p>
+      </div>
+      <div style="display: flex; gap: 0; border: 1px solid var(--rule); background: #fff; flex: none;">
+        <div style="padding: 11px 18px; border-right: 1px solid var(--rule);">
+          <div class="eyebrow" style="margin-bottom: 5px;">区间</div>
+          <div class="num" style="font-size: 15px;">12 个月</div>
+        </div>
+        <div style="padding: 11px 18px;">
+          <div class="eyebrow" style="margin-bottom: 5px;">口径</div>
+          <div style="font-size: 15px;">全球最低</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 示例数据提示 -->
+  <div style="margin: 0 56px 20px; padding: 11px 16px; border-left: 2px solid var(--ink);
+              background: #fff; display: flex; gap: 11px; align-items: baseline;">
+    <span class="eyebrow" style="color: var(--ink);">版式示意</span>
+    <span style="font-size: 12px; color: var(--ink2); line-height: 1.6;">
+      历史序列需要每日抓取累积后才能生成。下图为版式与刻度示意，仅右端点为 2026-08-26 实测值。
+    </span>
+  </div>
+
+  <!-- 图表 -->
+  <div style="padding: 0 56px;">
+    <div style="border: 1px solid var(--rule); background: #fff; padding: 26px 24px 18px;">
+
+      <!-- 图例 -->
+      <div style="display: flex; gap: 26px; align-items: center; margin-bottom: 18px; padding-left: 46px;">
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <div style="width: 14px; height: 2px; background: var(--s4);"></div>
+          <span style="font-size: 12px; color: var(--ink2);">SuperGrok</span></div>
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <div style="width: 14px; height: 2px; background: var(--s2);"></div>
+          <span style="font-size: 12px; color: var(--ink2);">Claude Pro</span></div>
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <div style="width: 14px; height: 2px; background: var(--s1);"></div>
+          <span style="font-size: 12px; color: var(--ink2);">ChatGPT Plus</span></div>
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <div style="width: 14px; height: 2px; background: var(--s3);"></div>
+          <span style="font-size: 12px; color: var(--ink2);">Google AI Pro</span></div>
+        <div style="flex-grow: 1;"></div>
+        <span style="font-size: 11px; color: var(--ink3);">单位：美元 / 月</span>
+      </div>
+
+      <svg viewBox="0 0 1250 380" width="100%" style="display: block; overflow: visible;"
+           font-family="IBM Plex Mono, monospace">
+        <!-- 网格 -->
+        <g stroke="#EDEAE1" stroke-width="1">
+          <line x1="70" y1="30"  x2="1020" y2="30"/>
+          <line x1="70" y1="105" x2="1020" y2="105"/>
+          <line x1="70" y1="180" x2="1020" y2="180"/>
+          <line x1="70" y1="255" x2="1020" y2="255"/>
+        </g>
+        <line x1="70" y1="330" x2="1020" y2="330" stroke="#D8D4C8" stroke-width="1"/>
+
+        <!-- y 轴刻度 -->
+        <g fill="#8B8879" font-size="11.5" text-anchor="end">
+          <text x="56" y="34">$32</text>
+          <text x="56" y="109">$24</text>
+          <text x="56" y="184">$16</text>
+          <text x="56" y="259">$8</text>
+          <text x="56" y="334">$0</text>
+        </g>
+
+        <!-- x 轴刻度 -->
+        <g fill="#8B8879" font-size="11.5" text-anchor="middle">
+          <text x="70"   y="352">2025-09</text>
+          <text x="242"  y="352">2025-11</text>
+          <text x="415"  y="352">2026-01</text>
+          <text x="588"  y="352">2026-03</text>
+          <text x="761"  y="352">2026-05</text>
+          <text x="933"  y="352">2026-07</text>
+          <text x="1020" y="352">08</text>
+        </g>
+
+        <!-- 序列 -->
+        <polyline fill="none" stroke="#8A3A6B" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+          points="70,53.4 156.4,56.3 242.7,59.1 329.1,61.9 415.5,64.7 501.8,67.5 588.2,70.3 674.5,72.2 760.9,74.1 847.3,75.5 933.6,76.1 1020,76.7"/>
+        <polyline fill="none" stroke="#BF4A15" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+          points="70,150.0 156.4,151.9 242.7,153.8 329.1,155.6 415.5,157.5 501.8,159.4 588.2,161.3 674.5,162.2 760.9,163.1 847.3,163.6 933.6,164.1 1020,164.4"/>
+        <polyline fill="none" stroke="#0B7D63" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+          points="70,171.6 156.4,172.5 242.7,173.0 329.1,173.4 415.5,174.4 501.8,174.8 588.2,175.3 674.5,175.8 760.9,176.3 847.3,177.2 933.6,177.7 1020,178.1"/>
+        <polyline fill="none" stroke="#2F5FAE" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+          points="70,198.8 156.4,202.5 242.7,206.3 329.1,209.1 415.5,211.9 501.8,214.7 588.2,217.5 674.5,219.4 760.9,221.3 847.3,223.1 933.6,224.1 1020,224.8"/>
+
+        <!-- 端点标记：2px 表面环 -->
+        <g stroke="#FFFFFF" stroke-width="2">
+          <circle cx="1020" cy="76.7"  r="4.5" fill="#8A3A6B"/>
+          <circle cx="1020" cy="164.4" r="4.5" fill="#BF4A15"/>
+          <circle cx="1020" cy="178.1" r="4.5" fill="#0B7D63"/>
+          <circle cx="1020" cy="224.8" r="4.5" fill="#2F5FAE"/>
+        </g>
+
+        <!-- 直接标注：色块承担身份，文字用墨色 -->
+        <g font-size="12.5">
+          <rect x="1042" y="72"  width="8" height="8" fill="#8A3A6B"/>
+          <text x="1057" y="80"  fill="#17160F" font-weight="500">$27.02</text>
+          <text x="1057" y="95"  fill="#8B8879" font-size="11" font-family="Archivo, sans-serif">SuperGrok · TR</text>
+
+          <rect x="1042" y="153" width="8" height="8" fill="#BF4A15"/>
+          <text x="1057" y="161" fill="#17160F" font-weight="500">$17.66</text>
+          <text x="1057" y="176" fill="#8B8879" font-size="11" font-family="Archivo, sans-serif">Claude Pro · PK</text>
+
+          <rect x="1042" y="192" width="8" height="8" fill="#0B7D63"/>
+          <text x="1057" y="200" fill="#17160F" font-weight="500">$16.20</text>
+          <text x="1057" y="215" fill="#8B8879" font-size="11" font-family="Archivo, sans-serif">ChatGPT Plus · PH</text>
+
+          <rect x="1042" y="231" width="8" height="8" fill="#2F5FAE"/>
+          <text x="1057" y="239" fill="#17160F" font-weight="500">$11.22</text>
+          <text x="1057" y="254" fill="#8B8879" font-size="11" font-family="Archivo, sans-serif">Google AI Pro · TR</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 变价事件 -->
+  <div style="display: grid; grid-template-columns: 1fr 380px; gap: 56px; padding: 34px 56px 44px;">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 16px;">变价事件</div>
+
+      <div style="display: grid; grid-template-columns: 96px 26px 1fr 176px 108px; gap: 16px;
+                  align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--rule);">
+        <span class="num" style="font-size: 12px; color: var(--ink3);">2026-08-26</span>
+        <span class="code">TR</span>
+        <div style="font-size: 13.5px;">ChatGPT Plus <span style="color: var(--ink3);">月付</span></div>
+        <div class="num" style="font-size: 12.5px; color: var(--ink2);">₺499,99 → ₺999,99</div>
+        <div class="num" style="text-align: right; color: var(--up); font-size: 13.5px; font-weight: 500;">+100.0%</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 96px 26px 1fr 176px 108px; gap: 16px;
+                  align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--rule);">
+        <span class="num" style="font-size: 12px; color: var(--ink3);">2026-08-19</span>
+        <span class="code">BG</span>
+        <div style="font-size: 13.5px;">ChatGPT Go <span style="color: var(--ink3);">月付</span></div>
+        <div class="num" style="font-size: 12.5px; color: var(--ink2);">7,99 € → 6,49 €</div>
+        <div class="num" style="text-align: right; color: var(--down); font-size: 13.5px; font-weight: 500;">−18.8%</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 96px 26px 1fr 176px 108px; gap: 16px;
+                  align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--rule);">
+        <span class="num" style="font-size: 12px; color: var(--ink3);">2026-07-13</span>
+        <span class="code">IN</span>
+        <div style="font-size: 13.5px;">Claude Pro <span style="color: var(--ink3);">月付</span></div>
+        <div class="num" style="font-size: 12.5px; color: var(--ink2);">首次本地化定价</div>
+        <div class="num" style="text-align: right; color: var(--ink3); font-size: 13.5px;">新增</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 96px 26px 1fr 176px 108px; gap: 16px;
+                  align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--rule);">
+        <span class="num" style="font-size: 12px; color: var(--ink3);">2026-06-02</span>
+        <span class="code">NG</span>
+        <div style="font-size: 13.5px;">ChatGPT Plus <span style="color: var(--ink3);">月付</span></div>
+        <div class="num" style="font-size: 12.5px; color: var(--ink2);">₦ 24,900 → ₦ 31,500</div>
+        <div class="num" style="text-align: right; color: var(--up); font-size: 13.5px; font-weight: 500;">+26.5%</div>
+      </div>
+    </div>
+
+    <div style="border-left: 1px solid var(--rule); padding-left: 32px;">
+      <div class="eyebrow" style="margin-bottom: 16px;">为什么记录历史</div>
+      <p style="margin: 0 0 14px; font-size: 13px; line-height: 1.72; color: var(--ink2); text-wrap: pretty;">
+        地区价格是活数据。土耳其曾长期被推荐为 ChatGPT 最便宜的地区，如今已排到第
+        <span class="num">97</span> 位；网上多数攻略仍停留在调价之前。
+      </p>
+      <p style="margin: 0; font-size: 13px; line-height: 1.72; color: var(--ink2); text-wrap: pretty;">
+        单日快照会过期，连续快照才能看出趋势。本站每日固定时间抓取一次，只追加不覆盖，
+        并保留 Apple 返回的原始价格字符串。
+      </p>
+    </div>
+  </div>
+
+  <div style="padding: 20px 56px 30px; border-top: 1px solid var(--ink);
+              display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 11.5px; color: var(--ink3); line-height: 1.7;">
+    <div style="max-width: 62em;">
+      折算使用当日中间价，历史价格配当日汇率，不用当前汇率回算。
+      本站与 OpenAI、Anthropic、Google、xAI 均无关联。
+    </div>
+    <div class="num" style="white-space: nowrap; padding-left: 40px;">2026-08-26 03:30 UTC</div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1280,"height":1220}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

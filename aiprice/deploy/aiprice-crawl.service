@@ -1,0 +1,21 @@
+[Unit]
+Description=aiprice 每日抓取 AI 订阅全球价格
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/aiprice/aiprice crawl
+EnvironmentFile=/opt/aiprice/env
+WorkingDirectory=/opt/aiprice
+User=www-data
+# 全量约 40 分钟（632 次请求 × 1.2s 节流），留足余量
+TimeoutStartSec=5400
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/aiprice
+
+[Install]
+WantedBy=multi-user.target

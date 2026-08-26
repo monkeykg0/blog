@@ -1,0 +1,1424 @@
+[
+ {
+  "code": "ae",
+  "currency": "AED",
+  "flag": "🇦🇪",
+  "nameEn": "United Arab Emirates",
+  "nameZh": "阿拉伯联合酋长国",
+  "currencyEn": "United Arab Emirates Dirham",
+  "currencyZh": "阿联酋迪拉姆"
+ },
+ {
+  "code": "ag",
+  "currency": "USD",
+  "flag": "🇦🇬",
+  "nameEn": "Antigua \u0026 Barbuda",
+  "nameZh": "安提瓜和巴布达",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ai",
+  "currency": "USD",
+  "flag": "🇦🇮",
+  "nameEn": "Anguilla",
+  "nameZh": "安圭拉",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "al",
+  "currency": "USD",
+  "flag": "🇦🇱",
+  "nameEn": "Albania",
+  "nameZh": "阿尔巴尼亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "am",
+  "currency": "USD",
+  "flag": "🇦🇲",
+  "nameEn": "Armenia",
+  "nameZh": "亚美尼亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ao",
+  "currency": "USD",
+  "flag": "🇦🇴",
+  "nameEn": "Angola",
+  "nameZh": "安哥拉",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ar",
+  "currency": "USD",
+  "flag": "🇦🇷",
+  "nameEn": "Argentina",
+  "nameZh": "阿根廷",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "at",
+  "currency": "EUR",
+  "flag": "🇦🇹",
+  "nameEn": "Austria",
+  "nameZh": "奥地利",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "au",
+  "currency": "AUD",
+  "flag": "🇦🇺",
+  "nameEn": "Australia",
+  "nameZh": "澳大利亚",
+  "currencyEn": "Australian Dollar",
+  "currencyZh": "澳大利亚元"
+ },
+ {
+  "code": "az",
+  "currency": "USD",
+  "flag": "🇦🇿",
+  "nameEn": "Azerbaijan",
+  "nameZh": "阿塞拜疆",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bb",
+  "currency": "USD",
+  "flag": "🇧🇧",
+  "nameEn": "Barbados",
+  "nameZh": "巴巴多斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "be",
+  "currency": "EUR",
+  "flag": "🇧🇪",
+  "nameEn": "Belgium",
+  "nameZh": "比利时",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "bf",
+  "currency": "USD",
+  "flag": "🇧🇫",
+  "nameEn": "Burkina Faso",
+  "nameZh": "布基纳法索",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bg",
+  "currency": "EUR",
+  "flag": "🇧🇬",
+  "nameEn": "Bulgaria",
+  "nameZh": "保加利亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "bh",
+  "currency": "USD",
+  "flag": "🇧🇭",
+  "nameEn": "Bahrain",
+  "nameZh": "巴林",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bj",
+  "currency": "USD",
+  "flag": "🇧🇯",
+  "nameEn": "Benin",
+  "nameZh": "贝宁",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bm",
+  "currency": "USD",
+  "flag": "🇧🇲",
+  "nameEn": "Bermuda",
+  "nameZh": "百慕大",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bn",
+  "currency": "USD",
+  "flag": "🇧🇳",
+  "nameEn": "Brunei",
+  "nameZh": "文莱",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bo",
+  "currency": "USD",
+  "flag": "🇧🇴",
+  "nameEn": "Bolivia",
+  "nameZh": "玻利维亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "br",
+  "currency": "BRL",
+  "flag": "🇧🇷",
+  "nameEn": "Brazil",
+  "nameZh": "巴西",
+  "currencyEn": "Brazilian Real",
+  "currencyZh": "巴西雷亚尔"
+ },
+ {
+  "code": "bs",
+  "currency": "USD",
+  "flag": "🇧🇸",
+  "nameEn": "Bahamas",
+  "nameZh": "巴哈马",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bt",
+  "currency": "USD",
+  "flag": "🇧🇹",
+  "nameEn": "Bhutan",
+  "nameZh": "不丹",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bw",
+  "currency": "USD",
+  "flag": "🇧🇼",
+  "nameEn": "Botswana",
+  "nameZh": "博茨瓦纳",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "bz",
+  "currency": "USD",
+  "flag": "🇧🇿",
+  "nameEn": "Belize",
+  "nameZh": "伯利兹",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ca",
+  "currency": "CAD",
+  "flag": "🇨🇦",
+  "nameEn": "Canada",
+  "nameZh": "加拿大",
+  "currencyEn": "Canadian Dollar",
+  "currencyZh": "加拿大元"
+ },
+ {
+  "code": "cd",
+  "currency": "USD",
+  "flag": "🇨🇩",
+  "nameEn": "Congo - Kinshasa",
+  "nameZh": "刚果（金）",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "cg",
+  "currency": "USD",
+  "flag": "🇨🇬",
+  "nameEn": "Congo - Brazzaville",
+  "nameZh": "刚果（布）",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ch",
+  "currency": "CHF",
+  "flag": "🇨🇭",
+  "nameEn": "Switzerland",
+  "nameZh": "瑞士",
+  "currencyEn": "Swiss Franc",
+  "currencyZh": "瑞士法郎"
+ },
+ {
+  "code": "ci",
+  "currency": "USD",
+  "flag": "🇨🇮",
+  "nameEn": "Côte d’Ivoire",
+  "nameZh": "科特迪瓦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "cl",
+  "currency": "CLP",
+  "flag": "🇨🇱",
+  "nameEn": "Chile",
+  "nameZh": "智利",
+  "currencyEn": "Chilean Peso",
+  "currencyZh": "智利比索"
+ },
+ {
+  "code": "co",
+  "currency": "COP",
+  "flag": "🇨🇴",
+  "nameEn": "Colombia",
+  "nameZh": "哥伦比亚",
+  "currencyEn": "Colombian Peso",
+  "currencyZh": "哥伦比亚比索"
+ },
+ {
+  "code": "cr",
+  "currency": "USD",
+  "flag": "🇨🇷",
+  "nameEn": "Costa Rica",
+  "nameZh": "哥斯达黎加",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "cv",
+  "currency": "USD",
+  "flag": "🇨🇻",
+  "nameEn": "Cape Verde",
+  "nameZh": "佛得角",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "cy",
+  "currency": "EUR",
+  "flag": "🇨🇾",
+  "nameEn": "Cyprus",
+  "nameZh": "塞浦路斯",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "cz",
+  "currency": "CZK",
+  "flag": "🇨🇿",
+  "nameEn": "Czechia",
+  "nameZh": "捷克",
+  "currencyEn": "Czech Koruna",
+  "currencyZh": "捷克克朗"
+ },
+ {
+  "code": "de",
+  "currency": "EUR",
+  "flag": "🇩🇪",
+  "nameEn": "Germany",
+  "nameZh": "德国",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "dk",
+  "currency": "DKK",
+  "flag": "🇩🇰",
+  "nameEn": "Denmark",
+  "nameZh": "丹麦",
+  "currencyEn": "Danish Krone",
+  "currencyZh": "丹麦克朗"
+ },
+ {
+  "code": "dm",
+  "currency": "USD",
+  "flag": "🇩🇲",
+  "nameEn": "Dominica",
+  "nameZh": "多米尼克",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "do",
+  "currency": "USD",
+  "flag": "🇩🇴",
+  "nameEn": "Dominican Republic",
+  "nameZh": "多米尼加共和国",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "dz",
+  "currency": "USD",
+  "flag": "🇩🇿",
+  "nameEn": "Algeria",
+  "nameZh": "阿尔及利亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ec",
+  "currency": "USD",
+  "flag": "🇪🇨",
+  "nameEn": "Ecuador",
+  "nameZh": "厄瓜多尔",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ee",
+  "currency": "EUR",
+  "flag": "🇪🇪",
+  "nameEn": "Estonia",
+  "nameZh": "爱沙尼亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "eg",
+  "currency": "EGP",
+  "flag": "🇪🇬",
+  "nameEn": "Egypt",
+  "nameZh": "埃及",
+  "currencyEn": "Egyptian Pound",
+  "currencyZh": "埃及镑"
+ },
+ {
+  "code": "es",
+  "currency": "EUR",
+  "flag": "🇪🇸",
+  "nameEn": "Spain",
+  "nameZh": "西班牙",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "fi",
+  "currency": "EUR",
+  "flag": "🇫🇮",
+  "nameEn": "Finland",
+  "nameZh": "芬兰",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "fj",
+  "currency": "USD",
+  "flag": "🇫🇯",
+  "nameEn": "Fiji",
+  "nameZh": "斐济",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "fm",
+  "currency": "USD",
+  "flag": "🇫🇲",
+  "nameEn": "Micronesia",
+  "nameZh": "密克罗尼西亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "fr",
+  "currency": "EUR",
+  "flag": "🇫🇷",
+  "nameEn": "France",
+  "nameZh": "法国",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "ga",
+  "currency": "USD",
+  "flag": "🇬🇦",
+  "nameEn": "Gabon",
+  "nameZh": "加蓬",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gb",
+  "currency": "GBP",
+  "flag": "🇬🇧",
+  "nameEn": "United Kingdom",
+  "nameZh": "英国",
+  "currencyEn": "British Pound",
+  "currencyZh": "英镑"
+ },
+ {
+  "code": "gd",
+  "currency": "USD",
+  "flag": "🇬🇩",
+  "nameEn": "Grenada",
+  "nameZh": "格林纳达",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gh",
+  "currency": "USD",
+  "flag": "🇬🇭",
+  "nameEn": "Ghana",
+  "nameZh": "加纳",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gm",
+  "currency": "USD",
+  "flag": "🇬🇲",
+  "nameEn": "Gambia",
+  "nameZh": "冈比亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gr",
+  "currency": "EUR",
+  "flag": "🇬🇷",
+  "nameEn": "Greece",
+  "nameZh": "希腊",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "gt",
+  "currency": "USD",
+  "flag": "🇬🇹",
+  "nameEn": "Guatemala",
+  "nameZh": "危地马拉",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gw",
+  "currency": "USD",
+  "flag": "🇬🇼",
+  "nameEn": "Guinea-Bissau",
+  "nameZh": "几内亚比绍",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "gy",
+  "currency": "USD",
+  "flag": "🇬🇾",
+  "nameEn": "Guyana",
+  "nameZh": "圭亚那",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "hn",
+  "currency": "USD",
+  "flag": "🇭🇳",
+  "nameEn": "Honduras",
+  "nameZh": "洪都拉斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "hr",
+  "currency": "EUR",
+  "flag": "🇭🇷",
+  "nameEn": "Croatia",
+  "nameZh": "克罗地亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "hu",
+  "currency": "HUF",
+  "flag": "🇭🇺",
+  "nameEn": "Hungary",
+  "nameZh": "匈牙利",
+  "currencyEn": "Hungarian Forint",
+  "currencyZh": "匈牙利福林"
+ },
+ {
+  "code": "id",
+  "currency": "IDR",
+  "flag": "🇮🇩",
+  "nameEn": "Indonesia",
+  "nameZh": "印度尼西亚",
+  "currencyEn": "Indonesian Rupiah",
+  "currencyZh": "印度尼西亚卢比"
+ },
+ {
+  "code": "ie",
+  "currency": "EUR",
+  "flag": "🇮🇪",
+  "nameEn": "Ireland",
+  "nameZh": "爱尔兰",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "il",
+  "currency": "ILS",
+  "flag": "🇮🇱",
+  "nameEn": "Israel",
+  "nameZh": "以色列",
+  "currencyEn": "Israeli New Shekel",
+  "currencyZh": "以色列新谢克尔"
+ },
+ {
+  "code": "in",
+  "currency": "INR",
+  "flag": "🇮🇳",
+  "nameEn": "India",
+  "nameZh": "印度",
+  "currencyEn": "Indian Rupee",
+  "currencyZh": "印度卢比"
+ },
+ {
+  "code": "iq",
+  "currency": "USD",
+  "flag": "🇮🇶",
+  "nameEn": "Iraq",
+  "nameZh": "伊拉克",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "is",
+  "currency": "USD",
+  "flag": "🇮🇸",
+  "nameEn": "Iceland",
+  "nameZh": "冰岛",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "it",
+  "currency": "EUR",
+  "flag": "🇮🇹",
+  "nameEn": "Italy",
+  "nameZh": "意大利",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "jm",
+  "currency": "USD",
+  "flag": "🇯🇲",
+  "nameEn": "Jamaica",
+  "nameZh": "牙买加",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "jo",
+  "currency": "USD",
+  "flag": "🇯🇴",
+  "nameEn": "Jordan",
+  "nameZh": "约旦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "jp",
+  "currency": "JPY",
+  "flag": "🇯🇵",
+  "nameEn": "Japan",
+  "nameZh": "日本",
+  "currencyEn": "Japanese Yen",
+  "currencyZh": "日元"
+ },
+ {
+  "code": "ke",
+  "currency": "USD",
+  "flag": "🇰🇪",
+  "nameEn": "Kenya",
+  "nameZh": "肯尼亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "kg",
+  "currency": "USD",
+  "flag": "🇰🇬",
+  "nameEn": "Kyrgyzstan",
+  "nameZh": "吉尔吉斯斯坦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "kh",
+  "currency": "USD",
+  "flag": "🇰🇭",
+  "nameEn": "Cambodia",
+  "nameZh": "柬埔寨",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "kn",
+  "currency": "USD",
+  "flag": "🇰🇳",
+  "nameEn": "St. Kitts \u0026 Nevis",
+  "nameZh": "圣基茨和尼维斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "kr",
+  "currency": "KRW",
+  "flag": "🇰🇷",
+  "nameEn": "South Korea",
+  "nameZh": "韩国",
+  "currencyEn": "South Korean Won",
+  "currencyZh": "韩元"
+ },
+ {
+  "code": "kw",
+  "currency": "USD",
+  "flag": "🇰🇼",
+  "nameEn": "Kuwait",
+  "nameZh": "科威特",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ky",
+  "currency": "USD",
+  "flag": "🇰🇾",
+  "nameEn": "Cayman Islands",
+  "nameZh": "开曼群岛",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "kz",
+  "currency": "KZT",
+  "flag": "🇰🇿",
+  "nameEn": "Kazakhstan",
+  "nameZh": "哈萨克斯坦",
+  "currencyEn": "Kazakhstani Tenge",
+  "currencyZh": "哈萨克斯坦坚戈"
+ },
+ {
+  "code": "la",
+  "currency": "USD",
+  "flag": "🇱🇦",
+  "nameEn": "Laos",
+  "nameZh": "老挝",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "lb",
+  "currency": "USD",
+  "flag": "🇱🇧",
+  "nameEn": "Lebanon",
+  "nameZh": "黎巴嫩",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "lc",
+  "currency": "USD",
+  "flag": "🇱🇨",
+  "nameEn": "St. Lucia",
+  "nameZh": "圣卢西亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "lk",
+  "currency": "USD",
+  "flag": "🇱🇰",
+  "nameEn": "Sri Lanka",
+  "nameZh": "斯里兰卡",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "lr",
+  "currency": "USD",
+  "flag": "🇱🇷",
+  "nameEn": "Liberia",
+  "nameZh": "利比里亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "lt",
+  "currency": "EUR",
+  "flag": "🇱🇹",
+  "nameEn": "Lithuania",
+  "nameZh": "立陶宛",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "lu",
+  "currency": "EUR",
+  "flag": "🇱🇺",
+  "nameEn": "Luxembourg",
+  "nameZh": "卢森堡",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "lv",
+  "currency": "EUR",
+  "flag": "🇱🇻",
+  "nameEn": "Latvia",
+  "nameZh": "拉脱维亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "ly",
+  "currency": "USD",
+  "flag": "🇱🇾",
+  "nameEn": "Libya",
+  "nameZh": "利比亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ma",
+  "currency": "USD",
+  "flag": "🇲🇦",
+  "nameEn": "Morocco",
+  "nameZh": "摩洛哥",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "md",
+  "currency": "USD",
+  "flag": "🇲🇩",
+  "nameEn": "Moldova",
+  "nameZh": "摩尔多瓦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "me",
+  "currency": "EUR",
+  "flag": "🇲🇪",
+  "nameEn": "Montenegro",
+  "nameZh": "黑山",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "mg",
+  "currency": "USD",
+  "flag": "🇲🇬",
+  "nameEn": "Madagascar",
+  "nameZh": "马达加斯加",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mk",
+  "currency": "USD",
+  "flag": "🇲🇰",
+  "nameEn": "North Macedonia",
+  "nameZh": "北马其顿",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ml",
+  "currency": "USD",
+  "flag": "🇲🇱",
+  "nameEn": "Mali",
+  "nameZh": "马里",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mm",
+  "currency": "USD",
+  "flag": "🇲🇲",
+  "nameEn": "Myanmar (Burma)",
+  "nameZh": "缅甸",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mn",
+  "currency": "USD",
+  "flag": "🇲🇳",
+  "nameEn": "Mongolia",
+  "nameZh": "蒙古",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mr",
+  "currency": "USD",
+  "flag": "🇲🇷",
+  "nameEn": "Mauritania",
+  "nameZh": "毛里塔尼亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ms",
+  "currency": "USD",
+  "flag": "🇲🇸",
+  "nameEn": "Montserrat",
+  "nameZh": "蒙特塞拉特",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mt",
+  "currency": "EUR",
+  "flag": "🇲🇹",
+  "nameEn": "Malta",
+  "nameZh": "马耳他",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "mu",
+  "currency": "USD",
+  "flag": "🇲🇺",
+  "nameEn": "Mauritius",
+  "nameZh": "毛里求斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mv",
+  "currency": "USD",
+  "flag": "🇲🇻",
+  "nameEn": "Maldives",
+  "nameZh": "马尔代夫",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mw",
+  "currency": "USD",
+  "flag": "🇲🇼",
+  "nameEn": "Malawi",
+  "nameZh": "马拉维",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "mx",
+  "currency": "MXN",
+  "flag": "🇲🇽",
+  "nameEn": "Mexico",
+  "nameZh": "墨西哥",
+  "currencyEn": "Mexican Peso",
+  "currencyZh": "墨西哥比索"
+ },
+ {
+  "code": "my",
+  "currency": "MYR",
+  "flag": "🇲🇾",
+  "nameEn": "Malaysia",
+  "nameZh": "马来西亚",
+  "currencyEn": "Malaysian Ringgit",
+  "currencyZh": "马来西亚林吉特"
+ },
+ {
+  "code": "mz",
+  "currency": "USD",
+  "flag": "🇲🇿",
+  "nameEn": "Mozambique",
+  "nameZh": "莫桑比克",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "na",
+  "currency": "USD",
+  "flag": "🇳🇦",
+  "nameEn": "Namibia",
+  "nameZh": "纳米比亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ne",
+  "currency": "USD",
+  "flag": "🇳🇪",
+  "nameEn": "Niger",
+  "nameZh": "尼日尔",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ng",
+  "currency": "NGN",
+  "flag": "🇳🇬",
+  "nameEn": "Nigeria",
+  "nameZh": "尼日利亚",
+  "currencyEn": "Nigerian Naira",
+  "currencyZh": "尼日利亚奈拉"
+ },
+ {
+  "code": "ni",
+  "currency": "USD",
+  "flag": "🇳🇮",
+  "nameEn": "Nicaragua",
+  "nameZh": "尼加拉瓜",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "nl",
+  "currency": "EUR",
+  "flag": "🇳🇱",
+  "nameEn": "Netherlands",
+  "nameZh": "荷兰",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "no",
+  "currency": "NOK",
+  "flag": "🇳🇴",
+  "nameEn": "Norway",
+  "nameZh": "挪威",
+  "currencyEn": "Norwegian Krone",
+  "currencyZh": "挪威克朗"
+ },
+ {
+  "code": "np",
+  "currency": "USD",
+  "flag": "🇳🇵",
+  "nameEn": "Nepal",
+  "nameZh": "尼泊尔",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "nz",
+  "currency": "NZD",
+  "flag": "🇳🇿",
+  "nameEn": "New Zealand",
+  "nameZh": "新西兰",
+  "currencyEn": "New Zealand Dollar",
+  "currencyZh": "新西兰元"
+ },
+ {
+  "code": "om",
+  "currency": "USD",
+  "flag": "🇴🇲",
+  "nameEn": "Oman",
+  "nameZh": "阿曼",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "pa",
+  "currency": "USD",
+  "flag": "🇵🇦",
+  "nameEn": "Panama",
+  "nameZh": "巴拿马",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "pe",
+  "currency": "PEN",
+  "flag": "🇵🇪",
+  "nameEn": "Peru",
+  "nameZh": "秘鲁",
+  "currencyEn": "Peruvian Sol",
+  "currencyZh": "秘鲁索尔"
+ },
+ {
+  "code": "pg",
+  "currency": "USD",
+  "flag": "🇵🇬",
+  "nameEn": "Papua New Guinea",
+  "nameZh": "巴布亚新几内亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ph",
+  "currency": "PHP",
+  "flag": "🇵🇭",
+  "nameEn": "Philippines",
+  "nameZh": "菲律宾",
+  "currencyEn": "Philippine Peso",
+  "currencyZh": "菲律宾比索"
+ },
+ {
+  "code": "pk",
+  "currency": "PKR",
+  "flag": "🇵🇰",
+  "nameEn": "Pakistan",
+  "nameZh": "巴基斯坦",
+  "currencyEn": "Pakistani Rupee",
+  "currencyZh": "巴基斯坦卢比"
+ },
+ {
+  "code": "pl",
+  "currency": "PLN",
+  "flag": "🇵🇱",
+  "nameEn": "Poland",
+  "nameZh": "波兰",
+  "currencyEn": "Polish Zloty",
+  "currencyZh": "波兰兹罗提"
+ },
+ {
+  "code": "pt",
+  "currency": "EUR",
+  "flag": "🇵🇹",
+  "nameEn": "Portugal",
+  "nameZh": "葡萄牙",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "py",
+  "currency": "USD",
+  "flag": "🇵🇾",
+  "nameEn": "Paraguay",
+  "nameZh": "巴拉圭",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "qa",
+  "currency": "QAR",
+  "flag": "🇶🇦",
+  "nameEn": "Qatar",
+  "nameZh": "卡塔尔",
+  "currencyEn": "Qatari Riyal",
+  "currencyZh": "卡塔尔里亚尔"
+ },
+ {
+  "code": "ro",
+  "currency": "RON",
+  "flag": "🇷🇴",
+  "nameEn": "Romania",
+  "nameZh": "罗马尼亚",
+  "currencyEn": "Romanian Leu",
+  "currencyZh": "罗马尼亚列伊"
+ },
+ {
+  "code": "rs",
+  "currency": "EUR",
+  "flag": "🇷🇸",
+  "nameEn": "Serbia",
+  "nameZh": "塞尔维亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "rw",
+  "currency": "USD",
+  "flag": "🇷🇼",
+  "nameEn": "Rwanda",
+  "nameZh": "卢旺达",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "sa",
+  "currency": "SAR",
+  "flag": "🇸🇦",
+  "nameEn": "Saudi Arabia",
+  "nameZh": "沙特阿拉伯",
+  "currencyEn": "Saudi Riyal",
+  "currencyZh": "沙特里亚尔"
+ },
+ {
+  "code": "sb",
+  "currency": "USD",
+  "flag": "🇸🇧",
+  "nameEn": "Solomon Islands",
+  "nameZh": "所罗门群岛",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "se",
+  "currency": "SEK",
+  "flag": "🇸🇪",
+  "nameEn": "Sweden",
+  "nameZh": "瑞典",
+  "currencyEn": "Swedish Krona",
+  "currencyZh": "瑞典克朗"
+ },
+ {
+  "code": "sg",
+  "currency": "SGD",
+  "flag": "🇸🇬",
+  "nameEn": "Singapore",
+  "nameZh": "新加坡",
+  "currencyEn": "Singapore Dollar",
+  "currencyZh": "新加坡元"
+ },
+ {
+  "code": "si",
+  "currency": "EUR",
+  "flag": "🇸🇮",
+  "nameEn": "Slovenia",
+  "nameZh": "斯洛文尼亚",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "sk",
+  "currency": "EUR",
+  "flag": "🇸🇰",
+  "nameEn": "Slovakia",
+  "nameZh": "斯洛伐克",
+  "currencyEn": "Euro",
+  "currencyZh": "欧元"
+ },
+ {
+  "code": "sl",
+  "currency": "USD",
+  "flag": "🇸🇱",
+  "nameEn": "Sierra Leone",
+  "nameZh": "塞拉利昂",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "sn",
+  "currency": "USD",
+  "flag": "🇸🇳",
+  "nameEn": "Senegal",
+  "nameZh": "塞内加尔",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "sr",
+  "currency": "USD",
+  "flag": "🇸🇷",
+  "nameEn": "Suriname",
+  "nameZh": "苏里南",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "sv",
+  "currency": "USD",
+  "flag": "🇸🇻",
+  "nameEn": "El Salvador",
+  "nameZh": "萨尔瓦多",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "sz",
+  "currency": "USD",
+  "flag": "🇸🇿",
+  "nameEn": "Eswatini",
+  "nameZh": "斯威士兰",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "tc",
+  "currency": "USD",
+  "flag": "🇹🇨",
+  "nameEn": "Turks \u0026 Caicos Islands",
+  "nameZh": "特克斯和凯科斯群岛",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "td",
+  "currency": "USD",
+  "flag": "🇹🇩",
+  "nameEn": "Chad",
+  "nameZh": "乍得",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "th",
+  "currency": "THB",
+  "flag": "🇹🇭",
+  "nameEn": "Thailand",
+  "nameZh": "泰国",
+  "currencyEn": "Thai Baht",
+  "currencyZh": "泰铢"
+ },
+ {
+  "code": "tj",
+  "currency": "USD",
+  "flag": "🇹🇯",
+  "nameEn": "Tajikistan",
+  "nameZh": "塔吉克斯坦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "tm",
+  "currency": "USD",
+  "flag": "🇹🇲",
+  "nameEn": "Turkmenistan",
+  "nameZh": "土库曼斯坦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "tn",
+  "currency": "USD",
+  "flag": "🇹🇳",
+  "nameEn": "Tunisia",
+  "nameZh": "突尼斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "tr",
+  "currency": "TRY",
+  "flag": "🇹🇷",
+  "nameEn": "Türkiye",
+  "nameZh": "土耳其",
+  "currencyEn": "Turkish Lira",
+  "currencyZh": "土耳其里拉"
+ },
+ {
+  "code": "tt",
+  "currency": "USD",
+  "flag": "🇹🇹",
+  "nameEn": "Trinidad \u0026 Tobago",
+  "nameZh": "特立尼达和多巴哥",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "tw",
+  "currency": "TWD",
+  "flag": "🇹🇼",
+  "nameEn": "Taiwan",
+  "nameZh": "台湾",
+  "currencyEn": "New Taiwan Dollar",
+  "currencyZh": "新台币"
+ },
+ {
+  "code": "tz",
+  "currency": "TZS",
+  "flag": "🇹🇿",
+  "nameEn": "Tanzania",
+  "nameZh": "坦桑尼亚",
+  "currencyEn": "Tanzanian Shilling",
+  "currencyZh": "坦桑尼亚先令"
+ },
+ {
+  "code": "ua",
+  "currency": "USD",
+  "flag": "🇺🇦",
+  "nameEn": "Ukraine",
+  "nameZh": "乌克兰",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "ug",
+  "currency": "USD",
+  "flag": "🇺🇬",
+  "nameEn": "Uganda",
+  "nameZh": "乌干达",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "us",
+  "currency": "USD",
+  "flag": "🇺🇸",
+  "nameEn": "United States",
+  "nameZh": "美国",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "uy",
+  "currency": "USD",
+  "flag": "🇺🇾",
+  "nameEn": "Uruguay",
+  "nameZh": "乌拉圭",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "uz",
+  "currency": "USD",
+  "flag": "🇺🇿",
+  "nameEn": "Uzbekistan",
+  "nameZh": "乌兹别克斯坦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "vc",
+  "currency": "USD",
+  "flag": "🇻🇨",
+  "nameEn": "St. Vincent \u0026 Grenadines",
+  "nameZh": "圣文森特和格林纳丁斯",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "vg",
+  "currency": "USD",
+  "flag": "🇻🇬",
+  "nameEn": "British Virgin Islands",
+  "nameZh": "英属维尔京群岛",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "vn",
+  "currency": "VND",
+  "flag": "🇻🇳",
+  "nameEn": "Vietnam",
+  "nameZh": "越南",
+  "currencyEn": "Vietnamese Dong",
+  "currencyZh": "越南盾"
+ },
+ {
+  "code": "ye",
+  "currency": "USD",
+  "flag": "🇾🇪",
+  "nameEn": "Yemen",
+  "nameZh": "也门",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "za",
+  "currency": "ZAR",
+  "flag": "🇿🇦",
+  "nameEn": "South Africa",
+  "nameZh": "南非",
+  "currencyEn": "South African Rand",
+  "currencyZh": "南非兰特"
+ },
+ {
+  "code": "zm",
+  "currency": "USD",
+  "flag": "🇿🇲",
+  "nameEn": "Zambia",
+  "nameZh": "赞比亚",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ },
+ {
+  "code": "zw",
+  "currency": "USD",
+  "flag": "🇿🇼",
+  "nameEn": "Zimbabwe",
+  "nameZh": "津巴布韦",
+  "currencyEn": "US Dollar",
+  "currencyZh": "美元"
+ }
+]

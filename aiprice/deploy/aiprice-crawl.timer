@@ -1,0 +1,12 @@
+[Unit]
+Description=每日触发 aiprice 抓取
+
+[Timer]
+# 每天 03:30（服务器时区 Europe/Berlin）跑，错峰避开整点
+OnCalendar=*-*-* 03:30:00
+# 关机错过就在开机后补跑
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target

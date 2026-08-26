@@ -1,12 +1,18 @@
 # 敏感信息：服务器密码、密钥，绝不入库
 服务器信息.md
 deploy/env
+aiprice/deploy/init.sql
+aiprice/deploy/env
 
 # 构建产物
 blog/dist/
 blog/node_modules/
 blog/.astro/
 server/blog-stats
+aiprice/api/aiprice
+aiprice/web/dist/
+aiprice/web/node_modules/
+aiprice/web/.astro/
 
 # 旧模板备份（确认 Fuwari 稳定后可整目录删除）
 blog-template-backup/

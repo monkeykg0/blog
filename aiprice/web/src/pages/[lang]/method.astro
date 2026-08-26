@@ -1,0 +1,175 @@
+---
+import Base from "../../layouts/Base.astro";
+import { LANGS, type Lang, t } from "../../lib/i18n";
+import { meta } from "../../lib/data";
+
+export function getStaticPaths() {
+	return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const zh = lang === "zh";
+
+const title = `${t(lang, "methodTitle")} — ${t(lang, "siteName")}`;
+const description = zh
+	? "价格从哪来、怎么解析、多久更新一次，以及这份数据的已知局限。"
+	: "Where the prices come from, how they are parsed, how often they update, and what this data cannot tell you.";
+---
+
+<Base {lang} {title} {description} path="method" nav="method">
+	<section class="wrap head rule-bottom">
+		<h1>{t(lang, "methodTitle")}</h1>
+		<p class="sub">{description}</p>
+	</section>
+
+	<article class="wrap prose">
+		<h2>{zh ? "数据来源" : "Source"}</h2>
+		<p>
+			{
+				zh
+					? `每天固定时间抓取一次 Apple App Store 全部 ${meta.storefronts} 个地区的商店页，读取页面内嵌的应用内购买列表。数据是 Apple 公开返回的，不需要登录，也不经过任何第三方转手。`
+					: `Once a day this site reads the App Store product page for all ${meta.storefronts} storefronts and takes the in-app purchase list embedded in each page. The data is what Apple serves publicly — no login, no third-party reseller in between.`
+			}
+		</p>
+		<p>
+			{
+				zh
+					? "抓取遵守 Apple 的 robots.txt：只请求商店页本身，不碰其内部接口，请求之间有节流。"
+					: "Crawling respects Apple's robots.txt: only the product pages themselves, never the internal APIs, and throttled between requests."
+			}
+		</p>
+
+		<h2>{zh ? "价格是怎么解析的" : "How prices are parsed"}</h2>
+		<p>
+			{
+				zh
+					? "Apple 返回的是已按地区格式化的字符串，同一个档位在各地区实测有 78 种不同写法。最容易出错的是货币符号——美国的 $19.99 和哥伦比亚的 $ 99.900,00 用同一个符号，但点和逗号的含义正好相反。"
+					: "Apple returns a string already formatted for the storefront — one tier alone appears in 78 distinct formats. The trap is the currency symbol: the US $19.99 and Colombia's $ 99.900,00 share a sign but reverse the meaning of the dot and the comma."
+			}
+		</p>
+		<p>
+			{
+				zh
+					? "所以本站从不根据符号推断币种，而是按「地区 → ISO 币种」的固定映射解析，小数位数查 ISO 4217 标准。折算成美元后如果落在该档位的合理区间之外，这条记录不会发布，而是留待人工确认。"
+					: "So the currency is never inferred from the symbol: each storefront is bound to its ISO currency, and the number of decimal places comes from ISO 4217. If a converted price falls outside the plausible range for its tier, the record is withheld from the site for review rather than published."
+			}
+		</p>
+
+		<h2>{zh ? "汇率" : "Exchange rates"}</h2>
+		<p>
+			{
+				zh
+					? `折算使用抓取当日的中间价，来源 ${meta.fxSource}。历史价格配当日汇率存档，不用当前汇率回算——否则一次汇率波动会让所有历史价格集体“变动”。`
+					: `Conversions use the mid-market rate of the day the price was captured, from ${meta.fxSource}. Historical prices keep the rate of their own day rather than being recomputed at today's rate, which would make every past price appear to move whenever the currency does.`
+			}
+		</p>
+		<p class="warn">
+			{
+				zh
+					? "折算值仅供横向比较。你实际支付的是本地货币金额，最终扣款还取决于发卡行汇率、税费和手续费。"
+					: "Converted figures are for comparison only. You are charged the local amount; what actually leaves your account also depends on your bank's rate, taxes and fees."
+			}
+		</p>
+
+		<h2>{zh ? "这份数据的局限" : "What this data cannot tell you"}</h2>
+		<ul>
+			<li>
+				{
+					zh
+						? "Apple 每个 App 最多展示 10 条内购项目，按该地区热度排序。某个档位没出现，不代表该地区不售——只是没进前 10。冷门高价档（如 Google AI Ultra、SuperGrok Heavy）的覆盖率明显低于主力档。"
+						: "Apple shows at most 10 in-app purchases per app, ranked by local popularity. A tier that is absent is not necessarily unavailable — it just missed the top 10. Expensive, low-volume tiers (Google AI Ultra, SuperGrok Heavy) are covered less completely than the headline ones."
+				}
+			</li>
+			<li>
+				{
+					zh
+						? "这里只有 App Store 内购价。同一个订阅在官网用信用卡买，价格可能不同，通常地区差异更小。"
+						: "These are App Store in-app purchase prices only. Buying the same subscription by card on the vendor's own site can cost a different amount, usually with less regional variation."
+				}
+			</li>
+			<li>
+				{
+					zh
+						? "价格不含各地区的税。部分地区商店页显示的是含税价，部分不是，本站原样记录，不做统一。"
+						: "Prices exclude nothing and add nothing: some storefronts display tax-inclusive figures and some do not. The value is recorded as shown, without normalisation."
+				}
+			</li>
+		</ul>
+
+		<h2>{zh ? "关于切换地区" : "On switching storefronts"}</h2>
+		<p>
+			{
+				zh
+					? "本站只呈现价格，不提供切换 App Store 地区的操作指引，也不销售任何礼品卡。切换地区需要该地区的有效支付方式和账单地址；以其它方式绕开可能违反 Apple Media Services 条款以及各服务商的服务条款，后果由账号持有人承担。"
+					: "This site presents prices and nothing else. It does not explain how to switch App Store region and does not sell gift cards. Switching requires a valid payment method and billing address in that region; working around that may breach the Apple Media Services Terms and the vendors' own terms, and the consequences fall on the account holder."
+			}
+		</p>
+
+		<h2>{zh ? "更新频率" : "Update cadence"}</h2>
+		<p>
+			{
+				zh
+					? `每日抓取一次。本页数据日期 ${meta.dataDate}，导出于 ${meta.generatedAt.replace("T", " ").replace("Z", " UTC")}。`
+					: `Once a day. This page carries data from ${meta.dataDate}, generated ${meta.generatedAt.replace("T", " ").replace("Z", " UTC")}.`
+			}
+		</p>
+	</article>
+</Base>
+
+<style>
+	.head {
+		padding-block: 34px 26px;
+	}
+	h1 {
+		font-size: 40px;
+		margin: 0 0 12px;
+	}
+	.sub {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--ink2);
+		max-width: 52em;
+	}
+	.prose {
+		padding-block: 30px 10px;
+		max-width: 46em;
+	}
+	.prose h2 {
+		font-family: var(--sans);
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--ink3);
+		margin: 34px 0 12px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid var(--rule);
+	}
+	.prose h2:first-child {
+		margin-top: 0;
+	}
+	.prose p,
+	.prose li {
+		font-size: 14px;
+		line-height: 1.78;
+		color: var(--ink2);
+		margin: 0 0 14px;
+	}
+	.prose ul {
+		margin: 0;
+		padding-left: 18px;
+	}
+	.prose li {
+		margin-bottom: 12px;
+	}
+	.warn {
+		border-left: 2px solid var(--ink);
+		padding-left: 16px;
+		color: var(--ink);
+	}
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 28px;
+		}
+	}
+</style>

@@ -1,0 +1,181 @@
+---
+// 某档位在全部地区的价格排行表。
+// 用真的 <table>：这是表格数据，屏幕阅读器和搜索引擎都该按表格理解它。
+import { type Lang, t, url } from "../lib/i18n";
+import {
+	cny,
+	regionName,
+	storefrontOf,
+	usd,
+	vsLowest,
+	withRanks,
+	type TierPrices,
+} from "../lib/data";
+
+interface Props {
+	lang: Lang;
+	tier: TierPrices;
+	/** 高亮这个地区（地区页跳过来时用） */
+	highlight?: string;
+	caption: string;
+}
+const { lang, tier, highlight, caption } = Astro.props;
+
+// 名次用竞赛排名：86 个地区可能同价，下标排名在并列里是任意的
+const rows = withRanks(tier.rows);
+const lowest = rows[0]?.usd ?? 0;
+const highest = rows[rows.length - 1]?.usd ?? 1;
+const span = highest - lowest || 1;
+---
+
+<div class="scroll-x">
+	<table class="tbl">
+		<caption class="sr-only">{caption}</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="c-rank">{t(lang, "colRank")}</th>
+				<th scope="col" class="c-code"><span class="sr-only">{t(lang, "colRegion")}</span></th>
+				<th scope="col" class="c-name">{t(lang, "colRegion")}</th>
+				<th scope="col" class="c-local">{t(lang, "colLocal")}</th>
+				<th scope="col" class="c-num">≈ USD</th>
+				<th scope="col" class="c-num">≈ CNY</th>
+				<th scope="col" class="c-gap">{t(lang, "colVsLowest")}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				rows.map((r) => {
+					const sf = storefrontOf(r.storefront);
+					const on = highlight === r.storefront;
+					const barPct = Math.max(4, ((r.usd - lowest) / span) * 100);
+					return (
+						<tr class:list={{ on }}>
+							<td class="c-rank num">
+								{r.rank}
+								{r.tied > 1 && <span class="tie" title={`${r.tied}`}>={r.tied}</span>}
+							</td>
+							<td class="c-code">
+								<span class="code">{r.storefront.toUpperCase()}</span>
+							</td>
+							<td class="c-name">
+								{sf ? <a href={url(lang, `r/${r.storefront}`)}>{regionName(sf, lang)}</a> : r.storefront}
+							</td>
+							<td class="c-local num">{r.rawPrice}</td>
+							<td class="c-num num strong">{usd(r.usd)}</td>
+							<td class="c-num num soft">{cny(r.usd)}</td>
+							<td class="c-gap">
+								<span class="bar" style={`width: ${barPct}%`} aria-hidden="true"></span>
+								<span class="num gapnum">{vsLowest(r.usd, lowest)}</span>
+							</td>
+						</tr>
+					);
+				})
+			}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+	.tbl {
+		width: 100%;
+		border-collapse: collapse;
+		min-width: 760px;
+	}
+	thead th {
+		font-size: 10.5px;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--ink3);
+		font-weight: 600;
+		text-align: left;
+		padding: 12px 10px 9px;
+		border-bottom: 1px solid var(--ink);
+		white-space: nowrap;
+	}
+	tbody td {
+		padding: 10px;
+		border-bottom: 1px solid var(--rule);
+		vertical-align: middle;
+	}
+	tbody tr:hover {
+		background: var(--surface);
+	}
+	tbody tr.on {
+		background: var(--surface);
+		box-shadow: inset 3px 0 0 var(--ink);
+	}
+	tbody tr.on .c-name {
+		font-weight: 500;
+	}
+
+	.c-rank {
+		width: 56px;
+		font-size: 14px;
+	}
+	.c-code {
+		width: 42px;
+	}
+	.c-name {
+		font-size: 13.5px;
+	}
+	.c-local {
+		width: 170px;
+		font-size: 13px;
+		color: var(--ink2);
+	}
+	.c-num {
+		width: 104px;
+		text-align: right;
+	}
+	th.c-num {
+		text-align: right;
+	}
+	.strong {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.soft {
+		font-size: 13px;
+		color: var(--ink2);
+	}
+	.c-gap {
+		width: 168px;
+		text-align: right;
+		white-space: nowrap;
+	}
+	th.c-gap {
+		text-align: right;
+	}
+	.bar {
+		display: inline-block;
+		height: 5px;
+		background: var(--ink3);
+		opacity: 0.28;
+		max-width: 104px;
+		vertical-align: middle;
+		margin-right: 9px;
+	}
+	.tie {
+		font-size: 10px;
+		color: var(--ink3);
+		margin-left: 3px;
+	}
+	.gapnum {
+		font-size: 12px;
+		color: var(--ink3);
+		display: inline-block;
+		width: 46px;
+		text-align: right;
+	}
+</style>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --paper: #FBFAF7; --surface: #FFFFFF;
+      --ink: #17160F; --ink2: #55534A; --ink3: #8B8879;
+      --rule: #E5E2D9;
+      --up: #A32B1C; --down: #1C6B45;
+      --s1: #0B7D63; --s2: #BF4A15; --s3: #2F5FAE; --s4: #8A3A6B;
+      --sans: "Archivo", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Newsreader", "Songti SC", Georgia, serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink);
+           font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: var(--ink); text-decoration: none; }
+    a:hover { color: var(--s2); }
+    .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+    .eyebrow { font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+               color: var(--ink3); font-weight: 600; }
+    .code { font-family: var(--mono); font-size: 11px; font-weight: 600;
+            letter-spacing: .04em; color: var(--ink2);
+            border: 1px solid var(--rule); padding: 2px 5px; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; background: var(--paper);">
+
+  <!-- ── masthead ───────────────────────────────────────────── -->
+  <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 22px 56px 14px; border-bottom: 1px solid var(--ink);">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: var(--serif); font-size: 23px; letter-spacing: -.01em;">AIPRICE</div>
+      <div style="width: 1px; height: 15px; background: var(--rule);"></div>
+      <div style="font-size: 12.5px; color: var(--ink2); letter-spacing: .02em;">AI 订阅全球价格观测</div>
+    </div>
+    <div style="display: flex; align-items: baseline; gap: 26px; font-size: 12.5px; color: var(--ink2);">
+      <a href="#">产品</a><a href="#">地区</a><a href="#">历史</a><a href="#">方法论</a>
+      <div style="display: flex; gap: 6px; align-items: baseline; padding-left: 6px; border-left: 1px solid var(--rule);">
+        <span style="color: var(--ink); font-weight: 600;">中</span>
+        <span style="color: var(--ink3);">EN</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── lede ───────────────────────────────────────────────── -->
+  <div style="display: grid; grid-template-columns: 1fr 340px; gap: 64px; padding: 44px 56px 38px; border-bottom: 1px solid var(--rule);">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 18px;">每日实测 · 158 个 App Store 地区</div>
+      <h1 style="font-family: var(--serif); font-weight: 400; font-size: 46px; line-height: 1.14;
+                 margin: 0 0 20px; letter-spacing: -.015em; max-width: 15em; text-wrap: pretty;">
+        同一个订阅，最贵的地区比最便宜的地区多付一半
+      </h1>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: var(--ink2); max-width: 46em; text-wrap: pretty;">
+        本站每日自动抓取 Apple App Store 全部 158 个地区商店页，记录 ChatGPT、Claude、Gemini、Grok
+        的订阅价格原始字符串与抓取时间，按当日中间价折算美元与人民币。不做推荐，不卖礼品卡，只呈现价格事实。
+      </p>
+    </div>
+    <div style="border-left: 1px solid var(--rule); padding-left: 28px;">
+      <div class="eyebrow" style="margin-bottom: 14px;">本次抓取</div>
+      <div style="display: flex; flex-direction: column; gap: 11px; font-size: 12.5px;">
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--ink3);">数据日期</span><span class="num">2026-08-26</span></div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--ink3);">覆盖地区</span><span class="num">158</span></div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--ink3);">内购条目</span><span class="num">4,791</span></div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--ink3);">抓取失败</span><span class="num">0</span></div>
+        <div style="display: flex; justify-content: space-between; padding-top: 11px; border-top: 1px solid var(--rule);">
+          <span style="color: var(--ink3);">汇率</span><span class="num">USD/CNY 6.7370</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 四产品总览 ─────────────────────────────────────────── -->
+  <div style="padding: 34px 56px 10px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px;">
+      <div class="eyebrow">主力档位 · 全球价格区间</div>
+      <div style="font-size: 11.5px; color: var(--ink3);">价格为各地区 App Store 内购月付价，已折算美元</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 210px 1fr 132px 132px 96px;
+                gap: 0 22px; font-size: 11px; letter-spacing: .07em; text-transform: uppercase;
+                color: var(--ink3); font-weight: 600; padding-bottom: 9px; border-bottom: 1px solid var(--ink);">
+      <div>产品 / 档位</div><div>全球分布</div>
+      <div style="text-align: right;">全球最低</div><div style="text-align: right;">美国</div>
+      <div style="text-align: right;">最大价差</div>
+    </div>
+
+    <!-- ChatGPT -->
+    <div style="display: grid; grid-template-columns: 210px 1fr 132px 132px 96px; gap: 0 22px;
+                align-items: center; padding: 17px 0; border-bottom: 1px solid var(--rule);">
+      <div style="display: flex; align-items: baseline; gap: 9px;">
+        <div style="width: 9px; height: 9px; background: var(--s1); flex: none;"></div>
+        <div>
+          <div style="font-size: 14.5px; font-weight: 500;">ChatGPT Plus</div>
+          <div style="font-size: 11.5px; color: var(--ink3); margin-top: 2px;">OpenAI · 158 个地区</div>
+        </div>
+      </div>
+      <div style="position: relative; height: 30px;">
+        <div style="position: absolute; top: 14px; left: 0; right: 0; height: 1px; background: var(--rule);"></div>
+        <div style="position: absolute; top: 11px; left: 0%; width: 100%; height: 7px; background: linear-gradient(90deg, rgba(11,125,99,.20), rgba(11,125,99,.06));"></div>
+        <div style="position: absolute; top: 8px; left: 0; width: 2px; height: 13px; background: var(--s1);"></div>
+        <div style="position: absolute; top: 8px; right: 0; width: 2px; height: 13px; background: var(--s1);"></div>
+        <div style="position: absolute; top: 5px; left: 45%; width: 1px; height: 19px; background: var(--ink); opacity: .55;"></div>
+        <div style="position: absolute; top: 25px; left: 45%; transform: translateX(-50%); font-size: 10px; color: var(--ink3);">US</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; font-weight: 500;">$16.20</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">PH 菲律宾</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; color: var(--ink2);">$19.99</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">第 90 / 158</div>
+      </div>
+      <div style="text-align: right;" class="num">
+        <span style="font-size: 16px;">50%</span>
+      </div>
+    </div>
+
+    <!-- Claude -->
+    <div style="display: grid; grid-template-columns: 210px 1fr 132px 132px 96px; gap: 0 22px;
+                align-items: center; padding: 17px 0; border-bottom: 1px solid var(--rule);">
+      <div style="display: flex; align-items: baseline; gap: 9px;">
+        <div style="width: 9px; height: 9px; background: var(--s2); flex: none;"></div>
+        <div>
+          <div style="font-size: 14.5px; font-weight: 500;">Claude Pro</div>
+          <div style="font-size: 11.5px; color: var(--ink3); margin-top: 2px;">Anthropic · 155 个地区</div>
+        </div>
+      </div>
+      <div style="position: relative; height: 30px;">
+        <div style="position: absolute; top: 14px; left: 0; right: 0; height: 1px; background: var(--rule);"></div>
+        <div style="position: absolute; top: 11px; left: 4%; width: 96%; height: 7px; background: linear-gradient(90deg, rgba(191,74,21,.20), rgba(191,74,21,.06));"></div>
+        <div style="position: absolute; top: 8px; left: 4%; width: 2px; height: 13px; background: var(--s2);"></div>
+        <div style="position: absolute; top: 8px; right: 0; width: 2px; height: 13px; background: var(--s2);"></div>
+        <div style="position: absolute; top: 5px; left: 33%; width: 1px; height: 19px; background: var(--ink); opacity: .55;"></div>
+        <div style="position: absolute; top: 25px; left: 33%; transform: translateX(-50%); font-size: 10px; color: var(--ink3);">US</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; font-weight: 500;">$17.66</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">PK 巴基斯坦</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; color: var(--ink2);">$20.00</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">第 71 / 155</div>
+      </div>
+      <div style="text-align: right;" class="num"><span style="font-size: 16px;">46%</span></div>
+    </div>
+
+    <!-- Gemini -->
+    <div style="display: grid; grid-template-columns: 210px 1fr 132px 132px 96px; gap: 0 22px;
+                align-items: center; padding: 17px 0; border-bottom: 1px solid var(--rule);">
+      <div style="display: flex; align-items: baseline; gap: 9px;">
+        <div style="width: 9px; height: 9px; background: var(--s3); flex: none;"></div>
+        <div>
+          <div style="font-size: 14.5px; font-weight: 500;">Google AI Pro</div>
+          <div style="font-size: 11.5px; color: var(--ink3); margin-top: 2px;">Google · 157 个地区</div>
+        </div>
+      </div>
+      <div style="position: relative; height: 30px;">
+        <div style="position: absolute; top: 14px; left: 0; right: 0; height: 1px; background: var(--rule);"></div>
+        <div style="position: absolute; top: 11px; left: 0%; width: 100%; height: 7px; background: linear-gradient(90deg, rgba(47,95,174,.20), rgba(47,95,174,.06));"></div>
+        <div style="position: absolute; top: 8px; left: 0; width: 2px; height: 13px; background: var(--s3);"></div>
+        <div style="position: absolute; top: 8px; right: 0; width: 2px; height: 13px; background: var(--s3);"></div>
+        <div style="position: absolute; top: 5px; left: 51%; width: 1px; height: 19px; background: var(--ink); opacity: .55;"></div>
+        <div style="position: absolute; top: 25px; left: 51%; transform: translateX(-50%); font-size: 10px; color: var(--ink3);">US</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; font-weight: 500;">$11.22</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">TR 土耳其</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; color: var(--ink2);">$19.99</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">第 95 / 157</div>
+      </div>
+      <div style="text-align: right;" class="num"><span style="font-size: 16px;">60%</span></div>
+    </div>
+
+    <!-- Grok -->
+    <div style="display: grid; grid-template-columns: 210px 1fr 132px 132px 96px; gap: 0 22px;
+                align-items: center; padding: 17px 0; border-bottom: 1px solid var(--rule);">
+      <div style="display: flex; align-items: baseline; gap: 9px;">
+        <div style="width: 9px; height: 9px; background: var(--s4); flex: none;"></div>
+        <div>
+          <div style="font-size: 14.5px; font-weight: 500;">SuperGrok</div>
+          <div style="font-size: 11.5px; color: var(--ink3); margin-top: 2px;">xAI · 148 个地区</div>
+        </div>
+      </div>
+      <div style="position: relative; height: 30px;">
+        <div style="position: absolute; top: 14px; left: 0; right: 0; height: 1px; background: var(--rule);"></div>
+        <div style="position: absolute; top: 11px; left: 0%; width: 100%; height: 7px; background: linear-gradient(90deg, rgba(138,58,107,.20), rgba(138,58,107,.06));"></div>
+        <div style="position: absolute; top: 8px; left: 0; width: 2px; height: 13px; background: var(--s4);"></div>
+        <div style="position: absolute; top: 8px; right: 0; width: 2px; height: 13px; background: var(--s4);"></div>
+        <div style="position: absolute; top: 5px; left: 42%; width: 1px; height: 19px; background: var(--ink); opacity: .55;"></div>
+        <div style="position: absolute; top: 25px; left: 42%; transform: translateX(-50%); font-size: 10px; color: var(--ink3);">US</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; font-weight: 500;">$27.02</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">TR 土耳其</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="num" style="font-size: 16px; color: var(--ink2);">$30.00</div>
+        <div style="font-size: 11px; color: var(--ink3); margin-top: 2px;">第 78 / 148</div>
+      </div>
+      <div style="text-align: right;" class="num"><span style="font-size: 16px;">37%</span></div>
+    </div>
+  </div>
+
+  <!-- ── 今日变价 + 观察 ────────────────────────────────────── -->
+  <div style="display: grid; grid-template-columns: 1fr 400px; gap: 56px; padding: 34px 56px 44px;">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 16px;">今日变价</div>
+      <div style="display: flex; flex-direction: column;">
+
+        <div style="display: grid; grid-template-columns: 26px 1fr 150px 128px; gap: 16px; align-items: baseline;
+                    padding: 13px 0; border-bottom: 1px solid var(--rule);">
+          <span class="code">TR</span>
+          <div style="font-size: 13.5px;">ChatGPT Plus <span style="color: var(--ink3);">月付</span></div>
+          <div class="num" style="font-size: 13px; color: var(--ink2);">₺499,99 → ₺999,99</div>
+          <div class="num" style="text-align: right; color: var(--up); font-size: 13.5px; font-weight: 500;">+100.0%</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 26px 1fr 150px 128px; gap: 16px; align-items: baseline;
+                    padding: 13px 0; border-bottom: 1px solid var(--rule);">
+          <span class="code">IN</span>
+          <div style="font-size: 13.5px;">Claude Pro <span style="color: var(--ink3);">月付</span></div>
+          <div class="num" style="font-size: 13px; color: var(--ink2);">₹1,799 → ₹1,999</div>
+          <div class="num" style="text-align: right; color: var(--up); font-size: 13.5px; font-weight: 500;">+11.1%</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 26px 1fr 150px 128px; gap: 16px; align-items: baseline;
+                    padding: 13px 0; border-bottom: 1px solid var(--rule);">
+          <span class="code">BG</span>
+          <div style="font-size: 13.5px;">ChatGPT Go <span style="color: var(--ink3);">月付</span></div>
+          <div class="num" style="font-size: 13px; color: var(--ink2);">7,99 € → 6,49 €</div>
+          <div class="num" style="text-align: right; color: var(--down); font-size: 13.5px; font-weight: 500;">−18.8%</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 26px 1fr 150px 128px; gap: 16px; align-items: baseline;
+                    padding: 13px 0; border-bottom: 1px solid var(--rule);">
+          <span class="code">LK</span>
+          <div style="font-size: 13.5px;">ChatGPT Go <span style="color: var(--ink3);">月付</span></div>
+          <div class="num" style="font-size: 13px; color: var(--ink2);">$5.99 → $5.00</div>
+          <div class="num" style="text-align: right; color: var(--down); font-size: 13.5px; font-weight: 500;">−16.5%</div>
+        </div>
+      </div>
+      <div style="margin-top: 15px; font-size: 11.5px; color: var(--ink3);">
+        与上一次抓取（2026-08-25）逐地区比对，仅列出本地货币原价发生变化的记录。
+      </div>
+    </div>
+
+    <div style="border-left: 1px solid var(--rule); padding-left: 32px;">
+      <div class="eyebrow" style="margin-bottom: 16px;">读数说明</div>
+      <p style="margin: 0 0 15px; font-size: 13px; line-height: 1.72; color: var(--ink2); text-wrap: pretty;">
+        <span style="color: var(--ink); font-weight: 500;">同一币种不等于同价。</span>
+        158 个地区共用 40 种货币，但同为欧元区，保加利亚的 ChatGPT Plus 是
+        <span class="num">19,99 €</span>，德国是 <span class="num">22,99 €</span>。
+      </p>
+      <p style="margin: 0 0 15px; font-size: 13px; line-height: 1.72; color: var(--ink2); text-wrap: pretty;">
+        <span style="color: var(--ink); font-weight: 500;">没有万能低价区。</span>
+        ChatGPT 最低在菲律宾，Claude 在巴基斯坦，Gemini 与 Grok 在土耳其。
+      </p>
+      <p style="margin: 0; font-size: 13px; line-height: 1.72; color: var(--ink2); text-wrap: pretty;">
+        <span style="color: var(--ink); font-weight: 500;">价格会过期。</span>
+        土耳其区曾长期是 ChatGPT 最低价地区，现已排至第 <span class="num">97</span> 位。
+      </p>
+    </div>
+  </div>
+
+  <!-- ── footer ─────────────────────────────────────────────── -->
+  <div style="padding: 20px 56px 30px; border-top: 1px solid var(--ink);
+              display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 11.5px; color: var(--ink3); line-height: 1.7;">
+    <div style="max-width: 62em;">
+      价格数据取自 Apple App Store 各地区公开商店页，汇率取自 open.er-api.com，仅供参考，以各平台实际结算为准。
+      切换 App Store 地区需要该地区的有效支付方式，并可能违反 Apple Media Services 条款。<br>
+      本站与 OpenAI、Anthropic、Google、xAI 均无关联。
+    </div>
+    <div class="num" style="white-space: nowrap; padding-left: 40px;">2026-08-26 03:30 UTC</div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1280,"height":1180}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

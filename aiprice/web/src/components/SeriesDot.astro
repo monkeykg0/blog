@@ -1,0 +1,21 @@
+---
+import { SERIES_VAR } from "../lib/data";
+interface Props {
+	productId: string;
+	size?: number;
+}
+const { productId, size = 9 } = Astro.props;
+const color = SERIES_VAR[productId] ?? "var(--ink3)";
+---
+
+<span class="dot" style={`--dot: ${color}; --size: ${size}px`} aria-hidden="true"></span>
+
+<style>
+	.dot {
+		display: inline-block;
+		width: var(--size);
+		height: var(--size);
+		background: var(--dot);
+		flex: none;
+	}
+</style>

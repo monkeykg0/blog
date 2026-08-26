@@ -1,0 +1,161 @@
+---
+import Base from "../../../layouts/Base.astro";
+import SeriesDot from "../../../components/SeriesDot.astro";
+import { LANGS, type Lang, t, url } from "../../../lib/i18n";
+import {
+	meta,
+	productName,
+	products,
+	regionName,
+	statsOf,
+	storefrontOf,
+	tierName,
+	tiersOf,
+	usd,
+	type TierPrices,
+} from "../../../lib/data";
+
+export function getStaticPaths() {
+	return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+const groups = products.map((p) => {
+	const seen = new Set<string>();
+	const tiers: TierPrices[] = [];
+	for (const tp of tiersOf(p.id)) {
+		if (seen.has(tp.tier)) continue;
+		seen.add(tp.tier);
+		tiers.push(tp);
+	}
+	tiers.sort((a, b) => (a.rows[0]?.usd ?? 0) - (b.rows[0]?.usd ?? 0));
+	return { product: p, tiers };
+});
+
+const title = `${t(lang, "navProducts")} — ${t(lang, "siteName")}`;
+const description =
+	lang === "zh"
+		? `ChatGPT、Claude、Gemini、Grok 全部订阅档位在 ${meta.storefronts} 个 App Store 地区的价格。`
+		: `Every subscription tier of ChatGPT, Claude, Gemini and Grok across ${meta.storefronts} App Store storefronts.`;
+---
+
+<Base {lang} {title} {description} path="p" nav="products">
+	<section class="wrap head rule-bottom">
+		<h1>{t(lang, "navProducts")}</h1>
+		<p class="sub">{description}</p>
+	</section>
+
+	{
+		groups.map(({ product, tiers }) => (
+			<section class="wrap grp">
+				<h2 class="gh">
+					<SeriesDot productId={product.id} />
+					<span>{productName(product, lang)}</span>
+					<span class="vendor">{product.vendor}</span>
+				</h2>
+				<div class="rows">
+					{tiers.map((tp) => {
+						const st = statsOf(tp);
+						if (!st) return null;
+						const low = storefrontOf(st.lowest.storefront);
+						return (
+							<a class="row" href={url(lang, `p/${product.id}/${tp.tier}`)}>
+								<span class="tn">{tierName(tp, lang)}</span>
+								<span class="meta">{t(lang, "regionsWord", { n: st.count })}</span>
+								<span class="low">
+									<span class="num v">${usd(st.lowest.usd)}</span>
+									<span class="w">
+										{t(lang, "cheapestIn")} {st.lowest.storefront.toUpperCase()}
+										{low ? ` ${regionName(low, lang)}` : ""}
+									</span>
+								</span>
+							</a>
+						);
+					})}
+				</div>
+			</section>
+		))
+	}
+</Base>
+
+<style>
+	.head {
+		padding-block: 34px 26px;
+	}
+	h1 {
+		font-size: 40px;
+		margin: 0 0 12px;
+	}
+	.sub {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--ink2);
+		max-width: 52em;
+	}
+	.grp {
+		padding-block: 26px 4px;
+	}
+	.gh {
+		font-family: var(--sans);
+		font-size: 15px;
+		font-weight: 500;
+		margin: 0 0 8px;
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+	}
+	.vendor {
+		font-size: 11.5px;
+		color: var(--ink3);
+		font-weight: 400;
+	}
+	.row {
+		display: flex;
+		align-items: baseline;
+		gap: 16px;
+		padding: 12px 0;
+		border-bottom: 1px solid var(--rule);
+	}
+	.tn {
+		font-size: 13.5px;
+		min-width: 190px;
+	}
+	.meta {
+		font-size: 11.5px;
+		color: var(--ink3);
+		flex-grow: 1;
+	}
+	.low {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+		text-align: right;
+	}
+	.low .v {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.low .w {
+		font-size: 11.5px;
+		color: var(--ink3);
+		min-width: 190px;
+		text-align: right;
+	}
+	@media (max-width: 760px) {
+		h1 {
+			font-size: 28px;
+		}
+		.row {
+			flex-wrap: wrap;
+			gap: 6px 12px;
+		}
+		.tn {
+			min-width: 0;
+			flex-basis: 100%;
+		}
+		.low .w {
+			min-width: 0;
+		}
+	}
+</style>

@@ -1,0 +1,31 @@
+---
+// 根路径：按浏览器语言把访客送到 /zh 或 /en。
+// 站点是纯静态的，没有服务端可以做 302，所以用 meta refresh + JS，
+// 并给搜索引擎留一个指向英文版的 canonical（x-default 也是英文）。
+import { HTML_LANG, LANGS, url } from "../lib/i18n";
+const site = Astro.site;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>AIPRICE — AI subscription prices, worldwide</title>
+		<link rel="canonical" href={new URL(url("en"), site).href} />
+		{LANGS.map((l) => <link rel="alternate" hreflang={HTML_LANG[l]} href={new URL(url(l), site).href} />)}
+		<link rel="alternate" hreflang="x-default" href={new URL(url("en"), site).href} />
+		<meta http-equiv="refresh" content={`0; url=${url("en")}`} />
+		<script is:inline>
+			(function () {
+				var zh = (navigator.languages || [navigator.language || "en"]).some(function (l) {
+					return String(l).toLowerCase().indexOf("zh") === 0;
+				});
+				location.replace(zh ? "/zh" : "/en");
+			})();
+		</script>
+	</head>
+	<body>
+		<p><a href="/en">English</a> · <a href="/zh">中文</a></p>
+	</body>
+</html>

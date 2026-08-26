@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --paper: #FBFAF7; --ink: #17160F; --ink2: #55534A; --ink3: #8B8879;
+      --rule: #E5E2D9; --s1: #0B7D63; --up: #A32B1C; --down: #1C6B45;
+      --sans: "Archivo", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Newsreader", "Songti SC", Georgia, serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+           -webkit-font-smoothing: antialiased; }
+    a { color: var(--ink); text-decoration: none; } a:hover { color: #BF4A15; }
+    .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+    .eyebrow { font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+               color: var(--ink3); font-weight: 600; }
+    .code { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .04em;
+            color: var(--ink2); border: 1px solid var(--rule); padding: 2px 5px; }
+    .row { display: grid; grid-template-columns: 52px 32px 1fr 160px 108px 108px 150px;
+           gap: 0 20px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+    .bar { height: 5px; background: var(--s1); opacity: .22; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; background: var(--paper);">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 22px 56px 14px; border-bottom: 1px solid var(--ink);">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: var(--serif); font-size: 23px; letter-spacing: -.01em;">AIPRICE</div>
+      <div style="width: 1px; height: 15px; background: var(--rule);"></div>
+      <div style="font-size: 12.5px; color: var(--ink2);">AI 订阅全球价格观测</div>
+    </div>
+    <div style="display: flex; gap: 26px; font-size: 12.5px; color: var(--ink2);">
+      <a href="#" style="color: var(--ink); font-weight: 500; border-bottom: 2px solid var(--ink); padding-bottom: 2px;">产品</a>
+      <a href="#">地区</a><a href="#">历史</a><a href="#">方法论</a>
+    </div>
+  </div>
+
+  <!-- 标题区 -->
+  <div style="padding: 34px 56px 26px; border-bottom: 1px solid var(--rule);">
+    <div style="font-size: 12px; color: var(--ink3); margin-bottom: 14px;">
+      <a href="#" style="color: var(--ink3);">产品</a>
+      <span style="padding: 0 7px;">/</span>
+      <a href="#" style="color: var(--ink3);">ChatGPT</a>
+      <span style="padding: 0 7px;">/</span>
+      <span style="color: var(--ink);">Plus 月付</span>
+    </div>
+
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px;">
+      <div>
+        <h1 style="font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.1;
+                   margin: 0 0 12px; letter-spacing: -.015em;">ChatGPT Plus 全球价格排行</h1>
+        <div style="font-size: 13.5px; color: var(--ink2);">
+          158 个 App Store 地区 · 按折算美元价升序 · 数据日期 <span class="num">2026-08-26</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0; border: 1px solid var(--rule); background: #fff;">
+        <div style="padding: 13px 22px; border-right: 1px solid var(--rule);">
+          <div class="eyebrow" style="margin-bottom: 6px;">最低</div>
+          <div class="num" style="font-size: 21px;">$16.20</div>
+          <div style="font-size: 11px; color: var(--ink3); margin-top: 3px;">PH 菲律宾</div>
+        </div>
+        <div style="padding: 13px 22px; border-right: 1px solid var(--rule);">
+          <div class="eyebrow" style="margin-bottom: 6px;">中位数</div>
+          <div class="num" style="font-size: 21px;">$19.99</div>
+          <div style="font-size: 11px; color: var(--ink3); margin-top: 3px;">第 79 位</div>
+        </div>
+        <div style="padding: 13px 22px;">
+          <div class="eyebrow" style="margin-bottom: 6px;">最高</div>
+          <div class="num" style="font-size: 21px;">$32.62</div>
+          <div style="font-size: 11px; color: var(--ink3); margin-top: 3px;">CO 哥伦比亚</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 筛选行 -->
+  <div style="display: flex; align-items: center; gap: 10px; padding: 16px 56px; border-bottom: 1px solid var(--rule); font-size: 12.5px;">
+    <span style="color: var(--ink3); margin-right: 4px;">档位</span>
+    <span style="padding: 5px 12px; background: var(--ink); color: #fff;">Plus 月付</span>
+    <span style="padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink2);">Plus 年付</span>
+    <span style="padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink2);">Go</span>
+    <span style="padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink2);">Pro 5x</span>
+    <span style="padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink2);">Pro 20x</span>
+    <div style="flex-grow: 1;"></div>
+    <span style="color: var(--ink3);">折算</span>
+    <span style="padding: 5px 12px; background: var(--ink); color: #fff;">USD</span>
+    <span style="padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink2);">CNY</span>
+  </div>
+
+  <!-- 表头 -->
+  <div style="padding: 0 56px;">
+    <div class="row" style="border-bottom: 1px solid var(--ink); padding: 12px 0 9px;
+                            font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase;
+                            color: var(--ink3); font-weight: 600;">
+      <div>排名</div><div>区</div><div>地区</div><div>本地价格</div>
+      <div style="text-align: right;">≈ USD</div><div style="text-align: right;">≈ CNY</div>
+      <div style="text-align: right;">较最低</div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px; font-weight: 500;">1</div><span class="code">PH</span>
+      <div style="font-size: 13.5px;">菲律宾</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">₱ 999.00</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">16.20</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">109</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 6px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">—</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">2</div><span class="code">PK</span>
+      <div style="font-size: 13.5px;">巴基斯坦</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">Rs 4,900.00</div>
+      <div class="num" style="text-align: right; font-size: 14px;">17.66</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">119</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 15px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+9%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">3</div><span class="code">CA</span>
+      <div style="font-size: 13.5px;">加拿大</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">$24.99</div>
+      <div class="num" style="text-align: right; font-size: 14px;">18.06</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">122</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 18px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+11%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">4</div><span class="code">JP</span>
+      <div style="font-size: 13.5px;">日本</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥3,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">18.84</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">127</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 23px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+16%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">5</div><span class="code">TZ</span>
+      <div style="font-size: 13.5px;">坦桑尼亚</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">49,900.00 TZS</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.05</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">128</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 25px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+18%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">6</div><span class="code">VN</span>
+      <div style="font-size: 13.5px;">越南</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">499.000đ</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.15</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">129</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 26px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+18%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">7</div><span class="code">QA</span>
+      <div style="font-size: 13.5px;">卡塔尔</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">QAR 69.99</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.23</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">130</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 27px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+19%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">8</div><span class="code">BR</span>
+      <div style="font-size: 13.5px;">巴西</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">R$ 99,90</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.38</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">131</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 28px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+20%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">9</div><span class="code">ID</span>
+      <div style="font-size: 13.5px;">印度尼西亚</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">Rp 349ribu</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.70</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">133</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 31px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+22%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">10</div><span class="code">EG</span>
+      <div style="font-size: 13.5px;">埃及</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">EGP 999.99</div>
+      <div class="num" style="text-align: right; font-size: 14px;">19.83</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">134</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 32px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+22%</span></div>
+    </div>
+
+    <!-- 省略指示 -->
+    <div style="display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule);">
+      <div style="flex-grow: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 7px);"></div>
+      <div style="font-size: 11.5px; color: var(--ink3); white-space: nowrap;">第 11 – 89 位省略</div>
+      <div style="flex-grow: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 7px);"></div>
+    </div>
+
+    <!-- 美国：高亮行 -->
+    <div class="row" style="background: #fff; margin: 0 -12px; padding: 13px 12px; border-bottom: 1px solid var(--rule);
+                            box-shadow: inset 3px 0 0 var(--ink);">
+      <div class="num" style="font-size: 15px; font-weight: 500;">90</div><span class="code" style="border-color: var(--ink); color: var(--ink);">US</span>
+      <div style="font-size: 13.5px; font-weight: 500;">美国 <span style="font-size: 11px; color: var(--ink3); font-weight: 400; padding-left: 6px;">基准</span></div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">$19.99</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">19.99</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">135</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 34px; opacity: .5;"></div><span class="num" style="font-size: 12px; color: var(--ink2); width: 42px; text-align: right;">+23%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">97</div><span class="code">TR</span>
+      <div style="font-size: 13.5px;">土耳其
+        <span style="font-size: 11px; color: var(--up); padding-left: 8px;">↑ 本月 +100%</span></div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">₺999,99</div>
+      <div class="num" style="text-align: right; font-size: 14px;">20.79</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">140</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 38px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+28%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">98</div><span class="code">IN</span>
+      <div style="font-size: 13.5px;">印度</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">₹ 1,999</div>
+      <div class="num" style="text-align: right; font-size: 14px;">20.95</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">141</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 39px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+29%</span></div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule);">
+      <div style="flex-grow: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 7px);"></div>
+      <div style="font-size: 11.5px; color: var(--ink3); white-space: nowrap;">第 99 – 154 位省略</div>
+      <div style="flex-grow: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 7px);"></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">155</div><span class="code">GB</span>
+      <div style="font-size: 13.5px;">英国</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">£19.99</div>
+      <div class="num" style="text-align: right; font-size: 14px;">27.27</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">184</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 82px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+68%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">156</div><span class="code">DK</span>
+      <div style="font-size: 13.5px;">丹麦</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">179,00 kr</div>
+      <div class="num" style="text-align: right; font-size: 14px;">27.93</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">188</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 88px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+72%</span></div>
+    </div>
+
+    <div class="row"><div class="num" style="font-size: 15px;">157</div><span class="code">HU</span>
+      <div style="font-size: 13.5px;">匈牙利</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">HUF8,990.00</div>
+      <div class="num" style="text-align: right; font-size: 14px;">29.02</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">196</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 97px;"></div><span class="num" style="font-size: 12px; color: var(--ink3); width: 42px; text-align: right;">+79%</span></div>
+    </div>
+
+    <div class="row" style="border-bottom: 1px solid var(--ink);">
+      <div class="num" style="font-size: 15px; font-weight: 500;">158</div><span class="code">CO</span>
+      <div style="font-size: 13.5px;">哥伦比亚</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">$ 99.900,00</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">32.62</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">220</div>
+      <div style="display: flex; align-items: center; gap: 9px; justify-content: flex-end;">
+        <div class="bar" style="width: 110px; opacity: .38;"></div><span class="num" style="font-size: 12px; color: var(--ink2); width: 42px; text-align: right;">+101%</span></div>
+    </div>
+  </div>
+
+  <div style="padding: 22px 56px 34px; display: flex; gap: 40px; align-items: flex-start;">
+    <div style="font-size: 11.5px; color: var(--ink3); line-height: 1.75; max-width: 60em;">
+      「本地价格」为 Apple 商店页原样返回的字符串，未做改写。哥伦比亚的 <span class="num" style="color: var(--ink2);">$ 99.900,00</span>
+      使用点作千分位、逗号作小数点，与美国的 <span class="num" style="color: var(--ink2);">$19.99</span> 虽同为 <span class="num">$</span> 符号但含义不同——
+      本站按地区绑定的 ISO 币种解析，不依据符号推断。
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1280,"height":1420}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

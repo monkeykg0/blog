@@ -1,0 +1,152 @@
+/* AIPRICE 设计系统
+ *
+ * 编辑感数据出版物：暖白纸张、近黑墨色、发丝分隔线。
+ * 刻意不用卡片阴影、圆角、渐变——那套东西会把数据表压成一堆彩色方块。
+ *
+ * 颜色只承载数据身份：四个产品各一个色，已过色盲分辨校验
+ * （protan ΔE 10.2 / 深色模式另配一套，见 --s1..--s4）。
+ * 文字一律用墨色，不用产品色——身份靠旁边的色块传达。
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+	--paper: #fbfaf7;
+	--surface: #ffffff;
+	--ink: #17160f;
+	--ink2: #55534a;
+	--ink3: #8b8879;
+	--rule: #e5e2d9;
+	--rule-soft: #edeae1;
+
+	--up: #a32b1c;
+	--down: #1c6b45;
+
+	--s1: #0b7d63; /* ChatGPT */
+	--s2: #bf4a15; /* Claude  */
+	--s3: #2f5fae; /* Gemini  */
+	--s4: #8a3a6b; /* Grok    */
+
+	--sans: "Archivo", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+	--serif: "Newsreader", "Songti SC", Georgia, serif;
+	--mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+	--pad: 56px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--paper: #14140f;
+		--surface: #1a1a15;
+		--ink: #f2efe6;
+		--ink2: #b3af9f;
+		--ink3: #85816f;
+		--rule: #302e26;
+		--rule-soft: #262419;
+
+		--up: #e8735e;
+		--down: #4fb383;
+
+		--s1: #2fa98d;
+		--s2: #de7433;
+		--s3: #5b8fd8;
+		--s4: #c75f94;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--sans);
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: var(--ink);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--s2);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--serif);
+	font-weight: 400;
+	letter-spacing: -0.015em;
+	margin: 0;
+	text-wrap: pretty;
+}
+
+/* 等宽 + 定宽数字。价格表全靠这个对齐，别去掉 tabular-nums */
+.num {
+	font-family: var(--mono);
+	font-variant-numeric: tabular-nums;
+}
+
+.eyebrow {
+	font-size: 10px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--ink3);
+	font-weight: 600;
+}
+
+/* 地区代码框。用等宽代码而不是旗帜 emoji——扫读更快，也不受系统字体影响 */
+.code {
+	font-family: var(--mono);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: var(--ink2);
+	border: 1px solid var(--rule);
+	padding: 2px 5px;
+	white-space: nowrap;
+}
+
+.wrap {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-inline: var(--pad);
+}
+
+.rule-top {
+	border-top: 1px solid var(--rule);
+}
+.rule-bottom {
+	border-bottom: 1px solid var(--rule);
+}
+.rule-strong {
+	border-bottom: 1px solid var(--ink);
+}
+
+/* 宽表格在窄屏自己横向滚动，页面本身绝不横向滚动 */
+.scroll-x {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+	:root {
+		--pad: 20px;
+	}
+	body {
+		font-size: 13.5px;
+	}
+}
+
+/* 焦点可见，键盘导航不至于瞎点 */
+:focus-visible {
+	outline: 2px solid var(--s2);
+	outline-offset: 2px;
+}

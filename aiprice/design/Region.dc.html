@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --paper: #FBFAF7; --ink: #17160F; --ink2: #55534A; --ink3: #8B8879;
+      --rule: #E5E2D9;
+      --s1: #0B7D63; --s2: #BF4A15; --s3: #2F5FAE; --s4: #8A3A6B;
+      --sans: "Archivo", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Newsreader", "Songti SC", Georgia, serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+           -webkit-font-smoothing: antialiased; }
+    a { color: var(--ink); text-decoration: none; } a:hover { color: var(--s2); }
+    .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+    .eyebrow { font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+               color: var(--ink3); font-weight: 600; }
+    .code { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .04em;
+            color: var(--ink2); border: 1px solid var(--rule); padding: 2px 5px; }
+    .trow { display: grid; grid-template-columns: 1fr 88px 150px 96px 96px 128px; gap: 0 20px;
+            align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+    .ghead { display: flex; align-items: baseline; gap: 10px; padding: 22px 0 9px; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; background: var(--paper);">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 22px 56px 14px; border-bottom: 1px solid var(--ink);">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <div style="font-family: var(--serif); font-size: 23px; letter-spacing: -.01em;">AIPRICE</div>
+      <div style="width: 1px; height: 15px; background: var(--rule);"></div>
+      <div style="font-size: 12.5px; color: var(--ink2);">AI 订阅全球价格观测</div>
+    </div>
+    <div style="display: flex; gap: 26px; font-size: 12.5px; color: var(--ink2);">
+      <a href="#">产品</a>
+      <a href="#" style="color: var(--ink); font-weight: 500; border-bottom: 2px solid var(--ink); padding-bottom: 2px;">地区</a>
+      <a href="#">历史</a><a href="#">方法论</a>
+    </div>
+  </div>
+
+  <div style="padding: 34px 56px 26px; border-bottom: 1px solid var(--rule);">
+    <div style="font-size: 12px; color: var(--ink3); margin-bottom: 14px;">
+      <a href="#" style="color: var(--ink3);">地区</a><span style="padding: 0 7px;">/</span>
+      <span style="color: var(--ink);">日本</span>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 13px; margin-bottom: 12px;">
+          <span class="code" style="font-size: 13px; padding: 4px 8px; border-color: var(--ink); color: var(--ink);">JP</span>
+          <h1 style="font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1;
+                     margin: 0; letter-spacing: -.015em;">日本 App Store</h1>
+        </div>
+        <div style="font-size: 13.5px; color: var(--ink2);">
+          结算币种 <span class="num">JPY 日元</span> · 四个产品共 <span class="num">17</span> 个订阅档位在售
+        </div>
+      </div>
+      <div style="display: flex; gap: 0; border: 1px solid var(--rule); background: #fff;">
+        <div style="padding: 13px 22px; border-right: 1px solid var(--rule);">
+          <div class="eyebrow" style="margin-bottom: 6px;">当日汇率</div>
+          <div class="num" style="font-size: 19px;">159.25</div>
+          <div style="font-size: 11px; color: var(--ink3); margin-top: 3px;">JPY / USD</div>
+        </div>
+        <div style="padding: 13px 22px;">
+          <div class="eyebrow" style="margin-bottom: 6px;">整体水平</div>
+          <div class="num" style="font-size: 19px;">偏低</div>
+          <div style="font-size: 11px; color: var(--ink3); margin-top: 3px;">四项中三项低于美国</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 8px 56px 40px;">
+
+    <!-- 表头 -->
+    <div class="trow" style="border-bottom: 1px solid var(--ink); padding: 16px 0 9px;
+                             font-size: 10.5px; letter-spacing: .07em; text-transform: uppercase;
+                             color: var(--ink3); font-weight: 600;">
+      <div>档位</div><div>周期</div><div>本地价格</div>
+      <div style="text-align: right;">≈ USD</div><div style="text-align: right;">≈ CNY</div>
+      <div style="text-align: right;">全球排名</div>
+    </div>
+
+    <!-- ChatGPT -->
+    <div class="ghead">
+      <div style="width: 9px; height: 9px; background: var(--s1);"></div>
+      <div style="font-size: 15px; font-weight: 500;">ChatGPT</div>
+      <div style="font-size: 11.5px; color: var(--ink3);">OpenAI</div>
+    </div>
+    <div class="trow"><div style="font-size: 13.5px;">ChatGPT Go</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥1,400</div>
+      <div class="num" style="text-align: right; font-size: 14px;">8.79</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">59</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">124 / 158</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">ChatGPT Plus</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥3,000</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">18.84</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">127</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s1); font-weight: 500;">4 / 158</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">ChatGPT Plus</div><div style="font-size: 12.5px; color: var(--ink2);">年付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥30,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">188.39</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">1,269</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">6 / 158</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">ChatGPT Pro 5x</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥16,800</div>
+      <div class="num" style="text-align: right; font-size: 14px;">105.50</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">711</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">31 / 158</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">ChatGPT Pro 20x</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥30,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">188.39</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">1,269</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">6 / 158</div></div>
+
+    <!-- Claude -->
+    <div class="ghead">
+      <div style="width: 9px; height: 9px; background: var(--s2);"></div>
+      <div style="font-size: 15px; font-weight: 500;">Claude</div>
+      <div style="font-size: 11.5px; color: var(--ink3);">Anthropic</div>
+    </div>
+    <div class="trow"><div style="font-size: 13.5px;">Claude Pro</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥3,000</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">18.84</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">127</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s2); font-weight: 500;">2 / 155</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">Claude Pro</div><div style="font-size: 12.5px; color: var(--ink2);">年付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥35,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">219.78</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">1,481</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">31 / 155</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">Claude Max 5x</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥20,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">125.59</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">846</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">73 / 155</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">Claude Max 20x</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥40,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">251.18</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">1,692</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">64 / 155</div></div>
+
+    <!-- Gemini -->
+    <div class="ghead">
+      <div style="width: 9px; height: 9px; background: var(--s3);"></div>
+      <div style="font-size: 15px; font-weight: 500;">Google Gemini</div>
+      <div style="font-size: 11.5px; color: var(--ink3);">Google</div>
+    </div>
+    <div class="trow"><div style="font-size: 13.5px;">Google AI Plus</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥720</div>
+      <div class="num" style="text-align: right; font-size: 14px;">4.52</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">30</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s3); font-weight: 500;">4 / 155</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">Google AI Pro</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥2,900</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">18.21</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">123</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s3); font-weight: 500;">4 / 157</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">Google AI Ultra</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥32,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">200.95</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">1,354</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">58 / 87</div></div>
+
+    <!-- Grok -->
+    <div class="ghead">
+      <div style="width: 9px; height: 9px; background: var(--s4);"></div>
+      <div style="font-size: 15px; font-weight: 500;">Grok</div>
+      <div style="font-size: 11.5px; color: var(--ink3);">xAI</div>
+    </div>
+    <div class="trow"><div style="font-size: 13.5px;">SuperGrok Lite</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥1,500</div>
+      <div class="num" style="text-align: right; font-size: 14px; font-weight: 500;">9.42</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">63</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s4); font-weight: 500;">1 / 149</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">SuperGrok</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥5,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">31.40</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">212</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">87 / 148</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">SuperGrok</div><div style="font-size: 12.5px; color: var(--ink2);">年付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥50,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">313.98</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">2,115</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">68 / 111</div></div>
+    <div class="trow"><div style="font-size: 13.5px;">SuperGrok Plus</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥15,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">94.19</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">635</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--s4); font-weight: 500;">4 / 149</div></div>
+    <div class="trow" style="border-bottom: 1px solid var(--ink);">
+      <div style="font-size: 13.5px;">SuperGrok Heavy</div><div style="font-size: 12.5px; color: var(--ink2);">月付</div>
+      <div class="num" style="font-size: 13px; color: var(--ink2);">¥50,000</div>
+      <div class="num" style="text-align: right; font-size: 14px;">313.98</div>
+      <div class="num" style="text-align: right; font-size: 13px; color: var(--ink2);">2,115</div>
+      <div class="num" style="text-align: right; font-size: 12.5px; color: var(--ink3);">68 / 128</div></div>
+
+    <!-- 未获取说明 -->
+    <div style="margin-top: 20px; padding: 15px 18px; border: 1px solid var(--rule); background: #fff;
+                display: flex; gap: 14px; align-items: flex-start;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex: none; margin-top: 1px;">
+        <circle cx="8" cy="8" r="6.6" stroke="#8B8879" stroke-width="1.3"/>
+        <path d="M8 4.9v3.6" stroke="#8B8879" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="8" cy="11" r=".85" fill="#8B8879"/>
+      </svg>
+      <div style="font-size: 12px; color: var(--ink2); line-height: 1.7;">
+        <span style="color: var(--ink); font-weight: 500;">Google AI Pro、AI Plus 的年付档位未在本地区商店页返回。</span>
+        Apple 每个 App 最多展示 10 条内购项目，按该地区热度排序——本地区 Gemini 的 10 个名额已被月付档与存储档占满。
+        未返回不代表该地区不售，只是未进入前 10。
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1280,"height":1400}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

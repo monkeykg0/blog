@@ -1,0 +1,94 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { LANGS, type Lang, t, url } from "../../../lib/i18n";
+import {
+	activeStorefronts,
+	cny,
+	headlineTier,
+	products,
+	regionName,
+	usd,
+} from "../../../lib/data";
+
+export function getStaticPaths() {
+	return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+// 用 ChatGPT 的代表档（Plus 月付）作为地区排序基准——覆盖 158 个地区，最完整
+const chatgpt = products.find((p) => p.id === "chatgpt")!;
+const basis = headlineTier(chatgpt)!;
+const rankOf = new Map(basis.rows.map((r, i) => [r.storefront, { rank: i + 1, usd: r.usd }]));
+
+const list = activeStorefronts()
+	.map((sf) => ({ sf, ...(rankOf.get(sf.code) ?? { rank: Number.MAX_SAFE_INTEGER, usd: null }) }))
+	.sort((a, b) => a.rank - b.rank);
+
+const title = `${t(lang, "regionsIndexTitle")} — ${t(lang, "siteName")}`;
+const description = t(lang, "regionsIndexSub", { n: list.length });
+---
+
+<Base {lang} {title} {description} path="r" nav="regions">
+	<section class="wrap head rule-bottom">
+		<h1>{t(lang, "regionsIndexTitle")}</h1>
+		<p class="sub">{t(lang, "regionsIndexSub", { n: list.length })}</p>
+	</section>
+
+	<section class="wrap grid">
+		{
+			list.map((it) => (
+				<a class="cell" href={url(lang, `r/${it.sf.code}`)}>
+					<span class="code">{it.sf.code.toUpperCase()}</span>
+					<span class="nm">{regionName(it.sf, lang)}</span>
+					<span class="pr num">{it.usd === null ? "—" : `$${usd(it.usd)}`}</span>
+				</a>
+			))
+		}
+	</section>
+</Base>
+
+<style>
+	.head {
+		padding-block: 34px 26px;
+	}
+	h1 {
+		font-size: 40px;
+		margin: 0 0 12px;
+	}
+	.sub {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--ink2);
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+		gap: 0 32px;
+		padding-block: 8px 20px;
+	}
+	.cell {
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+		padding: 10px 0;
+		border-bottom: 1px solid var(--rule);
+	}
+	.nm {
+		flex-grow: 1;
+		font-size: 13.5px;
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.pr {
+		font-size: 13px;
+		color: var(--ink2);
+	}
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 28px;
+		}
+	}
+</style>

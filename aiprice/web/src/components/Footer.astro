@@ -1,0 +1,53 @@
+---
+import { type Lang, t } from "../lib/i18n";
+import { meta } from "../lib/data";
+
+interface Props {
+	lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<footer class="foot">
+	<div class="wrap inner">
+		<p class="text">
+			{t(lang, "disclaimer", { fx: meta.fxSource })}
+			<br />
+			{t(lang, "notAffiliated")}
+		</p>
+		<p class="num stamp">
+			<time datetime={meta.generatedAt}>{meta.generatedAt.replace("T", " ").replace("Z", " UTC")}</time>
+		</p>
+	</div>
+</footer>
+
+<style>
+	.foot {
+		border-top: 1px solid var(--ink);
+		margin-top: 40px;
+	}
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 40px;
+		padding-block: 20px 34px;
+		font-size: 11.5px;
+		color: var(--ink3);
+		line-height: 1.7;
+	}
+	.text {
+		margin: 0;
+		max-width: 62em;
+	}
+	.stamp {
+		margin: 0;
+		white-space: nowrap;
+	}
+	@media (max-width: 720px) {
+		.inner {
+			flex-direction: column;
+			gap: 12px;
+		}
+	}
+</style>

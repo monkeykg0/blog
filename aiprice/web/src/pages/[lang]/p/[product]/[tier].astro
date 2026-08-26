@@ -1,0 +1,296 @@
+---
+import Base from "../../../../layouts/Base.astro";
+import RankingTable from "../../../../components/RankingTable.astro";
+import SeriesDot from "../../../../components/SeriesDot.astro";
+import { LANGS, type Lang, t, url } from "../../../../lib/i18n";
+import {
+	cny,
+	distinctPrices,
+	meta,
+	productName,
+	products,
+	regionName,
+	statsOf,
+	storefrontOf,
+	tierName,
+	tiersOf,
+	usd,
+	type TierPrices,
+} from "../../../../lib/data";
+
+export function getStaticPaths() {
+	const paths = [];
+	for (const lang of LANGS) {
+		for (const product of products) {
+			// 一个 tier 可能有月付和年付两条记录，页面按 tier 聚合，两种周期都展示
+			const seen = new Set<string>();
+			for (const tp of tiersOf(product.id)) {
+				if (seen.has(tp.tier)) continue;
+				seen.add(tp.tier);
+				paths.push({ params: { lang, product: product.id, tier: tp.tier } });
+			}
+		}
+	}
+	return paths;
+}
+
+const lang = Astro.params.lang as Lang;
+const productId = Astro.params.product as string;
+const tierId = Astro.params.tier as string;
+
+const product = products.find((p) => p.id === productId)!;
+const variants: TierPrices[] = tiersOf(productId)
+	.filter((t) => t.tier === tierId)
+	.sort((a, b) => (a.period === "monthly" ? -1 : 1) - (b.period === "monthly" ? -1 : 1));
+
+const primary = variants.find((v) => v.period === "monthly") ?? variants[0]!;
+const st = statsOf(primary)!;
+const label = tierName(primary, lang);
+
+// 同产品下的其它档位，做档位切换
+const siblings: TierPrices[] = [];
+{
+	const seen = new Set<string>();
+	for (const tp of tiersOf(productId)) {
+		if (seen.has(tp.tier)) continue;
+		seen.add(tp.tier);
+		siblings.push(tp);
+	}
+	siblings.sort((a, b) => (a.rows[0]?.usd ?? 0) - (b.rows[0]?.usd ?? 0));
+}
+
+const path = `p/${productId}/${tierId}`;
+const lowSf = storefrontOf(st.lowest.storefront);
+const highSf = storefrontOf(st.highest.storefront);
+
+const title = `${label} ${lang === "zh" ? "各国价格对比" : "price by country"} — ${t(lang, "siteName")}`;
+const description = t(lang, "rankingSub", {
+	n: st.count,
+	date: meta.dataDate,
+	tier: label,
+});
+---
+
+<Base {lang} {title} {description} {path} nav="products">
+	<section class="wrap head rule-bottom">
+		<nav class="crumb" aria-label="breadcrumb">
+			<a href={url(lang, "p")}>{t(lang, "navProducts")}</a>
+			<span aria-hidden="true">/</span>
+			<span>{productName(product, lang)}</span>
+			<span aria-hidden="true">/</span>
+			<span class="cur">{label}</span>
+		</nav>
+
+		<div class="row">
+			<div>
+				<h1>
+					<SeriesDot productId={product.id} size={11} />
+					{t(lang, "rankingTitle", { tier: label })}
+				</h1>
+				<p class="sub">{t(lang, "rankingSub", { n: st.count, date: meta.dataDate })}</p>
+			</div>
+
+			<div class="stats">
+				<div>
+					<p class="eyebrow">{t(lang, "lowest")}</p>
+					<p class="v num">${usd(st.lowest.usd)}</p>
+					<p class="k">
+						{st.lowest.storefront.toUpperCase()} {lowSf ? regionName(lowSf, lang) : ""}
+					</p>
+				</div>
+				<div>
+					<p class="eyebrow">{t(lang, "median")}</p>
+					<p class="v num">${usd(st.median.usd)}</p>
+					<p class="k">
+						{lang === "zh"
+							? `全球共 ${distinctPrices(primary.rows)} 个价位`
+							: `${distinctPrices(primary.rows)} distinct prices`}
+					</p>
+				</div>
+				<div>
+					<p class="eyebrow">{t(lang, "highest")}</p>
+					<p class="v num">${usd(st.highest.usd)}</p>
+					<p class="k">
+						{st.highest.storefront.toUpperCase()} {highSf ? regionName(highSf, lang) : ""}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="wrap chips rule-bottom">
+		<span class="lbl">{t(lang, "colTier")}</span>
+		{
+			siblings.map((s) => (
+				<a
+					href={url(lang, `p/${productId}/${s.tier}`)}
+					class:list={["chip", { on: s.tier === tierId }]}
+				>
+					{tierName(s, lang)}
+				</a>
+			))
+		}
+	</section>
+
+	{
+		variants.map((v) => {
+			const vst = statsOf(v)!;
+			return (
+				<section class="wrap block">
+					{variants.length > 1 && (
+						<h2 class="ptitle">
+							{t(lang, v.period === "annual" ? "annual" : "monthly")}
+							<span class="pcount">{t(lang, "regionsWord", { n: vst.count })}</span>
+						</h2>
+					)}
+					<RankingTable
+						{lang}
+						tier={v}
+						caption={`${label} ${t(lang, v.period === "annual" ? "annual" : "monthly")}`}
+					/>
+				</section>
+			);
+		})
+	}
+
+	<section class="wrap foot-note">
+		<p>
+			{
+				lang === "zh"
+					? "「本地价格」为 Apple 商店页原样返回的字符串，未做改写。哥伦比亚的 $ 99.900,00 使用点作千分位、逗号作小数点，与美国的 $19.99 虽同为 $ 符号但含义不同——本站按地区绑定的 ISO 币种解析，不依据符号推断。"
+					: 'The "local price" column is the string Apple returns, unaltered. Colombia\'s $ 99.900,00 uses dots for thousands and a comma for decimals; the US $19.99 does the opposite with the same $ sign. Parsing is keyed to each storefront\'s ISO currency, never inferred from the symbol.'
+			}
+		</p>
+	</section>
+</Base>
+
+<style>
+	.head {
+		padding-block: 34px 26px;
+	}
+	.crumb {
+		font-size: 12px;
+		color: var(--ink3);
+		margin-bottom: 14px;
+		display: flex;
+		gap: 7px;
+		flex-wrap: wrap;
+	}
+	.crumb a {
+		color: var(--ink3);
+	}
+	.crumb .cur {
+		color: var(--ink);
+	}
+	.row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 48px;
+		flex-wrap: wrap;
+	}
+	h1 {
+		font-size: 40px;
+		line-height: 1.1;
+		margin: 0 0 12px;
+		display: flex;
+		align-items: baseline;
+		gap: 12px;
+	}
+	.sub {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--ink2);
+	}
+	.stats {
+		display: flex;
+		border: 1px solid var(--rule);
+		background: var(--surface);
+	}
+	.stats > div {
+		padding: 13px 22px;
+		border-right: 1px solid var(--rule);
+	}
+	.stats > div:last-child {
+		border-right: 0;
+	}
+	.stats p {
+		margin: 0;
+	}
+	.stats .v {
+		font-size: 21px;
+		margin-top: 6px;
+	}
+	.stats .k {
+		font-size: 11px;
+		color: var(--ink3);
+		margin-top: 3px;
+	}
+
+	.chips {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding-block: 16px;
+		font-size: 12.5px;
+		flex-wrap: wrap;
+	}
+	.lbl {
+		color: var(--ink3);
+		margin-right: 4px;
+	}
+	.chip {
+		padding: 5px 12px;
+		border: 1px solid var(--rule);
+		color: var(--ink2);
+	}
+	.chip.on {
+		background: var(--ink);
+		color: var(--paper);
+		border-color: var(--ink);
+	}
+
+	.block {
+		padding-block: 22px 8px;
+	}
+	.ptitle {
+		font-family: var(--sans);
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--ink2);
+		margin: 0 0 10px;
+		display: flex;
+		align-items: baseline;
+		gap: 10px;
+	}
+	.pcount {
+		font-weight: 400;
+		letter-spacing: 0;
+		text-transform: none;
+		font-size: 11.5px;
+		color: var(--ink3);
+	}
+
+	.foot-note p {
+		font-size: 11.5px;
+		color: var(--ink3);
+		line-height: 1.75;
+		max-width: 62em;
+		margin: 22px 0 0;
+	}
+
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 28px;
+		}
+		.stats {
+			width: 100%;
+		}
+		.stats > div {
+			flex: 1;
+			padding: 11px 14px;
+		}
+	}
+</style>

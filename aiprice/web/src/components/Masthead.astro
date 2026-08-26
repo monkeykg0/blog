@@ -1,0 +1,122 @@
+---
+import { LANGS, type Lang, t, url } from "../lib/i18n";
+
+interface Props {
+	lang: Lang;
+	path: string;
+	nav?: "products" | "regions" | "method";
+}
+const { lang, path, nav } = Astro.props;
+
+const items = [
+	{ key: "products" as const, label: t(lang, "navProducts"), href: url(lang, "p") },
+	{ key: "regions" as const, label: t(lang, "navRegions"), href: url(lang, "r") },
+	{ key: "method" as const, label: t(lang, "navMethod"), href: url(lang, "method") },
+];
+---
+
+<header class="mast rule-strong">
+	<div class="wrap bar">
+		<a class="lockup" href={url(lang)}>
+			<span class="wordmark">{t(lang, "siteName")}</span>
+			<span class="divider" aria-hidden="true"></span>
+			<span class="tagline">{t(lang, "tagline")}</span>
+		</a>
+
+		<nav class="nav" aria-label={t(lang, "navProducts")}>
+			{
+				items.map((i) => (
+					<a href={i.href} class:list={["navlink", { on: nav === i.key }]}>
+						{i.label}
+					</a>
+				))
+			}
+			<span class="langs">
+				{
+					LANGS.map((l) => (
+						<a href={url(l, path)} class:list={["lang", { on: l === lang }]} hreflang={l}>
+							{l === "zh" ? "中" : "EN"}
+						</a>
+					))
+				}
+			</span>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.mast {
+		background: var(--paper);
+	}
+	.bar {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 24px;
+		padding-block: 22px 14px;
+		flex-wrap: wrap;
+	}
+	.lockup {
+		display: flex;
+		align-items: baseline;
+		gap: 14px;
+		min-width: 0;
+	}
+	.lockup:hover {
+		color: var(--ink);
+	}
+	.wordmark {
+		font-family: var(--serif);
+		font-size: 23px;
+		letter-spacing: -0.01em;
+	}
+	.divider {
+		width: 1px;
+		height: 15px;
+		background: var(--rule);
+		flex: none;
+	}
+	.tagline {
+		font-size: 12.5px;
+		color: var(--ink2);
+		letter-spacing: 0.02em;
+	}
+	.nav {
+		display: flex;
+		align-items: baseline;
+		gap: 26px;
+		font-size: 12.5px;
+		color: var(--ink2);
+	}
+	.navlink {
+		color: var(--ink2);
+		padding-bottom: 2px;
+	}
+	.navlink.on {
+		color: var(--ink);
+		font-weight: 500;
+		border-bottom: 2px solid var(--ink);
+	}
+	.langs {
+		display: flex;
+		gap: 6px;
+		padding-left: 12px;
+		border-left: 1px solid var(--rule);
+	}
+	.lang {
+		color: var(--ink3);
+	}
+	.lang.on {
+		color: var(--ink);
+		font-weight: 600;
+	}
+	@media (max-width: 620px) {
+		.tagline,
+		.divider {
+			display: none;
+		}
+		.nav {
+			gap: 16px;
+		}
+	}
+</style>
