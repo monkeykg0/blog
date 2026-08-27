@@ -6,10 +6,13 @@
 背景调研、实测数据与设计决策见 [`../AI订阅全球价格站可行性调研.md`](../AI订阅全球价格站可行性调研.md)。
 
 ```
-访客 → Cloudflare → OpenResty (443) → aiprice.monkeykgai.com → web/dist 静态文件
-                                                                      ↑
-                       systemd timer 每日 03:30 → aiprice crawl → MySQL → aiprice export
+访客 → Cloudflare → OpenResty (443) → aiprice.monkeykgai.com → 站点目录静态文件
+                                                                      ↑ rsync
+  timer 每日 03:30 → crawl.service → MySQL ─(OnSuccess)→ publish.service → export + astro build
 ```
+
+**抓取和发布全在服务器上，不需要本地参与。** `crawl` 判定 aborted 时退出码非零，
+`OnSuccess=` 不触发，坏数据进不了线上。
 
 ## 目录
 
@@ -18,7 +21,7 @@
 | `api/` | Go 抓取程序 `aiprice`。抓取、解析、归一化、落库、导出 JSON |
 | `web/` | Astro 静态站（中英双语，359 页），构建期读 `api export` 产出的 JSON |
 | `design/` | 界面设计稿（`.dc.html` artboards），改完重新 seed 即可更新设计画布 |
-| `deploy/` | 部署脚本、systemd service/timer、建库 SQL |
+| `deploy/` | 部署脚本、`publish.sh`、systemd service/timer、建库 SQL |
 
 ## 命令
 
@@ -78,8 +81,16 @@ npm run dev            # 本地预览（用 src/data 里已有的数据）
 npm run build          # 构建到 dist/
 ```
 
-部署：`./deploy/deploy-web.sh`（会先从服务器导出最新数据再构建），
-只改样式不用重新取数时加 `--skip-export`。
+**日常不用部署前端**——价格每天由服务器自己 export + build + rsync，`web/src/data`
+里那份只是本地预览用的缓存。
+
+改了页面模板、样式或依赖之后，`./deploy/deploy-web.sh` 把源码推上服务器、
+`npm ci` 装依赖并立即重建一次。不改代码只想手动补发当天数据：
+
+```bash
+ssh root@159.195.18.74 systemctl start aiprice-publish.service
+ssh root@159.195.18.74 journalctl -u aiprice-publish -n 30 --no-pager
+```
 
 **排名一律用竞赛排名**（比它严格便宜的地区数 + 1，并列同名次）。
 不能用排序后的数组下标——158 个地区只有 42 个不同价位，光 `$19.99` 就有 86 个地区，
@@ -89,4 +100,11 @@ npm run build          # 构建到 dist/
 ## 服务器初始化
 
 见 `deploy/`：`init.sql` 建库，`env.example` 抄成 `/opt/aiprice/env`（`chmod 600`），
-然后 `./deploy/deploy-api.sh`。
+然后 `./deploy/deploy-api.sh`，最后 `./deploy/deploy-web.sh`。
+
+发布要在服务器上跑 Astro，需要 **Node ≥ 22.12**（Astro 7 的 engines 要求）。
+Debian 13 仓库里只有 20.19，得走 NodeSource：
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && apt-get install -y nodejs
+```

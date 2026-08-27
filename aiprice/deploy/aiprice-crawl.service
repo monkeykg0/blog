@@ -2,6 +2,9 @@
 Description=aiprice 每日抓取 AI 订阅全球价格
 After=network-online.target
 Wants=network-online.target
+# 抓取成功后自动发布。抓取判定 aborted 时退出码非零，OnSuccess 不会触发，
+# 坏数据进不了线上。
+OnSuccess=aiprice-publish.service
 
 [Service]
 Type=oneshot

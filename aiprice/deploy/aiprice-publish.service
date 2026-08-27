@@ -1,0 +1,22 @@
+[Unit]
+Description=aiprice 导出数据、构建静态站并发布
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/aiprice/publish.sh
+EnvironmentFile=/opt/aiprice/env
+WorkingDirectory=/opt/aiprice/web
+User=www-data
+# npm/astro 要有 HOME 才肯写缓存，www-data 的 home 是 /nonexistent
+Environment=HOME=/opt/aiprice
+Environment=npm_config_cache=/opt/aiprice/.npm
+Environment=ASTRO_TELEMETRY_DISABLED=1
+# 361 页构建约 3 秒，导出加同步也就十几秒，留足余量
+TimeoutStartSec=900
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/aiprice
+ReadWritePaths=/opt/1panel/apps/openresty/openresty/www/sites/aiprice.monkeykgai.com/index
