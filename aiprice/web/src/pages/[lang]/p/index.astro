@@ -57,6 +57,8 @@ const description =
 								<span class="tn">{tierName(tp, lang)}</span>
 								<span class="meta">{t(lang, "regionsWord", { n: st.count })}</span>
 								<span class="low">
+									{/* 列表只列月付（distinctTiers 去重时优先月付），标出来免得跟年付价混淆 */}
+									<span class="per">{t(lang, tp.period === "annual" ? "annual" : "monthly")}</span>
 									<span class="num v">${usd(st.lowest.usd)}</span>
 									<span class="w">
 										{t(lang, "cheapestIn")} {st.lowest.storefront.toUpperCase()}
@@ -125,6 +127,13 @@ const description =
 		gap: 10px;
 		text-align: right;
 	}
+	.low .per {
+		font-size: 11.5px;
+		color: var(--ink3);
+		/* 固定宽度，价格那一列才能对齐（en 的 Monthly 比 zh 的月付宽） */
+		min-width: 52px;
+		text-align: right;
+	}
 	.low .v {
 		font-size: 14px;
 		font-weight: 500;
@@ -148,6 +157,9 @@ const description =
 			flex-basis: 100%;
 		}
 		.low .w {
+			min-width: 0;
+		}
+		.low .per {
 			min-width: 0;
 		}
 	}
