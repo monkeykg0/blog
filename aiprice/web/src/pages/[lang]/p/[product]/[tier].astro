@@ -5,6 +5,7 @@ import SeriesDot from "../../../../components/SeriesDot.astro";
 import { LANGS, type Lang, t, url } from "../../../../lib/i18n";
 import {
 	cny,
+	distinctTiers,
 	distinctPrices,
 	meta,
 	productName,
@@ -23,10 +24,7 @@ export function getStaticPaths() {
 	for (const lang of LANGS) {
 		for (const product of products) {
 			// 一个 tier 可能有月付和年付两条记录，页面按 tier 聚合，两种周期都展示
-			const seen = new Set<string>();
-			for (const tp of tiersOf(product.id)) {
-				if (seen.has(tp.tier)) continue;
-				seen.add(tp.tier);
+			for (const tp of distinctTiers(product.id)) {
 				paths.push({ params: { lang, product: product.id, tier: tp.tier } });
 			}
 		}
@@ -48,16 +46,9 @@ const st = statsOf(primary)!;
 const label = tierName(primary, lang);
 
 // 同产品下的其它档位，做档位切换
-const siblings: TierPrices[] = [];
-{
-	const seen = new Set<string>();
-	for (const tp of tiersOf(productId)) {
-		if (seen.has(tp.tier)) continue;
-		seen.add(tp.tier);
-		siblings.push(tp);
-	}
-	siblings.sort((a, b) => (a.rows[0]?.usd ?? 0) - (b.rows[0]?.usd ?? 0));
-}
+const siblings: TierPrices[] = distinctTiers(productId).sort(
+	(a, b) => (a.rows[0]?.usd ?? 0) - (b.rows[0]?.usd ?? 0),
+);
 
 const path = `p/${productId}/${tierId}`;
 const lowSf = storefrontOf(st.lowest.storefront);

@@ -3,6 +3,7 @@ import Base from "../../../layouts/Base.astro";
 import SeriesDot from "../../../components/SeriesDot.astro";
 import { LANGS, type Lang, t, url } from "../../../lib/i18n";
 import {
+	distinctTiers,
 	meta,
 	productName,
 	products,
@@ -10,9 +11,7 @@ import {
 	statsOf,
 	storefrontOf,
 	tierName,
-	tiersOf,
 	usd,
-	type TierPrices,
 } from "../../../lib/data";
 
 export function getStaticPaths() {
@@ -22,13 +21,7 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 
 const groups = products.map((p) => {
-	const seen = new Set<string>();
-	const tiers: TierPrices[] = [];
-	for (const tp of tiersOf(p.id)) {
-		if (seen.has(tp.tier)) continue;
-		seen.add(tp.tier);
-		tiers.push(tp);
-	}
+	const tiers = distinctTiers(p.id);
 	tiers.sort((a, b) => (a.rows[0]?.usd ?? 0) - (b.rows[0]?.usd ?? 0));
 	return { product: p, tiers };
 });

@@ -175,6 +175,22 @@ export function tierPrices(productId: string, tier: string, period: string): Tie
 	return tiersOf(productId).find((t) => t.tier === tier && t.period === period);
 }
 
+/**
+ * 每个档位只留一条记录，供「一个档位一行」的页面用（产品列表、档位切换）。
+ *
+ * ⚠️ 必须优先取月付。同一个 tier 下月付和年付是两条记录，export 按
+ * (tier, period) 排序，`annual` 字母序在 `monthly` 前面——直接取第一条
+ * 会把年付价当成该档位的价格展示（ChatGPT Plus 会显示成 $159 而不是 $15.97）。
+ */
+export function distinctTiers(productId: string): TierPrices[] {
+	const byTier = new Map<string, TierPrices>();
+	for (const tp of tiersOf(productId)) {
+		const cur = byTier.get(tp.tier);
+		if (!cur || (cur.period !== "monthly" && tp.period === "monthly")) byTier.set(tp.tier, tp);
+	}
+	return [...byTier.values()];
+}
+
 /** 该产品所有「主力档 + 月付」的组合，首页和导航用。 */
 export function featuredMonthly(product: Product): TierPrices[] {
 	const featured = new Set(product.tiers.filter((t) => t.featured).map((t) => t.tier));
