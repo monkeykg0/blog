@@ -48,6 +48,13 @@ const canonical = new URL(url(lang, path), Astro.site).href;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
 		<meta name="theme-color" content="#14140f" media="(prefers-color-scheme: dark)" />
+
+		{/* 访问统计：自建 umami，无 cookie */}
+		<script
+			is:inline
+			defer
+			src="https://umami.monkeykgai.com/script.js"
+			data-website-id="163a44c2-5c68-4382-924a-250b4ef8b84d"></script>
 	</head>
 	<body>
 		<Masthead lang={lang} path={path} nav={nav} />
