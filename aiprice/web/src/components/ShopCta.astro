@@ -1,0 +1,96 @@
+---
+// 自营代充服务的引导卡片，只挂在中文 ChatGPT 档位页。
+//
+// 刻意做成和价格数据视觉分开、明确标注「本站自营」：本站的价值是中立的价格数据，
+// 引导不能混进排行榜，也不写价格——商城是网页订阅，和 App Store 内购不是一套定价。
+//
+// 链接带 utm 参数，引流效果在商城的 umami 里按来源看；点击本身记在本站 umami 的
+// shop_cta_click 事件里。
+
+interface Props {
+	tier: string;
+	label: string;
+}
+
+const { tier, label } = Astro.props;
+
+const SHOP = "https://shop.monkeykgai.com";
+
+// aiprice 档位 → 商城商品 slug。没有对应商品的档位不显示卡片。
+// Pro 20x 商城前台暂停销售中（gpt-shop 的 PAUSED_SLUGS），恢复后在这里加回 pro20x: "chatgpt-pro20x"。
+const SLUGS: Record<string, string> = {
+	plus: "chatgpt-plus",
+	pro5x: "chatgpt-pro5x",
+};
+
+const slug = SLUGS[tier];
+const href = slug
+	? `${SHOP}/product/${slug}?utm_source=aiprice&utm_medium=tier_card&utm_campaign=chatgpt_${tier}`
+	: "";
+---
+
+{
+	slug && (
+		<section class="wrap cta-wrap">
+			<aside class="cta">
+				<div>
+					<p class="eyebrow">本站自营 · 代充服务</p>
+					<p class="t">没有外区 Apple ID，也能开通 {label}</p>
+					<p class="d">网页端订阅，支付宝 / 微信 / USDT 付款，下单后自动开通。</p>
+				</div>
+				<a
+					class="go"
+					href={href}
+					target="_blank"
+					rel="noopener"
+					data-umami-event="shop_cta_click"
+					data-umami-event-tier={tier}
+				>
+					去商城开通 →
+				</a>
+			</aside>
+		</section>
+	)
+}
+
+<style>
+	.cta-wrap {
+		padding-block: 18px 4px;
+	}
+	.cta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px 32px;
+		flex-wrap: wrap;
+		padding: 16px 22px;
+		border: 1px solid var(--rule);
+		border-left: 3px solid var(--s1);
+		background: var(--surface);
+	}
+	.cta p {
+		margin: 0;
+	}
+	.t {
+		font-family: var(--serif);
+		font-size: 20px;
+		margin-top: 6px !important;
+	}
+	.d {
+		font-size: 12.5px;
+		color: var(--ink2);
+		margin-top: 4px !important;
+	}
+	.go {
+		padding: 9px 18px;
+		background: var(--ink);
+		color: var(--paper);
+		font-size: 13px;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+	.go:hover {
+		color: var(--paper);
+		background: var(--s1);
+	}
+</style>

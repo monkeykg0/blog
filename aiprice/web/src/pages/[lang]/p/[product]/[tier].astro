@@ -2,6 +2,7 @@
 import Base from "../../../../layouts/Base.astro";
 import RankingTable from "../../../../components/RankingTable.astro";
 import SeriesDot from "../../../../components/SeriesDot.astro";
+import ShopCta from "../../../../components/ShopCta.astro";
 import { LANGS, type Lang, t, url } from "../../../../lib/i18n";
 import {
 	cny,
@@ -122,6 +123,9 @@ const description = t(lang, "rankingSub", {
 			))
 		}
 	</section>
+
+	{/* 商城只有中文、只收国内支付方式和 USDT，英文页先不放 */}
+	{lang === "zh" && productId === "chatgpt" && <ShopCta tier={tierId} {label} />}
 
 	{
 		variants.map((v) => {
