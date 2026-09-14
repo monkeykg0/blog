@@ -23,9 +23,14 @@ const SLUGS: Record<string, string> = {
 	pro5x: "chatgpt-pro5x",
 };
 
+// 本站读者专属优惠码，商城商品页会自动填好。码要先在商城后台「优惠券」里建好，
+// 否则用户点进去会看到「优惠码无效」。停发时清空这里再部署。
+const COUPON = "AIPRICE";
+
 const slug = SLUGS[tier];
 const href = slug
-	? `${SHOP}/product/${slug}?utm_source=aiprice&utm_medium=tier_card&utm_campaign=chatgpt_${tier}`
+	? `${SHOP}/product/${slug}?utm_source=aiprice&utm_medium=tier_card&utm_campaign=chatgpt_${tier}` +
+		(COUPON ? `&coupon=${COUPON}` : "")
 	: "";
 ---
 
